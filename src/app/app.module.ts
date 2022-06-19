@@ -11,17 +11,23 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatSelectModule } from '@angular/material/select';
-import { MatButtonModule } from '@angular/material/button';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatSelectModule } from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { CreateManufacturerComponent } from './components/create-manufacturer/create-manufacturer/create-manufacturer.component';
+import { ManufacturersComponent } from './components/manufacturers/manufacturers/manufacturers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CreateManufacturerComponent
+    CreateManufacturerComponent,
+    ManufacturersComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,11 @@ import { CreateManufacturerComponent } from './components/create-manufacturer/cr
     MatAutocompleteModule,
     MatSelectModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatCardModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

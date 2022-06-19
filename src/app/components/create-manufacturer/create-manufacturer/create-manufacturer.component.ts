@@ -1,8 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Manufacturer } from 'src/app/models/manufacturer';
 import { ManufacturerService } from 'src/app/services/manufacturer/manufacturer.service';
+import { ManufacturersComponent } from '../../manufacturers/manufacturers/manufacturers.component';
 
 @Component({
   selector: 'app-create-manufacturer',
@@ -40,7 +42,7 @@ export class CreateManufacturerComponent implements OnInit {
 
   constructor(private fb: FormBuilder, 
     private manufacturerService: ManufacturerService,
-    private router: Router) { }
+    private dialogRef: MatDialogRef<ManufacturersComponent>,) { }
 
   ngOnInit(): void {
     this.createManufacturerForm = this.fb.group({
@@ -72,6 +74,9 @@ export class CreateManufacturerComponent implements OnInit {
     }
 
     this.manufacturerService.createManufacturer(manufacturer)
-    this.router.navigateByUrl('');
+  }
+
+  closeDialog() {
+    this.dialogRef.close()
   }
 }
