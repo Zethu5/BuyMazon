@@ -7,5 +7,5 @@ const manufacturerSchema = new mongoose.Schema({
     owner: String,
 })
 
-module.exports.Manufacturer = mongoose.model('Manufacturer', manufacturerSchema)
+module.exports.ManufacturerModel = mongoose.model('Manufacturer', manufacturerSchema)
 module.exports.manufacturerSchema = manufacturerSchema
