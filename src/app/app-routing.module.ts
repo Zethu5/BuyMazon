@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateManufacturerComponent } from './components/create-manufacturer/create-manufacturer/create-manufacturer.component';
+import { ManufacturersComponent } from './components/manufacturers/manufacturers/manufacturers.component';
 
 const routes: Routes = [
-  {path: 'manufacturers', component: CreateManufacturerComponent}
+  {path: 'manufacturers', component: ManufacturersComponent}
 ];
 
 @NgModule({
