@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Manufacturer } from 'src/app/models/manufacturer';
+import { ManufacturerService } from 'src/app/services/manufacturer/manufacturer.service';
 
 @Component({
   selector: 'app-create-manufacturer',
@@ -35,7 +38,9 @@ export class CreateManufacturerComponent implements OnInit {
     'Utilities'
   ]
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, 
+    private manufacturerService: ManufacturerService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.createManufacturerForm = this.fb.group({
@@ -53,5 +58,20 @@ export class CreateManufacturerComponent implements OnInit {
       return { invalidImageURI: true }
     }
     return null
+  }
+
+  onManufacturerSubmit() {
+    if(!this.createManufacturerForm.valid) return
+
+    let manufacturer: Manufacturer = {
+      name: this.createManufacturerForm.controls['name'].value,
+      logo: this.createManufacturerForm.controls['logo'].value,
+      type: this.createManufacturerForm.controls['type'].value,
+      industry: this.createManufacturerForm.controls['industry'].value,
+      owner: this.createManufacturerForm.controls['owner'].value
+    }
+
+    this.manufacturerService.createManufacturer(manufacturer)
+    this.router.navigateByUrl('');
   }
 }

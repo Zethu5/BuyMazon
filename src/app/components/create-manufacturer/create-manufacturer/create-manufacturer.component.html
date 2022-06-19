@@ -1,4 +1,4 @@
-<form [formGroup]="createManufacturerForm" id="createManufacturerForm">
+<form [formGroup]="createManufacturerForm" id="createManufacturerForm" (ngSubmit)="onManufacturerSubmit()">
   <mat-form-field>
     <mat-label>Name</mat-label>
     <input matInput required type="text" formControlName="name">
@@ -48,4 +48,5 @@
       Owner is required...
     </mat-error>
   </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Create Manufacturer</button>
 </form>
