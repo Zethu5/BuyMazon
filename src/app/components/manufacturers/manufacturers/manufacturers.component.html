@@ -1,0 +1,33 @@
+<div id="topBar">
+    <div>
+        <button mat-raised-button color="primary" (click)="openDialog()">Add Manufacturur</button>
+    </div>
+    <mat-form-field appearance="fill">
+        <mat-label>Search</mat-label>
+        <input matInput [(ngModel)]="searchField" (input)="search()">
+    </mat-form-field>
+</div>
+
+<mat-grid-list cols="5" rowHeight="35rem">
+  <mat-grid-tile *ngFor="let manufacturer of manufacturers">
+    <mat-card>
+        <div class="cardTitle">
+            <mat-card-title>
+                {{manufacturer.name}}
+            </mat-card-title>
+        </div>
+        <div id="logo">
+            <img src="{{manufacturer.logo}}" width="100px">
+        </div>
+        <mat-card-content>
+            <p><b>Type</b>: {{manufacturer.type}}</p>
+            <p><b>Industry</b>: {{manufacturer.industry}}</p>
+            <p><b>Owner</b>: {{manufacturer.owner}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="warn">DELETE</button>
+            <button mat-raised-button color="accent">Update</button>
+        </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
