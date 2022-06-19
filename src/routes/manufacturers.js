@@ -8,7 +8,7 @@ mongoose.connect('mongodb://localhost:27017/BuyMazon');
 router
 .route('/')
 .get(async (req, res) => {
-    res.json(await Manufacturer.find().exec())
+    res.json(await ManufacturerModel.find().exec())
 })
 .post(async (req, res) => {
     const manufacturer = new ManufacturerModel(req.body)
@@ -19,14 +19,14 @@ router
 router
 .route('/:id')
 .get(async (req, res) => {
-    res.json(await Manufacturer.find({id: req.params.id}).exec())
+    res.json(await ManufacturerModel.find({id: req.params.id}).exec())
 })
 .put(async (req, res) => {
-    await Manufacturer.findOneAndUpdate({id: req.params.id}, req.body.manufacturer)
+    await ManufacturerModel.findOneAndUpdate({id: req.params.id}, req.body.manufacturer)
     res.send('Updated manufacturer ' + req.params.id)
 })
 .delete(async (req, res) => {
-    await Manufacturer.findOneAndDelete({id: req.params.id})
+    await ManufacturerModel.findOneAndDelete({id: req.params.id})
     res.send('Deleted manufacturer ' + req.params.id)
 })
 
