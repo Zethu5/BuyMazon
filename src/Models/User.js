@@ -5,6 +5,7 @@ const userSchema = new mongoose.Schema({
     password: String,
     creationDate: Date,
     age: Number,
+    admin: Boolean,
     products: [Product]
 })
 

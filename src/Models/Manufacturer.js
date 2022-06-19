@@ -1,10 +1,9 @@
 const mongoose = require('mongoose')
 const manufacturerSchema = new mongoose.Schema({
     name: String,
-    picture: String,
+    logo: String,
     type: String,
     industry: String,
-    founder: String,
     owner: String,
 })
 
