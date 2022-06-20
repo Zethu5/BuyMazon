@@ -1,6 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Manufacturer } from 'src/app/models/manufacturer';
 import { ManufacturerService } from 'src/app/services/manufacturer/manufacturer.service';
 import { ManufacturersComponent } from '../../manufacturers/manufacturers/manufacturers.component';
 
