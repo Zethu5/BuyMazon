@@ -1,8 +1,11 @@
 <div id="deleteDiv">
     <img src="{{ manufacturer.logo }}">
     <div>
-        <p>NAME: <b>{{ manufacturer.name }}</b><p>
         <p>ID: <b>{{ manufacturer._id }}</b></p>
+        <p>NAME: <b>{{ manufacturer.name }}</b><p>
+        <p>TYPE: <b>{{ manufacturer.type }}</b></p>
+        <p>INDUSTRY: <b>{{ manufacturer.industry }}</b></p>
+        <p>OWNER: <b>{{ manufacturer.owner }}</b></p>
     </div>
     <p id="warning"><b>PRODUCTS RELATED TO THIS MANUFACTURER WILL BE DELETED AS WELL!</b></p>
     <button mat-raised-button color="warn" (click)="deleteManufacturer(manufacturer)">DELETE</button>
