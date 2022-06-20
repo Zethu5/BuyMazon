@@ -29,4 +29,9 @@ export class ManufacturerService {
     const url = `${this.apiBase}/manufacturers/${id}`
     return this.http.get(url)
   }
+
+  deleteManufacturer(id: string) {
+    const url = `${this.apiBase}/manufacturers/${id}`
+    this.http.delete(url).subscribe()
+  }
 }
