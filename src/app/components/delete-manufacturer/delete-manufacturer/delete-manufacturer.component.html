@@ -1,1 +1,9 @@
-<p>delete-manufacturer works!</p>
+<div id="deleteDiv">
+    <img src="{{ manufacturer.logo }}">
+    <div>
+        <p>NAME: <b>{{ manufacturer.name }}</b><p>
+        <p>ID: <b>{{ manufacturer._id }}</b></p>
+    </div>
+    <p id="warning"><b>PRODUCTS RELATED TO THIS MANUFACTURER WILL BE DELETED AS WELL!</b></p>
+    <button mat-raised-button color="warn" (click)="deleteManufacturer(manufacturer)">DELETE</button>
+</div>

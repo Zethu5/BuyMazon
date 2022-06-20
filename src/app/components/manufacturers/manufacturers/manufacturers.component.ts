@@ -4,6 +4,7 @@ import { ManufacturerService } from 'src/app/services/manufacturer/manufacturer.
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { CreateManufacturerComponent } from '../../create-manufacturer/create-manufacturer/create-manufacturer.component';
 import { Manufacturer } from 'src/app/models/manufacturer';
+import { DeleteManufacturerComponent } from '../../delete-manufacturer/delete-manufacturer/delete-manufacturer.component';
 
 @Component({
   selector: 'app-manufacturers',
@@ -29,10 +30,33 @@ export class ManufacturersComponent implements OnInit {
   updateManufacturers() {
     this.manufacturerService.getManufacturers().subscribe(data => {
       this.manufacturersClone = this.manufacturers = data
+      this.searchField = ''
     })
   }
 
   openCreateDialog(): void {
+    const dialogRef = this.dialog.open(CreateManufacturerComponent);
+
+    dialogRef.afterClosed().subscribe(() => {
+      this.updateManufacturers()
+    });
+  }
+
+  openDeleteDialog(manufacturer: Manufacturer): void {
+    const dialogRef = this.dialog.open(DeleteManufacturerComponent, {
+      data: {
+        manufacturer: manufacturer
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result?.event == 'Deleted') {
+        this.updateManufacturers()
+      }
+    });
+  }
+
+  openUpdateDialog(): void {
     const dialogRef = this.dialog.open(CreateManufacturerComponent);
 
     dialogRef.afterClosed().subscribe(() => {

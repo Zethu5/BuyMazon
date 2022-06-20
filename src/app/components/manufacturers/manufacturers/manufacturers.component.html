@@ -25,7 +25,7 @@
             <p><b>Owner</b>: {{manufacturer.owner}}</p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button color="warn">DELETE</button>
+            <button mat-raised-button color="warn" (click)="openDeleteDialog(manufacturer)">DELETE</button>
             <button mat-raised-button color="accent">Update</button>
         </mat-card-actions>
     </mat-card>

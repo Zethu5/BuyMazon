@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Manufacturer } from 'src/app/models/manufacturer';
+import { ManufacturerService } from 'src/app/services/manufacturer/manufacturer.service';
+import { ManufacturersComponent } from '../../manufacturers/manufacturers/manufacturers.component';
 
 @Component({
   selector: 'app-delete-manufacturer',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteManufacturerComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, 
+  private manufacturerService: ManufacturerService, 
+  private dialogRef: MatDialogRef<ManufacturersComponent>) { }
+
+  manufacturer!: any
 
   ngOnInit(): void {
+    this.manufacturer = this.data.manufacturer
   }
 
+  deleteManufacturer(manufacturer: any) {
+    this.manufacturerService.deleteManufacturer(manufacturer._id)
+    this.dialogRef.close({event: 'Deleted'})
+  }
 }
