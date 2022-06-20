@@ -32,7 +32,7 @@ export class ManufacturersComponent implements OnInit {
     })
   }
 
-  openDialog(): void {
+  openCreateDialog(): void {
     const dialogRef = this.dialog.open(CreateManufacturerComponent);
 
     dialogRef.afterClosed().subscribe(() => {
