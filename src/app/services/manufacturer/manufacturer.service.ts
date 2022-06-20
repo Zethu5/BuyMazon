@@ -34,4 +34,9 @@ export class ManufacturerService {
     const url = `${this.apiBase}/manufacturers/${id}`
     this.http.delete(url).subscribe()
   }
+
+  updateManufacturer(id: string, manufacturer: Manufacturer) {
+    const url = `${this.apiBase}/manufacturers/${id}`
+    this.http.put(url, manufacturer).subscribe()
+  }
 }
