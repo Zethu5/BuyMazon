@@ -21,13 +21,17 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 import { CreateManufacturerComponent } from './components/create-manufacturer/create-manufacturer/create-manufacturer.component';
 import { ManufacturersComponent } from './components/manufacturers/manufacturers/manufacturers.component';
+import { DeleteManufacturerComponent } from './components/delete-manufacturer/delete-manufacturer/delete-manufacturer.component';
+import { UpdateManufacturerComponent } from './components/update-manufacturer/update-manufacturer/update-manufacturer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CreateManufacturerComponent,
-    ManufacturersComponent
+    ManufacturersComponent,
+    DeleteManufacturerComponent,
+    UpdateManufacturerComponent
   ],
   imports: [
     BrowserModule,
