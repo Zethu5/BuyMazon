@@ -5,6 +5,7 @@ import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { CreateManufacturerComponent } from '../../create-manufacturer/create-manufacturer/create-manufacturer.component';
 import { Manufacturer } from 'src/app/models/manufacturer';
 import { DeleteManufacturerComponent } from '../../delete-manufacturer/delete-manufacturer/delete-manufacturer.component';
+import { UpdateManufacturerComponent } from '../../update-manufacturer/update-manufacturer/update-manufacturer.component';
 
 @Component({
   selector: 'app-manufacturers',
@@ -56,11 +57,17 @@ export class ManufacturersComponent implements OnInit {
     });
   }
 
-  openUpdateDialog(): void {
-    const dialogRef = this.dialog.open(CreateManufacturerComponent);
+  openUpdateDialog(manufacturer: Manufacturer): void {
+    const dialogRef = this.dialog.open(UpdateManufacturerComponent, {
+      data: {
+        manufacturer: manufacturer
+      }
+    });
 
-    dialogRef.afterClosed().subscribe(() => {
-      this.updateManufacturers()
+    dialogRef.afterClosed().subscribe(result => {
+      if (result?.event == 'Updated') {
+        this.updateManufacturers()
+      }
     });
   }
 

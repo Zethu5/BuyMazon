@@ -1,1 +1,53 @@
-<p>update-manufacturer works!</p>
+<form [formGroup]="updateManufacturerForm" id="updateManufacturerForm" (ngSubmit)="onManufacturerSubmit()">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput required type="text" formControlName="name">
+      <mat-error *ngIf="updateManufacturerForm.controls['name'].errors?.['required']">
+        Name is required...
+      </mat-error>
+      <mat-error *ngIf="updateManufacturerForm.controls['name'].errors?.['minlength']">
+        Name has to have at least 2 characters...
+      </mat-error>
+      <mat-error *ngIf="updateManufacturerForm.controls['name'].errors?.['maxlength']">
+        Name has to have at most 50 characters...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Logo</mat-label>
+      <input matInput formControlName="logo">
+      <mat-error *ngIf="updateManufacturerForm.controls['logo'].errors?.['invalidImageURI']">
+        Not a valid image uri...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Type</mat-label>
+      <mat-select formControlName="type">
+        <mat-option *ngFor="let companyType of companyTypes" [value]="companyType">
+          {{ companyType }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="updateManufacturerForm.controls['type'].errors?.['required']">
+        Type is required...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Industry</mat-label>
+      <mat-select formControlName="industry">
+        <mat-option *ngFor="let industryType of industryTypes" [value]="industryType">
+          {{ industryType }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="updateManufacturerForm.controls['industry'].errors?.['required']">
+        Industry is required...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Owner</mat-label>
+      <input matInput required type="text" formControlName="owner">
+      <mat-error *ngIf="updateManufacturerForm.controls['owner'].errors?.['required']">
+        Owner is required...
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Update Manufacturer</button>
+  </form>
+  
