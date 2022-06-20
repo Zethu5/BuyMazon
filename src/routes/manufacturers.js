@@ -22,7 +22,7 @@ router
     res.json(await ManufacturerModel.find({_id: req.params.id}).exec())
 })
 .put(async (req, res) => {
-    await ManufacturerModel.findOneAndUpdate({_id: req.params.id}, req.body.manufacturer)
+    await ManufacturerModel.findOneAndUpdate({_id: req.params.id}, req.body)
     res.json({result: 'Updated manufacturer ' + req.params.id})
 })
 .delete(async (req, res) => {
