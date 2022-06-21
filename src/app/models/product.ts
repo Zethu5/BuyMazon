@@ -5,7 +5,8 @@ export class Product {
     picture: string
     code: string
     price: number
-    weight: string
+    weight: number
+    weightUnit: string
     ingredients: string
     productionCountry: string
     manufacturer: Manufacturer
@@ -15,9 +16,10 @@ export class Product {
         this.picture = product?.picture ?? '',
         this.code = product?.code ?? '',
         this.price = product?.price ?? 0,
-        this.weight = product?.weight ?? ''
-        this.ingredients = product?.ingredients ?? ''
-        this.productionCountry = product?.productionCountry ?? ''
+        this.weight = product?.weight ?? 0,
+        this.weightUnit = product?.weightUnit ?? ''
+        this.ingredients = product?.ingredients ?? '',
+        this.productionCountry = product?.productionCountry ?? '',
         this.manufacturer = product?.manufacturer ?? new Manufacturer()
     }
 }
