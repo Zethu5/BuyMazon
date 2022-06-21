@@ -1,1 +1,35 @@
-<p>products works!</p>
+<div id="topBar">
+  <div>
+    <button mat-raised-button color="primary" (click)="openCreateDialog()">Add Product</button>
+  </div>
+  <mat-form-field appearance="fill">
+    <mat-label>Search</mat-label>
+    <input matInput [(ngModel)]="searchField" (input)="search()">
+  </mat-form-field>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="space-evenly stretch">
+  <mat-card *ngFor="let product of products">
+    <div class="cardTitle">
+      <mat-card-title>
+        {{ product.name }}
+      </mat-card-title>
+    </div>
+    <div id="logo">
+      <img src="{{ product.picture }}" width="100px">
+    </div>
+    <mat-card-content>
+      <p><b>Code</b>: {{ product.code }}</p>
+      <p><b>Price</b>: {{ product.price }}</p>
+      <p><b>Weight</b>: {{ product.weight }}</p>
+      <p><b>Weight Unit</b>: {{ product.weightUnit }}</p>
+      <p><b>Ingredients</b>: {{ product.ingredients }}</p>
+      <p><b>ProductionCountry</b>: {{ product.productionCountry }}</p>
+      <p><b>Manufacturer</b>: {{ product.manufacturer.name }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="openDeleteDialog(product)">DELETE</button>
+      <button mat-raised-button color="accent" (click)="openUpdateDialog(product)">Update</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
