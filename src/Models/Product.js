@@ -3,7 +3,7 @@ const { manufacturerSchema } = require('./Manufacturer');
 const productSchema = new mongoose.Schema({
     name: String,
     picture: String,
-    id: String,
+    code: String,
     price: Number,
     weight: String,
     ingredients: String,
