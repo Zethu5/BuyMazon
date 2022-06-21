@@ -11,9 +11,9 @@ router
     res.json(await ProductModel.find().exec())
 })
 .post(async (req, res) => {
-    const product = new ProductModel(req.body.product)
-    await Product.save()
-    res.send('Added product ' + product._id)
+    const product = new ProductModel(req.body)
+    await product.save()
+    res.json({result: 'Added product ' + product._id})
 })
 
 router
