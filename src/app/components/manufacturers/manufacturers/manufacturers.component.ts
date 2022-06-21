@@ -83,7 +83,7 @@ export class ManufacturersComponent implements OnInit {
 
   search() {
     if (this.searchField.length > 0) {
-      this.manufacturers = this.manufacturers.filter(
+      this.manufacturers = this.manufacturersClone.filter(
         (manufacturer: Manufacturer) => 
         this.searchFilter(
           manufacturer, this.searchField.toLowerCase()
