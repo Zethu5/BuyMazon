@@ -30,7 +30,7 @@ export class ProductsComponent implements OnInit {
 
   searchFilter(product: Product, search: string): boolean {
     if(search.length > 0) {
-      product.name.toLowerCase().includes(search) ||
+      return product.name.toLowerCase().includes(search) ||
       product.picture.toLowerCase().includes(search) ||
       product.code.toLowerCase().includes(search) ||
       product.price.toString().toLowerCase().includes(search) ||
