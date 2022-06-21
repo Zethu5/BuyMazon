@@ -23,6 +23,10 @@ import { CreateManufacturerComponent } from './components/create-manufacturer/cr
 import { ManufacturersComponent } from './components/manufacturers/manufacturers/manufacturers.component';
 import { DeleteManufacturerComponent } from './components/delete-manufacturer/delete-manufacturer/delete-manufacturer.component';
 import { UpdateManufacturerComponent } from './components/update-manufacturer/update-manufacturer/update-manufacturer.component';
+import { CreateProductComponent } from './components/create-product/create-product/create-product.component';
+import { ProductsComponent } from './components/products/products/products.component';
+import { DeleteProductComponent } from './components/delete-product/delete-product/delete-product.component';
+import { UpdateProductComponent } from './components/update-product/update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { UpdateManufacturerComponent } from './components/update-manufacturer/up
     CreateManufacturerComponent,
     ManufacturersComponent,
     DeleteManufacturerComponent,
-    UpdateManufacturerComponent
+    UpdateManufacturerComponent,
+    CreateProductComponent,
+    ProductsComponent,
+    DeleteProductComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
