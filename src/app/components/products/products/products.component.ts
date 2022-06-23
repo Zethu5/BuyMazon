@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product/product.service';
 import { CreateProductComponent } from '../../create-product/create-product/create-product.component';
+import { DeleteProductComponent } from '../../delete-product/delete-product/delete-product.component';
 
 @Component({
   selector: 'app-products',
@@ -60,15 +61,20 @@ export class ProductsComponent implements OnInit {
     const dialogRef = this.dialog.open(CreateProductComponent);
 
     dialogRef.afterClosed().subscribe(() => {
-      // this.updateManufacturers()
+      this.updateProducts()
     });
   }
 
   openDeleteDialog(product: Product): void {
-    const dialogRef = this.dialog.open(CreateProductComponent);
+    const dialogRef = this.dialog.open(DeleteProductComponent, {
+      width: '25rem',
+      data: {
+        product: product
+      }
+    });
 
     dialogRef.afterClosed().subscribe(() => {
-      // this.updateManufacturers()
+      this.updateProducts()
     });
   }
 

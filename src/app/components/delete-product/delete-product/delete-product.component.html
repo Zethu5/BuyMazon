@@ -1,1 +1,13 @@
-<p>delete-product works!</p>
+<div id="deleteDiv">
+    <img src="{{ product.picture }}">
+    <div>
+        <p>ID: <b>{{ product._id }}</b></p>
+        <p>CODE: <b>{{ product.code }}</b><p>
+        <p>WEIGHT: <b>{{ product.weight }}</b></p>
+        <p>WEIGHT UNIT: <b>{{ product.weightUnit }}</b></p>
+        <p>INGREDIENTS: <b>{{ product.ingredients }}</b></p>
+        <p>PRODUCTION COUNTRY: <b>{{ product.productionCountry }}</b></p>
+        <p>MANUFACTURER: <b>{{ product.manufacturer.name }}</b></p>
+    </div>
+    <button mat-raised-button color="warn" (click)="deleteProduct()">Delete Product</button>
+</div>

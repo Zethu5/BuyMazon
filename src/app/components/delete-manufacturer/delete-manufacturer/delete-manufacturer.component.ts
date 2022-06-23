@@ -10,11 +10,11 @@ import { ManufacturersComponent } from '../../manufacturers/manufacturers/manufa
 })
 export class DeleteManufacturerComponent implements OnInit {
 
+  manufacturer!: any
+
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, 
   private manufacturerService: ManufacturerService, 
   private dialogRef: MatDialogRef<ManufacturersComponent>) { }
-
-  manufacturer!: any
 
   ngOnInit(): void {
     this.manufacturer = this.data.manufacturer
