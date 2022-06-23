@@ -22,11 +22,11 @@ router
     res.json(await ProductModel.find({id: req.params.id}).exec())
 })
 .put(async (req, res) => {
-    await Product.findOneAndUpdate({_id: req.params.id}, req.body)
+    await ProductModel.findOneAndUpdate({_id: req.params.id}, req.body)
     res.json({result: 'Updated product ' + req.params.id})
 })
 .delete(async (req, res) => {
-    await Product.findOneAndDelete({_id: req.params.id})
+    await ProductModel.findOneAndDelete({_id: req.params.id})
     res.json({result: 'Deleted product ' + req.params.id})
 })
 
