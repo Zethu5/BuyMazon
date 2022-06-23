@@ -1,1 +1,88 @@
-<p>update-product works!</p>
+<div id="title"><h1>Update Product</h1></div>
+<form [formGroup]="updateProductForm" id="updateProductForm" (ngSubmit)="onProductSubmit()">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput required type="text" formControlName="name">
+      <mat-error *ngIf="updateProductForm.controls['name'].errors?.['required']">
+        Name is required...
+      </mat-error>
+      <mat-error *ngIf="updateProductForm.controls['name'].errors?.['minlength']">
+        Name has to have at least 2 characters...
+      </mat-error>
+      <mat-error *ngIf="updateProductForm.controls['name'].errors?.['maxlength']">
+        Name has to have at most 50 characters...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Picture</mat-label>
+      <input matInput formControlName="picture">
+      <mat-error *ngIf="updateProductForm.controls['picture'].errors?.['invalidImageURI']">
+        Not a valid image uri...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Code</mat-label>
+      <input matInput required type="text" formControlName="code">
+      <mat-error *ngIf="updateProductForm.controls['code'].errors?.['invalidCode']">
+        Minimum 10 and at most 20 without special characters...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input matInput required type="number" formControlName="price">
+      <mat-error *ngIf="updateProductForm.controls['price'].errors?.['required']">
+        Price is required...
+      </mat-error>
+    </mat-form-field>
+    <div id="weight">
+      <mat-form-field>
+        <mat-label>Weight</mat-label>
+        <input matInput required type="number" formControlName="weight">
+        <mat-error *ngIf="updateProductForm.controls['weight'].errors?.['invalidWeight']">
+          Weight is invalid...
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Weight Unit</mat-label>
+        <mat-select formControlName="weightUnit">
+          <mat-option *ngFor="let weightUnit of weightUnits" [value]="weightUnit">
+            {{ weightUnit }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="updateProductForm.controls['weight'].errors?.['invalidWeight']">
+          Weight unit is required...
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <mat-form-field>
+      <mat-label>Production Country</mat-label>
+      <mat-select formControlName="productionCountry">
+        <mat-option *ngFor="let country of countries" [value]="country">
+          {{ country }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="updateProductForm.controls['productionCountry'].errors?.['required']">
+        Production country is required...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Manufacturer</mat-label>
+      <mat-select formControlName="manufacturer">
+        <mat-option *ngFor="let manufacturer of manufacturers" [value]="manufacturer">
+          {{ manufacturer.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="updateProductForm.controls['manufacturer'].errors?.['required']">
+        Manufacturer is required...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Ingredients</mat-label>
+      <textarea matInput required type="text" formControlName="ingredients"></textarea>
+      <mat-error *ngIf="updateProductForm.controls['ingredients'].errors?.['required']">
+        Ingredients are required...
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Update Product</button>
+  </form>
+  

@@ -4,6 +4,7 @@ import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product/product.service';
 import { CreateProductComponent } from '../../create-product/create-product/create-product.component';
 import { DeleteProductComponent } from '../../delete-product/delete-product/delete-product.component';
+import { UpdateProductComponent } from '../../update-product/update-product/update-product.component';
 
 @Component({
   selector: 'app-products',
@@ -79,10 +80,14 @@ export class ProductsComponent implements OnInit {
   }
 
   openUpdateDialog(product: Product): void {
-    const dialogRef = this.dialog.open(CreateProductComponent);
+    const dialogRef = this.dialog.open(UpdateProductComponent, {
+      data: {
+        product: product
+      }
+    });
 
     dialogRef.afterClosed().subscribe(() => {
-      // this.updateManufacturers()
+      this.updateProducts()
     });
   }
 }
