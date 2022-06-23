@@ -20,8 +20,8 @@ export class DeleteManufacturerComponent implements OnInit {
     this.manufacturer = this.data.manufacturer
   }
 
-  deleteManufacturer(manufacturer: any) {
-    this.manufacturerService.deleteManufacturer(manufacturer._id)
+  deleteManufacturer() {
+    this.manufacturerService.deleteManufacturer(this.manufacturer._id)
     this.dialogRef.close({event: 'Deleted'})
   }
 }
