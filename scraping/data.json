@@ -1,0 +1,1962 @@
+[
+    {
+        "name": "קוקה קולה זירו בקבוק 1 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290013585387-229597.jpg?_a=1648109481241",
+        "code": "7290013585387",
+        "price": 8.5,
+        "weight": 1,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d), מווסתי חומציות: חומצה זרחתית ומלח לימון (E332), ממתיקים: אספרטיים ואססולפאם- קיי, חומרי טעם וריח טבעיים, קפאין .",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה 1 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290013585394-208539.jpg?_a=1648105732399",
+        "code": "7290013585394",
+        "price": 8.5,
+        "weight": 1,
+        "weight_unit": "LITER",
+        "ingridients": "מים, סוכר, פחמן  דו-חמצני, צבע מאכל קרמל (E150d), מווסת חומציות: חומצה זרחתית, חומרי טעם וריח טבעיים, קפאין .",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה בקבוק  1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115203-842015.jpg?_a=1651099313769",
+        "code": "7290110115203",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, סוכר, פחמן  דו-חמצני, צבע מאכל קרמל (E150d), מווסת חומציות: חומצה זרחתית, חומרי טעם וריח טבעיים, קפאין .",
+        "production_country": "IL"
+    },
+    {
+        "name": "קולה ZERO לימון 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115241-842020.jpg?_a=1651100455385",
+        "code": "7290110115241",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d),מווסתי חומציות: חומצה זרחתית ומלח לימון (E332), ממתיקים: אספרטיים ואססולפאם- קיי,חומרי טעם וריח טבעיים, קפאין.",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה זירו בקבוק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115227-842018.jpg?_a=1651098202452",
+        "code": "7290110115227",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d), מווסתי חומציות: חומצה זרחתית ומלח לימון (E332), ממתיקים: אספרטיים ואססולפאם- קיי, חומרי טעם וריח טבעיים, קפאין .",
+        "production_country": "IL"
+    },
+    {
+        "name": "ספרייט זירו בקבוק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115272-842032.jpg?_a=1651096413503",
+        "code": "7290110115272",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון ומלח לימון (E331), ממתיקים: אספרטיים ואססולפאם-קיי, חומרי טעם וריח טבעיים.",
+        "production_country": "IL"
+    },
+    {
+        "name": "ספרייט בקבוק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115265-842030.jpg?_a=1651100632334",
+        "code": "7290110115265",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, סוכר, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון ומלח לימון (E331), חומרי טעם וריח טבעיים, מעכב חמצון: חומצה אסקורבית.",
+        "production_country": "IL"
+    },
+    {
+        "name": "ספרייט 19 קל לימון-נענע 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115289-858868.jpg?_a=1655298999944",
+        "code": "7290110115289",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, סוכר, פרוקטוז, פחמן דו-חמצני,  מווסתי חומציות: חומצת לימון ותלת-נתרן ציטראט (מלח לימון), ממתיק: גליקוזידים של סטיביול, מעכב חמצון: חומצה אסקורבית. חומרי טעם וריח טבעיים.",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה דיאט בקבוק  1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115210-848022.jpg?_a=1651098556239",
+        "code": "7290110115210",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d),מווסתי חומציות: חומצה זרחתית וחומצת לימון,ממתיקים: אספרטיים ואססולפאם-קיי,חומרי טעם וריח טבעיים, קפאין.",
+        "production_country": "IL"
+    },
+    {
+        "name": "קולה ZERO מנגו 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115258-876726.jpg?_a=1655122167955",
+        "code": "7290110115258",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "רכיבים: מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d),מווסתי חומציות: חומצה זרחתית ותלת-אשלגן ציטראט, ממתיקים: אספרטיים ואססולפאם- קיי,חומרי טעם וריח טבעיים, קפאין.",
+        "production_country": "IL"
+    },
+    {
+        "name": "קולה ZERO נטול 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115234-842019.jpg?_a=1654513605527",
+        "code": "7290110115234",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d),מווסתי חומציות: חומצה זרחתית ומלח לימון (E332), ממתיקים: אספרטיים ואססולפאם- קיי,חומרי טעם וריח טבעיים.",
+        "production_country": "IL"
+    },
+    {
+        "name": "פאנטה אורנג בקבוק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115296-842038.jpg?_a=1651098544502",
+        "code": "7290110115296",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, סוכר, פרוקטוז, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון ומלח לימון (E331),nצבע מאכל טבעי: בטא-קרוטן, מייצבים: אקאציה גאם ו-E444,  tnמעכב חמצון: חומצה אסקורבית, חומרי טעם וריח טבעיים.",
+        "production_country": "IL"
+    },
+    {
+        "name": "פאנטה ZERO אורנג 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115302-842040.jpg?_a=1651098174338",
+        "code": "7290110115302",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון ותלת-נתרן ציטראט (מלח לימון), צבע מאכל טבעי: בטא-קרוטן, מייצבים: אקאציה גאם , E444 ו- E445, מעכב חמצון: חומצה אסקורבית (ויטמין C), ממתיקים: אססולפאם-קיי, אספרטיים, סוכרלוז. חומרי טעם וריח טבעיים.",
+        "production_country": "IL"
+    },
+    {
+        "name": "פאנטה אקזוטיק בקבוק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115319-847379.jpg?_a=1651096191330",
+        "code": "7290110115319",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים ,סוכר, פרוקטוז, פחמן דו-חמצני, צבע מאכל טבעי: אנטוציאנין, מווסתי חומציות: חומצת לימון ומלח לימון (E331),מייצבים: אקציה גאם ואסטר גאם,חומרי טעם וריח.",
+        "production_country": "IL"
+    },
+    {
+        "name": "פאנטה תות בקבוק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115333-842044.jpg?_a=1654513661935",
+        "code": "7290110115333",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים ,סוכר, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון וחומצה מאלית,תמצית מזון לצביעה מירקות ופירות, חומרי טעם וריח טבעיים.",
+        "production_country": "IL"
+    },
+    {
+        "name": "פאנטה ZERO תפוח 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115531-847389.jpg?_a=1651097114134",
+        "code": "7290110115531",
+        "price": 9.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון, חומצה מאלית ותלת-נתרן ציטראט (מלח לימון), חומרי טעם וריח טבעיים, תמצית מזון לצביעה מצמחים ופירות, ממתיקים: אספרטיים ואססולפאם-קיי, מעכב חמצון : חומצה אסקורבית (ויטמין C)",
+        "production_country": "IL"
+    },
+    {
+        "name": "פפסי קולה מקס ללא סוכר בקבוק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000136158-862516.jpg?_a=1651096925376",
+        "code": "136158",
+        "price": 8.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "\"מים,nפחמן דו חמצני,nצבע מאכל (קרמל E150d),nחומצות מאכל (חומצה זרחתית, חומצת לימון),nממתיק (אספרטיים, אססולפם K),nמווסת חומציות (טרי סודיום ציטראט),nקפאין,nחומרי טעם וריח.\"nnn",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מוגז לימונייד 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290018471944-858557.jpg?_a=1654805467081",
+        "code": "7290018471944",
+        "price": 10.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, סוכר, פחמן דו-חמצני, מיץ לימון* ורכיבי לימון (1.2%),  חומצה (חומצת לימון), מייצב (E414), חומרי טעם וריח, מווסת חומציות (E332II), מעכב חמצון (חומצה אסקורבית -ויטמין C), משמר (E202), רכז קורטם *עשוי מרכז.",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מוגז פירות אננס ללא סוכר 1.5 ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290019056034-858562.jpg?_a=1652646486631",
+        "code": "7290019056034",
+        "price": 10.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו חמצני, חומצה (חומצת לימון), חומרי טעם וריח, מווסת חומציות (E322ii), ממתיק (סוכרלוז), מייצב טבעי (E414), צבע מאכל טבעי מקורטם.",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מ.פירות לימונייד ללא סוכר 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290019056041-858564.jpg?_a=1652646250331",
+        "code": "7290019056041",
+        "price": 10.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, חומצה (חומצת לימון), חומרי טעם וריח, מווסת חומציות (E332ii), מייצב (E414), מעכב חימצון (חומצה אסקורבית – ויטמין C), ממתיק (סוכרלוז), רכז קורטם.",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מוגז פירות ענבים 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290018471920-858554.jpg?_a=1652647332269",
+        "code": "7290018471920",
+        "price": 10.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, מיץ תפוחים, סוכר, מיץ ענבים (4%)* (מכיל 10% או יותר רכיבי פרי), פרוקטוז, פחמן דו חמצני, חומצות (חומצה מאלית וחומצה טנית), חומרי טעם וריח, מייצב טבעי (E414), רכז גזר סגול,משמר (E202). עשוי מרכז.",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מוגז פירות תות ליים 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290018471937-862001.jpg?_a=1652649119694",
+        "code": "7290018471937",
+        "price": 10.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים,סוכר,מיץ אגסים,מיץ תות (2%), מיץ לימון (1%),מכיל 10% או יותר רכיבי פרי, פחמן דו חמצני,חומצה (חומצת לימון),חומרי טעם וריח,מייצב טבעי,( E414),משמר (E202)",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מוגז פירות ללס תפוח 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290019056027-845594.jpg?_a=1652648318110",
+        "code": "7290019056027",
+        "price": 10.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, חומצה (חומצה מאלית), חומרי טעם וריח, מייצב (E414), מווסת חומציות (E331iii), ממתיק (סוכרלוז), צבע מאכל (קרמל)",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מוגז לימונדה ורודה 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290018471906-858550.jpg?_a=1652646701288",
+        "code": "7290018471906",
+        "price": 10.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, סוכר, מיץ לימון (1%)* (מכיל פחות 10% רכיבי פרי), פחמן דו חמצני, חומצה (חומצת לימון), מווסת חומציות (E332II), מייצב טבעי (E414), חומרי טעם וריח, משמר (E202),רכז קורטם, רכז פירות יער. עשוי מרכז.",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מוגז פירות תפוחים 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290018471913-858552.jpg?_a=1654805470966",
+        "code": "7290018471913",
+        "price": 10.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, מיץ תפוחים* (12%) (מכיל 10% או יותר רכיבי פרי), סוכר, פרוקטוז, פחמן דו חמצני, חומצה (חומצת מאלית), חומרי טעם וריח, מייצב טבעי (E414), משמר (E202).n*עשוי מרכז.",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס גינגר בקבוק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290019056294-858566.jpg?_a=1652649250904",
+        "code": "7290019056294",
+        "price": 12.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים,סוכר,פחמן דו-חמצני,חומצה (חומצת לימון),חומרי טעם וריח,מווסת חומציות (E331iii),צבע מאכל (קרמל).",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס ראשן בקבוק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290019056317-858571.jpg?_a=1653393945938",
+        "code": "7290019056317",
+        "price": 12.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, סוכר, פחמן דו-חמצני, חומצה (חומצת לימון), חומרי טעם וריח, משמר (E202), מווסת חומציות (E331iii), מייצב טבעי (E414), רכז פירות יער, רכז גזר סגול, כינין.",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מוגז עדין אפרסק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290019056096-858538.jpg?_a=1652648929509",
+        "code": "7290019056096",
+        "price": 11.5,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים,מיץ אגסים,מיץ אפרסקים (2%),(מכיל 10% או יותר רכיבי פרי), סוכר,פרוקטוז, (סוכר פירות),פחמן דו חמצני,חומצה (חומצת לימון),חומרי טעם וריח,משמר (E202),מווסת חומציות (E331iii),עשוי מרכז",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מוגז עדין פירות יער 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290019056065-858532.jpg?_a=1652648319620",
+        "code": "7290019056065",
+        "price": 11.5,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים,סוכר,מיצי פירות (אגס ותפוח),מיץ פירות יער (1%) (מכיל 10% או יותר רכיבי פרי),פרוקטוז (סוכר פירות),פחמן דו חמצני ,חומצה (חומצת לימון),רכז גזר סגול,חומרי טעם וריח,משמר (E202),מווסת חומציות (E331III).nעשוי מרכז.",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מוגז עדין תפוח ליים 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290019056058-858530.jpg?_a=1654806017490",
+        "code": "7290019056058",
+        "price": 11.5,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים,מיץ תפוחים (9%),סוכר,מיץ לימון (1%)(מכיל 10% או יותר רכיבי פרי),פרוקטוז (סוכר פירות),פחמן דו חמצני,חומצה (חומצת לימון),חומרי טעם וריח,משמר (E202),מעכב חמצון-חומצה אסקורבית (ויטמין C),מווסת חומציות (E331III). עשוי מרכז.",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס טוניק ללא סוכר 1.5 ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290019056331-858548.jpg?_a=1652646481717",
+        "code": "7290019056331",
+        "price": 12.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו חמצני, חומצה (חומצת לימון), חומרי טעם וריח, ממתיק (סוכרלוז), מווסת חומציות (E331iii), כינין.",
+        "production_country": "IL"
+    },
+    {
+        "name": "פחית קולהZERO לימון 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110110574-807152.jpg?_a=1655299257307",
+        "code": "7290110110574",
+        "price": 5.9,
+        "weight": 330,
+        "weight_unit": "ML",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d),מווסתי חומציות: חומצה זרחתית ומלח לימון (E332), ממתיקים: אספרטיים ואססולפאם- קיי,חומרי טעם וריח טבעיים, קפאין.n",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה פחית סליק 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290011017866-807153.jpg?_a=1655064270677",
+        "code": "7290011017866",
+        "price": 5.9,
+        "weight": 330,
+        "weight_unit": "ML",
+        "ingridients": "מים, סוכר, פחמן  דו-חמצני, צבע מאכל קרמל (E150d), מווסת חומציות: חומצה זרחתית, חומרי טעם וריח טבעיים, קפאין .",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה דיאט פחית סליק 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290011017880-807151.jpg?_a=1655122251720",
+        "code": "7290011017880",
+        "price": 5.9,
+        "weight": 11,
+        "weight_unit": "FL OZ",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d),מווסתי חומציות: חומצה זרחתית וחומצת לימון,ממתיקים: אספרטיים ואססולפאם-קיי,חומרי טעם וריח טבעיים, קפאין.",
+        "production_country": "IL"
+    },
+    {
+        "name": "ספרייט פחית סליק 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110110659-807946.jpg?_a=1651096763078",
+        "code": "7290110110659",
+        "price": 5.9,
+        "weight": 330,
+        "weight_unit": "ML",
+        "ingridients": "מים, סוכר, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון ומלח לימון (E331), חומרי טעם וריח טבעיים, מעכב חמצון: חומצה אסקורבית.n",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה זירו פחית סליק 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290011017873-807149.jpg?_a=1655064473576",
+        "code": "7290011017873",
+        "price": 5.9,
+        "weight": 330,
+        "weight_unit": "ML",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d), מווסתי חומציות: חומצה זרחתית ומלח לימון (E332), ממתיקים: אספרטיים ואססולפאם- קיי, חומרי טעם וריח טבעיים, קפאין .",
+        "production_country": "IL"
+    },
+    {
+        "name": "משקה ד\"ר פפר פחית 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/5017818800116-786025.jpg?_a=1651094912876",
+        "code": "5017818800116",
+        "price": 6.5,
+        "weight": 330,
+        "weight_unit": "ML",
+        "ingridients": "מים מוגזים, סוכר, צבע מאכל קרמל (E-150d), מווסת חומציות (E338), חומרי טעם וריח, חומר משמר (E202), קפאין.n",
+        "production_country": "FR"
+    },
+    {
+        "name": "משקה גוארנה אנטרטיקה פחית 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/5601045300022-781012.jpg?_a=1651098076503",
+        "code": "5601045300022",
+        "price": 6.5,
+        "weight": 330,
+        "weight_unit": "ML",
+        "ingridients": "מים מוגזים,סוכר,חומצת לימון(E330),תמצית גוארנה,חומרים משמרים(E211,E202),צבע מאכל (E150d),חומרי טעם וריח.nn ",
+        "production_country": "PT"
+    },
+    {
+        "name": "פרייה אנד גוס אננס מנגו פחית",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7613036286008-816640.jpg?_a=1649633560868",
+        "code": "7613036286008",
+        "price": 9,
+        "weight": 250,
+        "weight_unit": "ML",
+        "ingridients": "מים מינרלים טבעיים מוגזים (78%), מיץ תפוח עץ מרכז (4.9%), מיץ אננס מרכז (5%), מיץ לימון מרכז (4%), מיץ מנגו מרכז (3%), סוכר, חומרי טעם וריח טבעיים, רכז (גזר, דלעת)",
+        "production_country": "FR"
+    },
+    {
+        "name": "פרייבה אנד גוס אפרסק דובדבן פחית",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7613036280327-816634.jpg?_a=1649644135205",
+        "code": "7613036280327",
+        "price": 9,
+        "weight": 250,
+        "weight_unit": "ML",
+        "ingridients": "מים מינרלים טבעיים מוגזים (80%), מיץ אפרסק מרכז (6.6%), מיץ לימון מרכז (5.4%), מיץ תפוח עץ מרכז (2.4%), מיץ דובדבן מרכז (1.1%), סוכר, חומרי טעם וריח טבעיים, רכז (גזר)",
+        "production_country": "FR"
+    },
+    {
+        "name": "קוקה קולה דיאט קלאסי בקבוק 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290001594032-234760.jpg?_a=1651098924630",
+        "code": "1594032",
+        "price": 7.5,
+        "weight": 330,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d),מווסתי חומציות: חומצה זרחתית וחומצת לימון,ממתיקים: אספרטיים ואססולפאם-קיי,חומרי טעם וריח טבעיים, קפאין.",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה זירו 500 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290008909853-876599.jpg?_a=1655064285012",
+        "code": "8909853",
+        "price": 8,
+        "weight": 500,
+        "weight_unit": "ML",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d), מווסתי חומציות: חומצה זרחתית ומלח לימון (E332), ממתיקים: אספרטיים ואססולפאם- קיי, חומרי טעם וריח טבעיים, קפאין .",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה קלאסי בקבוק 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290001594025-863045.jpg?_a=1655299201687",
+        "code": "1594025",
+        "price": 7.5,
+        "weight": 330,
+        "weight_unit": "ML",
+        "ingridients": "מים, סוכר, פחמן  דו-חמצני, צבע מאכל קרמל (E150d), מווסת חומציות: חומצה זרחתית, חומרי טעם וריח טבעיים, קפאין .",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה בקבוק 500 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290001594155-876595.jpg?_a=1655064320078",
+        "code": "1594155",
+        "price": 7.5,
+        "weight": 500,
+        "weight_unit": "ML",
+        "ingridients": "מים, סוכר, פחמן  דו-חמצני, צבע מאכל קרמל (E150d), מווסת חומציות: חומצה זרחתית, חומרי טעם וריח טבעיים, קפאין .",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה דיאט בקבוק 500 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290001594186-876597.jpg?_a=1655064445525",
+        "code": "1594186",
+        "price": 8,
+        "weight": 500,
+        "weight_unit": "ML",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d),מווסתי חומציות: חומצה זרחתית וחומצת לימון,ממתיקים: אספרטיים ואססולפאם-קיי,חומרי טעם וריח טבעיים, קפאין.",
+        "production_country": "IL"
+    },
+    {
+        "name": "פאנטה ZERO אורנג 500 מל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110113926-806856.jpg?_a=1651098626395",
+        "code": "7290110113926",
+        "price": 7.9,
+        "weight": 500,
+        "weight_unit": "ML",
+        "ingridients": "מים, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון ותלת-נתרן ציטראט (מלח לימון), צבע מאכל טבעי: בטא-קרוטן, מייצבים: אקאציה גאם , E444 ו- E445, מעכב חמצון: חומצה אסקורבית (ויטמין C), ממתיקים: אססולפאם-קיי, אספרטיים, סוכרלוז. חומרי טעם וריח טבעיים.",
+        "production_country": "IL"
+    },
+    {
+        "name": "ספרייט זירו בקבוק 500 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290013585257-807940.jpg?_a=1651099069855",
+        "code": "7290013585257",
+        "price": 7.9,
+        "weight": 500,
+        "weight_unit": "ML",
+        "ingridients": "מים, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון ומלח לימון (E331), ממתיקים: אספרטיים ואססולפאם-קיי, חומרי טעם וריח טבעיים.",
+        "production_country": "IL"
+    },
+    {
+        "name": "ספרייט בקבוק 500 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110110635-807945.jpg?_a=1651098790426",
+        "code": "7290110110635",
+        "price": 7.9,
+        "weight": 500,
+        "weight_unit": "ML",
+        "ingridients": "מים, סוכר, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון ומלח לימון (E331), חומרי טעם וריח טבעיים, מעכב חמצון: חומצה אסקורבית.",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה זירו קלאסי 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290008909884-863048.jpg?_a=1651100053811",
+        "code": "8909884",
+        "price": 7.5,
+        "weight": 350,
+        "weight_unit": "ML",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d), מווסתי חומציות: חומצה זרחתית ומלח לימון (E332), ממתיקים: אספרטיים ואססולפאם- קיי, חומרי טעם וריח טבעיים, קפאין .",
+        "production_country": "IL"
+    },
+    {
+        "name": "פאנטה אורנג בקבוק 500 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290001594179-821661.jpg?_a=1651099203669",
+        "code": "1594179",
+        "price": 7.9,
+        "weight": 500,
+        "weight_unit": "ML",
+        "ingridients": "מים, סוכר, פרוקטוז, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון ומלח לימון (E331),nצבע מאכל טבעי: בטא-קרוטן, מייצבים: אקאציה גאם ו-E444,  tnמעכב חמצון: חומצה אסקורבית, חומרי טעם וריח טבעיים.tn",
+        "production_country": "IL"
+    },
+    {
+        "name": "פפסי קולה בקבוק 500 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290010237531-756059.jpg?_a=1649631369780",
+        "code": "7290010237531",
+        "price": 5,
+        "weight": 500,
+        "weight_unit": "ML",
+        "ingridients": "\"מים,nסוכר,nפחמן דו חמצני,nצבע מאכל (קרמל E150d),nחומצת מאכל (חומצה זרחתית),nקפאין,nחומרי טעם וריח.\"nnn",
+        "production_country": "IL"
+    },
+    {
+        "name": "מירינדה בקבוק 500 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290010237562-756062.jpg?_a=1649638319254",
+        "code": "7290010237562",
+        "price": 5,
+        "weight": 500,
+        "weight_unit": "ML",
+        "ingridients": "\"מים,nסוכר,nפחמן דו חמצני,nחומצת מאכל (חומצת לימון),nעמילן מעובד (E1450),nחומרי טעם וריח טבעיים,nחומר משמר (פוטסיום סורבט),nמעכב חימצון (חומצה אסקורבית),nמייצב (E445),nצבע מאכל (בטא קרוטן).\"nn",
+        "production_country": "IL"
+    },
+    {
+        "name": "פפסי מקס בקבוק 500 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290010237548-756056.jpg?_a=1649641643966",
+        "code": "7290010237548",
+        "price": 5,
+        "weight": 500,
+        "weight_unit": "ML",
+        "ingridients": "\"מים,nפחמן דו חמצני,nצבע מאכל (קרמל E150d),nחומצות מאכל (חומצה זרחתית, חומצת לימון),nממתיק (אספרטיים, אססולפם K),nמווסת חומציות (טרי סודיום ציטראט),nקפאין,nחומרי טעם וריח.\"n",
+        "production_country": "IL"
+    },
+    {
+        "name": "סודה שוופס בקבוק 250 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290008757034-814204.jpg?_a=1654805482629",
+        "code": "8757034",
+        "price": 4.5,
+        "weight": 250,
+        "weight_unit": "ML",
+        "ingridients": "מים, פחמן דו-חמצני, סודה לשתיה.",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מוגז פירות לימונים 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290012404184-751989.jpg?_a=1652647856663",
+        "code": "7290012404184",
+        "price": 6.9,
+        "weight": 330,
+        "weight_unit": "ML",
+        "ingridients": "מים , סוכר, מיץ לימון (6%), רכז אגס, פחמן דו חמצני, חומצה - חומצת לימון, מייצב טבעי E414, חומרי טעם וריח, מעכב חמצון - חומצה אסקורבית (ויטמין C), משמר E202, רכז קורטס, צבע מאכל - כלורופילין.nעשוי מרכז",
+        "production_country": "IL"
+    },
+    {
+        "name": "שוופס מוגז פירות תפוחים 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290012404177-758313.jpg?_a=1652646819037",
+        "code": "7290012404177",
+        "price": 6.9,
+        "weight": 330,
+        "weight_unit": "ML",
+        "ingridients": "מים, מיץ תפוחים (12%),סוכר,פחמן דו חמצני,חומצה - חומצה מאלית, חומרי טעם וריח, משמר E202, צבע מאכל - קרמל. עשוי מרכז",
+        "production_country": "IL"
+    },
+    {
+        "name": "סודה שוופס בקבוק 500 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290016006025-829866.jpg?_a=1654805478490",
+        "code": "7290016006025",
+        "price": 3.9,
+        "weight": 500,
+        "weight_unit": "ML",
+        "ingridients": "מים,פחמן דו-חמצני,סודה לשתיה.",
+        "production_country": "IL"
+    },
+    {
+        "name": "מי סודה טמפו 275 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290008464611-221856.jpg?_a=1651099102520",
+        "code": "8464611",
+        "price": 4.5,
+        "weight": 275,
+        "weight_unit": "ML",
+        "ingridients": "מים, פחמן דו חמצני",
+        "production_country": "IL"
+    },
+    {
+        "name": "סודה נגיעות לימון בקבוק 275 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000135151-762600.jpg?_a=1651095617448",
+        "code": "135151",
+        "price": 4.5,
+        "weight": 275,
+        "weight_unit": "ML",
+        "ingridients": "רכיבים: מים, פחמן דו חמצני , מווסת חומציות (סודיום ביקרבונט), חומצת מאכל (חומצת לימון), חומרי טעם וריח .",
+        "production_country": "IL"
+    },
+    {
+        "name": "סיידר  תפוח מוגז בקבוק 275 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290010822096-831930.jpg?_a=1649646050625",
+        "code": "7290010822096",
+        "price": 7.5,
+        "weight": 275,
+        "weight_unit": "ML",
+        "ingridients": "מים, תרכיז תפוחים (17%), פחמן דו חמצני",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה דיאט מארז שישייה פחיות 330 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290011018924-817616.jpg?_a=1651100820621",
+        "code": "7290011018924",
+        "price": 24.9,
+        "weight": 330,
+        "weight_unit": "ML",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d),מווסתי חומציות: חומצה זרחתית וחומצת לימון,ממתיקים: אספרטיים ואססולפאם-קיי,חומרי טעם וריח טבעיים, קפאין.",
+        "production_country": "IL"
+    },
+    {
+        "name": "ספרייט זירו שישייה בקבוק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115395-842036.jpg?_a=1651096530550",
+        "code": "7290110115395",
+        "price": 49.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, מווסתי חומציות: חומצת לימון ומלח לימון (E331), ממתיקים: אספרטיים ואססולפאם-קיי, חומרי טעם וריח טבעיים.",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה שישייה בקבוק  1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115364-842372.jpg?_a=1651098267169",
+        "code": "7290110115364",
+        "price": 52.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, סוכר, פחמן  דו-חמצני, צבע מאכל קרמל (E150d), מווסת חומציות: חומצה זרחתית, חומרי טעם וריח טבעיים, קפאין .",
+        "production_country": "IL"
+    },
+    {
+        "name": "קוקה קולה זירו שישייה בקבוק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290110115418-842374.jpg?_a=1651100306516",
+        "code": "7290110115418",
+        "price": 49.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "מים, פחמן דו-חמצני, צבע מאכל קרמל (E150d), מווסתי חומציות: חומצה זרחתית ומלח לימון (E332), ממתיקים: אספרטיים ואססולפאם- קיי, חומרי טעם וריח טבעיים, קפאין .",
+        "production_country": "IL"
+    },
+    {
+        "name": "פפסי מקס פחית צרה 330 שישייה",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290011133634-626124.jpg?_a=1649645300927",
+        "code": "7290011133634",
+        "price": 19.9,
+        "weight": 330,
+        "weight_unit": "ML",
+        "ingridients": "\"מים,nפחמן דו חמצני,nצבע מאכל (קרמל E150d),nחומצות מאכל (חומצה זרחתית, חומצת לימון),nממתיק (אספרטיים, אססולפם K),nמווסת חומציות (טרי סודיום ציטראט),nקפאין,nחומרי טעם וריח.\"nnn",
+        "production_country": "IL"
+    },
+    {
+        "name": "פפסי קולה לארג שישייה בקבוק 1.5 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000136769-848495.jpg?_a=1651101107430",
+        "code": "136769",
+        "price": 44.9,
+        "weight": 1.5,
+        "weight_unit": "LITER",
+        "ingridients": "\"מים,nסוכר,nפחמן דו חמצני,nצבע מאכל (קרמל E150d),nחומצת מאכל (חומצה זרחתית),nקפאין,nחומרי טעם וריח.\"nt",
+        "production_country": "IL"
+    },
+    {
+        "name": "שקד טבעי 200 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290006241214-765171.jpg?_a=1647987839056",
+        "code": "6241214",
+        "price": 24.9,
+        "weight": 200,
+        "weight_unit": "GRAM",
+        "ingridients": "שקדים",
+        "production_country": "IL"
+    },
+    {
+        "name": "שקד מולבן פרוס",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290013145123-868344.jpg?_a=1649916290419",
+        "code": "7290013145123",
+        "price": 14.9,
+        "weight": 100,
+        "weight_unit": "GRAM",
+        "ingridients": "שקדים",
+        "production_country": "IL"
+    },
+    {
+        "name": "שקד מולבן טחון 100גר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290013145109-868338.jpg?_a=1649919435048",
+        "code": "7290013145109",
+        "price": 14.9,
+        "weight": 100,
+        "weight_unit": "GRAM",
+        "ingridients": "שקדים",
+        "production_country": "IL"
+    },
+    {
+        "name": "שקד מולבן מרוסק 100 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000267104-268856.jpg?_a=1596430094110",
+        "code": "267104",
+        "price": 10.9,
+        "weight": 100,
+        "weight_unit": "GRAM",
+        "ingridients": "שקד מקולף",
+        "production_country": "IL"
+    },
+    {
+        "name": "שקד טבעי מולבן שלם 100 גרם שקדיה",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000267012-268871.jpg?_a=1596432085193",
+        "code": "267012",
+        "price": 10.9,
+        "weight": 100,
+        "weight_unit": "GRAM",
+        "ingridients": "שקד מקולףn",
+        "production_country": "IL"
+    },
+    {
+        "name": "שקדים טחונים 100 גרם שקדיה",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000267050-268859.jpg?_a=1596458313005",
+        "code": "267050",
+        "price": 10.9,
+        "weight": 100,
+        "weight_unit": "GRAM",
+        "ingridients": "שקד מקולף",
+        "production_country": "IL"
+    },
+    {
+        "name": "שקד טבעי מולבן פרוס 100 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000267043-268862.jpg?_a=1596434070494",
+        "code": "267043",
+        "price": 10.9,
+        "weight": 100,
+        "weight_unit": "GRAM",
+        "ingridients": "שקד מקולף מולבןn",
+        "production_country": "IL"
+    },
+    {
+        "name": "תפוחונים אורגניים חמצמץ 40 גרם נטורפוד",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/5600286004089-769835.jpg?_a=1649175619870",
+        "code": "5600286004089",
+        "price": 9.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "תפוח עץ",
+        "production_country": "PT"
+    },
+    {
+        "name": "תפוחונים אורגניים מתקתק 40 גרם נטורפוד",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/5600286004072-769838.jpg?_a=1649175381280",
+        "code": "5600286004072",
+        "price": 9.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "תפוח עץ",
+        "production_country": "PT"
+    },
+    {
+        "name": "חטיף תפוחונים טבעי 22 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290108502985-680392.jpg?_a=1641644738822",
+        "code": "7290108502985",
+        "price": 5.9,
+        "weight": 22,
+        "weight_unit": "GRAM",
+        "ingridients": "100% תפוחי עץ",
+        "production_country": "CN"
+    },
+    {
+        "name": "חטיף דובונים 40 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000066264-869321.jpg?_a=1652303900204",
+        "code": "66264",
+        "price": 4.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "עמילנים, שמן חמניות, תפוחי אדמה מיובשים (28%), עמילן מעובד (E1412), מלח, סוכר, חומר מתחלב (לציטין סויה), תמצית שמרים, תבלינים.",
+        "production_country": "IL"
+    },
+    {
+        "name": "בייגלה מקלות מלוחים 400 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000461656-743065.jpg?_a=1650382729961",
+        "code": "461656",
+        "price": 13.9,
+        "weight": 400,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה, (מכיל גלוטן),שמן צמחי , מלח, לתת שעורה (מכיל גלוטן), שמרים, חומר מוסת חומציות (E524)",
+        "production_country": "IL"
+    },
+    {
+        "name": "בייגלה שמיניות 400 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000461625-833044.jpg?_a=1655673449592",
+        "code": "461625",
+        "price": 13.9,
+        "weight": 400,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה(מכיל גלוטן),שמן צמחי,מלח,לתת שעורה(מכיל גלוטן),שמרים,חומר,מווסת חומציות (E-542)",
+        "production_country": "IL"
+    },
+    {
+        "name": "בייגלה ארוך ארוך דל שומן 150 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000461793-833049.jpg?_a=1650383440962",
+        "code": "461793",
+        "price": 7.4,
+        "weight": 150,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן), מלח, שמן צמחי, מתחלב, (לציטין סויה), מעכב חמצון (תמצית רוזמרין), חומר מווסת חומציות E-524",
+        "production_country": "IL"
+    },
+    {
+        "name": "בייגלה גדול גדול 400 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000461700-833047.jpg?_a=1650388079632",
+        "code": "461700",
+        "price": 15.9,
+        "weight": 400,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן) שמן צמחי, מלח, לתת שעורה, (מכיל גלוטן) שמרים, חומר מווסת חומציות (E-524)",
+        "production_country": "IL"
+    },
+    {
+        "name": "שטוחלה פינוקים 300 גרם מאיר בייגל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290017928227-805226.jpg?_a=1649067360208",
+        "code": "7290017928227",
+        "price": 12.9,
+        "weight": 300,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן), שומן צמחי, סוכר ,לתת שעורה (מכיל גלוטן), תערובת תיבול פינוקים (שומשום, קצח, שום מיובש, בצל מיובש, חומרי טעם וריח טבעיים), מלח, חומר תפיחה (E-500i), מתחלב (לציטין סויה),מעכב חמצון (מיצוי רוזמרין), מווסת חומציות (E-524).",
+        "production_country": "IL"
+    },
+    {
+        "name": "שטוחלה שומשום 300 גרם מאיר בייגל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290017928616-805217.jpg?_a=1649065716039",
+        "code": "7290017928616",
+        "price": 12.9,
+        "weight": 300,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן),שומשום (12%) ,שומן צמחי, סוכר, לתת שעורה (מכיל גלוטן), מלח ,חומר תפיחה (i500-E), מתחלב (לציטין סויה), מעכב חמצון (מיצוי רוזמרין), מווסת חומציות E524)).",
+        "production_country": "IL"
+    },
+    {
+        "name": "בייגלה טבעות שומשום 300 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000081663-229608.jpg?_a=1652306387456",
+        "code": "81663",
+        "price": 14.5,
+        "weight": 300,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן), שומשום (12%), שמן צמחי, מלח, סוכר, שמרים, לתת שעורה, מווסת חומציות (E524), מתחלב (לציטין סויה), חומר תפיחה (סודיום ביקרבונט - סודה לשתיה), חומצת מאכל (חומצת לימון).",
+        "production_country": "IL"
+    },
+    {
+        "name": "בייגלה מקלות מלוחים 400 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000060088-159319.jpg?_a=1652310147584",
+        "code": "60088",
+        "price": 14.5,
+        "weight": 400,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן), שמן צמחי, מלח (1.9%), סוכר, מווסת חומציות (E524), חומר תפיחה (סודה ביקרבונט - סודה לשתיה), מתחלב (לציטין סויה), חומצת מאכל (חומצת לימון).",
+        "production_country": "IL"
+    },
+    {
+        "name": "בייגלה שמיניות קטנות 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000076126-869336.jpg?_a=1652307608203",
+        "code": "76126",
+        "price": 4.5,
+        "weight": 80,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן), שמן צמחי, מלח (1.9%), סוכר, לתת שעורה, חומר תפיחה (סודיום ביקרבונט -סודה לשתיה), מווסת חומציות (E524), מתחלב (לציטין סויה), חומצת מאכל (חומצת לימון).",
+        "production_country": "IL"
+    },
+    {
+        "name": "בייגלה שטוחים עם מלח 60 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000071008-634550.jpg?_a=1652309309898",
+        "code": "71008",
+        "price": 4.5,
+        "weight": 60,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן), שמן צמחי, סוכר, לתת שעורה, מלח (1.7%), חומר תפיחה (סודיום ביקרבונט - סודה לשתיה), מווסת חומציות (E524), מתחלב (לציטין סויה).",
+        "production_country": "IL"
+    },
+    {
+        "name": "בייגלה סניידרס סנדביץ גבינה צ\"דר 226 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/077975094631-791679.jpg?_a=1647971481336",
+        "code": "77975094631",
+        "price": 19.9,
+        "weight": 226,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה מועשר (קמח חיטה רך, (מכיל גלוטן, ) ניאצין, ברזל מחוזר, תיאמין מונוניטראט, ריבופלאבין, חומצה פולית), מים, שמן דקלים מזוכך, אבקת מי גבינה (חלב), גבינת צ'דר, (40%) (חלב מפוסטר, תרביות חיידקים, מלח לתעשיית המזון סוג א' אנזימים), חמאה, אבקת חובצה, לתת תירס ושעורה (מכיל גלוטן), שמן קנולה מזוכך, צבע מאכל (אנאטו), מלח לתעשיית המזון סוג א', גלוטן חיטה, שמרים, חומר תפיחה (סודיום ביקרבונט) ",
+        "production_country": "US"
+    },
+    {
+        "name": "שברי בייגלה סניידרס חמאת בוטנים 283 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/077975094624-797776.jpg?_a=1651608834378",
+        "code": "77975094624",
+        "price": 17.9,
+        "weight": 280,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה מועשר (מכיל גלוטן) (קמח חיטה, ויטמין B3, ברזל, ויטמין B1, ויטמין B2, חומצה פולית), חמאת בוטנים (27%) (בוטנים, סוכר, מלח), מלח, שמן לפתית מזוכך - חומצה אולאית גבוהה, שמן סויה, סירופ גלוקוז מתירס, תמצית לתת שעורה (מכיל גלוטן), מתפיחים (סודה הידרוג'ן קרבונט, אמוניום הידרוג'ן קרבונט), שמרים.",
+        "production_country": "US"
+    },
+    {
+        "name": "סניידרס דבש חרדל ובצל 340 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/077975094778-827774.jpg?_a=1653337137900",
+        "code": "77975094778",
+        "price": 17.9,
+        "weight": 340,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה מועשר (קמח חיטה (מכיל גלוטן), ויטמין B3, ברזל, ויטמין B1, ויטמין B2, חומצה פולית), שמן דקלים מזוכך, מים, סוכר לבן, אבקת בצל (2%), מלטודקסטרין, ממרח חרדל (0.5%) (מכיל צבע מאכל כורכומין), דקסטרוז, אבקת מי גבינה (חלב), מלח שולחן, אבקת חומץ (מלטודקסטרין, עמילן תירס מעובד, חומץ), סוכרים,חלבוני סויה, עמילן חיטה, שמרים, תבלינים, חומצה ציטרית, אבקת חזרת, חומרי טעם וריח, מווסת חומציות (סודיום קרבונאט),אבקת חזרתף חומרי טעם וריח.",
+        "production_country": "US"
+    },
+    {
+        "name": "בייגלה סניידרס חלפיניו 340 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/077975088234-776428.jpg?_a=1647968387108",
+        "code": "77975088234",
+        "price": 17.9,
+        "weight": 12,
+        "weight_unit": "OZ",
+        "ingridients": "קמח חיטה מועשר (קמח חיטה (מכיל גלוטן), ויטמין B3, ברזל, ויטמין B1, ויטמין B2, חומצה פולית, שמן דלקים מזוכך, מים, מלח, דקסטרוז, אבקת פלפל חלפיניו (1.4%), מלטודקסטרין, מסמיך (עמילן תירס מעובד), מחזקי טעם (מונוסודיום גלוטאמט, דיסודיום ניוזינאט, דיסודיום גואנליאט), עמילן תירס למאכל, אבקת בצל (0.7%), שמרים, אבקת שום (0.6%), צבע מאכל (מיצוי פפריקה), אבקת חומץ, שמרים תבלין (פיטרוזיליה) שמן סויה מזוכך, חומרי טעם וריח, חומר התפחה (סודיום הידרוגן קרבונט).",
+        "production_country": "US"
+    },
+    {
+        "name": "סניידרס בטעם צדר 340 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/077975094761-822507.jpg?_a=1647987026542",
+        "code": "77975094761",
+        "price": 17.9,
+        "weight": 340,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה מועשר (קמח חיטה (56.8%) (מגיל גלוטן), ויטמין B3, ברזל, ויטמין B1, ויטמין B2, חומצה פולית), שמן דקלים מזוכך, אבקת מי גבינה (חלב), מים, תמצית בטעם גבינת צ'דר (2%) (אבקת חלב מפוסטר, תרביות חיידקים, מלח שולחן, אנזימים), מלח שולחן, מלטודקסטרין, אבקת חובצה, שמרים, תיבול (אבקת בצל, תבלינים, מיצוי שמרים, מחזקי טעם (דיסודיום אינוזינאט, דיסודיום גואנליאט)), דיסודיום פוספאט, סודיום קזאינט, אבקת עגבניות, חומצה ציטרית, אבקת חלב כחוש, סוכר לבן, חומרי טעם וריח, אבקת שום, צבעי מאכל (כורכומין, אנאטו, מיצוי פפריקה, מווסת חומציות (סודיום קרבונאט).",
+        "production_country": "US"
+    },
+    {
+        "name": "ביסלי פארטי מיקס 150 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290111568206-229994.jpg?_a=1652304794545",
+        "code": "7290111568206",
+        "price": 11.9,
+        "weight": 150,
+        "weight_unit": "GRAM",
+        "ingridients": " קמח חיטה (מכיל גלוטן) (32%), שמנים מהצומח, גריסי תירס (16%), בוטנים (13%), סוכרים, עמילן מעובד (E1422), קמח אורז, שומשום (2.5%), סירופ גלוקוזה, מלח, שמרים מיובשים, תבלינים, חומרים מחזקי טעם (מונוסודיום גלוטמט, E631, E627), הידרוליזטי חלבונים צמחיים (מכיל סויה), תחליף מלח (מלח אשלגן), חומר תפיחה (פוטסיום ביקרבונט), ירקות מיובשים (פלפל אדום, פטרוזיליה), חומרי טעם וריח, תמצית שמרים, מלטודקסטרין, תמציות תבלינים, עמילנים (תירס, אורז), חומצות מאכל (חומצה אסקורבית, חומצת לימון).nמכיל 35% פיצוחים מתובלים. ",
+        "production_country": "IL"
+    },
+    {
+        "name": "במבה ביסלי בצל מיקס 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290111566066-771127.jpg?_a=1652299908595",
+        "code": "7290111566066",
+        "price": 4.9,
+        "weight": 80,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן) (43%), בוטנים טחונים (23%), גריסי תירס, שמן חמניות, תבלינים (בצל (1%), שום), מלח, הידרוליזט חלבון סויה, עלי פטרוזיליה מיובשים, עמילן תירס, תמצית שמרים, שמן צמחי, ויטמינים (ויטמין C, ויטמין B3 (ניאצין), ויטמין E, ויטמין B1 (תיאמין), ויטמין B6, ויטמין A, חומצה פולית, ויטמין B12), חומצת מאכל (חומצת לימון), ברזל.",
+        "production_country": "IL"
+    },
+    {
+        "name": "ביסלי גריל 200 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000066196-229633.jpg?_a=1652309325736",
+        "code": "66196",
+        "price": 10.9,
+        "weight": 200,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן) (75%), שמן חמניות, שמרים מיובשים, סוכרים, הידרוליזט חלבון סויה, מחזקי טעם (מונוסודיום גלוטמט, E631, E627), מלח, קמח אורז, תבלינים, חומרי טעם וריח, שמן קנולה, תמצית פפריקה, תמצית שמרים.",
+        "production_country": "IL"
+    },
+    {
+        "name": "ביסלי במבה מיקס 200 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290111564956-226269.jpg?_a=1652309146512",
+        "code": "7290111564956",
+        "price": 11.9,
+        "weight": 200,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן) (43.5%), בוטנים טחונים (22.5%), גריסי תירס, שמן חמניות, מלח, שמרים מיובשים, סוכרים הידרוליזט חלבון סויה, מחזקי טעם (מונוסודיום גלוטמט, E627, E631), קמח אורז, תבלינים, חומרי טעם וריח, שמן קנולה, תמצית פפריקה, תמצית שמרים, ויטמינים (ויטמין C, ויטמין B3 (ניאצין), ויטמין E, ויטמין B1 (תיאמין), ויטמין B6, ויטמין A, חומצה פולית, ויטמין B12), ברזל.",
+        "production_country": "IL"
+    },
+    {
+        "name": "תערובת אגוזים מקורמלים וצימוקים 150 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290111354083-864011.jpg?_a=1648032263878",
+        "code": "7290111354083",
+        "price": 21.9,
+        "weight": 170,
+        "weight_unit": "GRAM",
+        "ingridients": "קשיו ממותק (אגוזי קשיו (20%) סוכר, שמן סויה, דבש), צימוקים מצופים שוקולד (33%) (צימוקים (49.5%), שוקולד מריר (49%) {סוכר, חמאת קקאו, עיסת קקאו, אבקת קקאו, מתחלב [לציטין קנולה (לפתית)], חומרי טעם וריח}, ח. הזגה E414), אגוזי לוז מצופים קוקוס  (אגוזי לוז (10%), סוכר, שמן צמחי מוקשה, קקאו, מלח, חומרי טעם וריח, מוסת חומציות E- 501i ).",
+        "production_country": "IL"
+    },
+    {
+        "name": "אגוזי לוז בציפוי שוקולד מריר 160 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290013725820-846153.jpg?_a=1641535184406",
+        "code": "7290013725820",
+        "price": 11.9,
+        "weight": 160,
+        "weight_unit": "GRAM",
+        "ingridients": "שוקולד מריר  לוז",
+        "production_country": "IL"
+    },
+    {
+        "name": "משוקלדים פקאן חלב 160 גר קופסא",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290014095953-699734.jpg?_a=1629293140668",
+        "code": "7290014095953",
+        "price": 11.9,
+        "weight": 160,
+        "weight_unit": "GRAM",
+        "ingridients": "78% שוקולד חלב (סוכר, חמאת קקאו, אבקת חלב מלא, עיסת קקאו, מתחלב  E414 מייצב,  חומר הזגה, מתחלב לפתית E476, חומרי טעם וריח: ונילין),פאקן סיני מסוכר 22% (פקאן טבעי, סוכר, שמן כותנה).nבשוקולד חלב 34% מוצקי קקאו ו15.6% מוצקי חלב",
+        "production_country": "IL"
+    },
+    {
+        "name": "שקדים בציפוי שוקולד מריר 160 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290013724946-825329.jpg?_a=1629298926884",
+        "code": "7290013724946",
+        "price": 11.9,
+        "weight": 160,
+        "weight_unit": "GRAM",
+        "ingridients": "שוקלד  מריר   לציטין  שקד",
+        "production_country": "IL"
+    },
+    {
+        "name": "פליפז  בייגלה מצופה שוקולד מריר 140 ג",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290017513782-811100.jpg?_a=1648403685428",
+        "code": "7290017513782",
+        "price": 9.9,
+        "weight": 140,
+        "weight_unit": "GRAM",
+        "ingridients": "שוקולד מריר (62%) [סוכר, עיסת קקאו, חמאת קקאו, שומן חלב, מתחלב (לציטין סויה), שמנים צמחים, חומר טעם וריח. כלל מוצקי קקאו בשוקולד מריר: 49% מינימום]. חטיף אפוי (38%) [קמח חיטה (מכיל גלוטן),מלח, סוכר אינוורטי, מתחלב (לציטין סויה), מווסת חומציות (E524) , תמצית, תמצית לתת שעורה (מכיל גלוטן), מתפיח (E500ii)].",
+        "production_country": "TR"
+    },
+    {
+        "name": "פליפז  בייגלה מצופה שוקולד חלב140 ג",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290017513775-811097.jpg?_a=1648401995667",
+        "code": "7290017513775",
+        "price": 9.9,
+        "weight": 140,
+        "weight_unit": "GRAM",
+        "ingridients": "שוקולד חלב (62%) [סוכר, חמאת קקאו, אבקת חלב, עיסת קקאו, מתחלבים (E442, E476), תמצית טעם וריח טבעי (וניל), מתחלב (לציטין סויה).  כלל מוצקי קקאו בשוקולד חלב: 28% מינימום]. חטיף אפוי (38%) [קמח חיטה (מכיל גלוטן),מלח, סוכר אינוורטי, מתחלב (לציטין סויה), מווסת חומציות (E524) , תמצית לתת שעורה, מתפיח (E500ii)]..",
+        "production_country": "TR"
+    },
+    {
+        "name": "פליפז בייגלה מצופה חמאת בוטנים 140 ג",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290018440193-811103.jpg?_a=1648407322679",
+        "code": "7290018440193",
+        "price": 9.9,
+        "weight": 140,
+        "weight_unit": "GRAM",
+        "ingridients": "שוקולד חלב (62%) [סוכר, חמאת קקאו, אבקת חלב, עיסת קקאו, מתחלבים (E442, E476), תמצית טעם וריח טבעי (וניל), מתחלב (לציטין סויה).  כלל מוצקי קקאו בשוקולד חלב: 28% מינימום]. חטיף אפוי (38%) [קמח חיטה (מכיל גלוטן),מלח, סוכר אינוורטי, מתחלב (לציטין סויה), מווסת חומציות (E524) , תמצית לתת שעורה, מתפיח (E500ii)]..",
+        "production_country": "TR"
+    },
+    {
+        "name": "פליפז בייגלה מצופה בקרם עוגת גבינה 140 ג",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290018440476-830012.jpg?_a=1646169995397",
+        "code": "7290018440476",
+        "price": 9.9,
+        "weight": 140,
+        "weight_unit": "GRAM",
+        "ingridients": "קרם בטעם עוגת גבינה ותותים (66%) [סוכר, שמן צמחי, אבקת חלב, צבע מאכל (אבקת סלק), חומרי טעם וריח טבעיים ,מתחלב (לציטין סויה), מווסת חומציות (חומצה ציטרית), צבע מאכל (E162, E160a).] חטיף בייגלה אפוי (34%) [קמח חיטה (מכיל גלוטן), מלח, סירופ סוכר אינוורטי, מתחלב (לציטין סויה), מווסת חומציות (E524) , תמצית לתת שעורה ( מכיל גלוטן), מתפיח (E500ii)].",
+        "production_country": "TR"
+    },
+    {
+        "name": "פליפז בייגלה מצופה בקרמל מלוח ושוקולד 14",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290018440483-830017.jpg?_a=1646167415952",
+        "code": "7290018440483",
+        "price": 9.9,
+        "weight": 140,
+        "weight_unit": "GRAM",
+        "ingridients": "קרם בטעם קרמל מלוח ושוקולד (65%) [סוכר, שמן צמחי, אבקת חלב, צבעי מאכל (E162, קרמל, E160a), חומרי טעם וריח טבעיים, מתחלבים (לציטין סויה, E476), אבקת קקאו, אבקת מי גבינה, חומר טעם וריח.] חטיף בייגלה אפוי (35%) [קמח חיטה (מכיל גלוטן), מלח, סירופ גלוקוז, מתחלב (לציטין סויה), מווסת חומציות (E524) , תמצית לתת שעורה ( מכיל גלוטן), מתפיח (E500ii)].",
+        "production_country": "TR"
+    },
+    {
+        "name": "פליפז בייגלה מצופה פאדג לבן 140 ג",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290018440209-811106.jpg?_a=1646168374647",
+        "code": "7290018440209",
+        "price": 9.9,
+        "weight": 140,
+        "weight_unit": "GRAM",
+        "ingridients": "שוקולד חלב (62%) [סוכר, חמאת קקאו, אבקת חלב, עיסת קקאו, מתחלבים (E442, E476), תמצית טעם וריח טבעי (וניל), מתחלב (לציטין סויה).  כלל מוצקי קקאו בשוקולד חלב: 28% מינימום]. חטיף אפוי (38%) [קמח חיטה (מכיל גלוטן),מלח, סוכר אינוורטי, מתחלב (לציטין סויה), מווסת חומציות (E524) , תמצית לתת שעורה, מתפיח (E500ii)]..",
+        "production_country": "TR"
+    },
+    {
+        "name": "בייגלה מצופה קרם עוגיות ושוקולד 140 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290019232834-872555.jpg?_a=1651608335199",
+        "code": "7290019232834",
+        "price": 9.9,
+        "weight": 140,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן), סוכר לבן, שמן דקלים, אבקת חלב, אבקת חלב דל שומן, שוקולד חלב (4.8%) (כלל מוצקי קקאו בשוקולד חלב: 29% מינימום), מלח, סירוב סוכר אינוורטי, חמאת קקאו, מתחלבים (לציטין סויה, E442,E476), חומרי טעם וריח טבעיים, תמצית לתת שעורה (מכיל גלוטן), מתפיח (E500), מווסת חומציות (E524).",
+        "production_country": "TR"
+    },
+    {
+        "name": "חטיף ציטוס גבינה 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290106720626-844139.jpg?_a=1647209072533",
+        "code": "7290106720626",
+        "price": 5.2,
+        "weight": 80,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח תירס (61%), שמן חמניות, גלוקוז, רכיבי חלב, תערובת מלחים (מלח,אשלגן כלורי), חומרי טעם וריח, מחזק טעם (מונסודיום גלוטמאט, E631,E627), צבעי מאכל (כורכומין, אנאטו).",
+        "production_country": "IL"
+    },
+    {
+        "name": "חטיף ציטוס בוטנים 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290106660649-840987.jpg?_a=1652014333511",
+        "code": "7290106660649",
+        "price": 5.2,
+        "weight": 80,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח תירס (58%), שמן חמניות, חמאת בוטנים (15%), דקסטרוז, מלח.",
+        "production_country": "IL"
+    },
+    {
+        "name": "דוריטוס טבעי 185 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290106528628-810069.jpg?_a=1649393881794",
+        "code": "7290106528628",
+        "price": 8.9,
+        "weight": 185,
+        "weight_unit": "GRAM",
+        "ingridients": "תירס (80.5%), שמן חמניות, מלח.",
+        "production_country": "IL"
+    },
+    {
+        "name": "דוריטוס חמוץ חריף 185 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290106667266-240981.jpg?_a=1652433508690",
+        "code": "7290106667266",
+        "price": 8.9,
+        "weight": 185,
+        "weight_unit": "GRAM",
+        "ingridients": "תירס (70.5%), שמן חמניות, סוכר, תערובת תיבול,  חלבון סויה מעובד, תערובת מלחים (מלח, אשלגן כלורי),  מווסתי חומציות (סודיום דיאצטט, חומצה מאלית), צבעי מאכל (תמצית פפריקה, כורכומין), מחזק טעם (E627, E631), ממתיק (אספרטיים), חומרי טעם וריח.",
+        "production_country": "IL"
+    },
+    {
+        "name": "נאצוס הוטפופ מקסיקני 332 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290111350726-826959.jpg?_a=1648003023460",
+        "code": "7290111350726",
+        "price": 17.9,
+        "weight": 322,
+        "weight_unit": "GRAM",
+        "ingridients": "תירס צהוב 72.5%, שמן צמחי מעורב ומזוכך, מלח",
+        "production_country": "US"
+    },
+    {
+        "name": "נאצוס הוטפופ מסעדות 332 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290111350719-826951.jpg?_a=1648001994155",
+        "code": "7290111350719",
+        "price": 17.9,
+        "weight": 322,
+        "weight_unit": "GRAM",
+        "ingridients": "תירס לבן 72.5%, שמן צמחי מעורב ומזוכך, מלח",
+        "production_country": "US"
+    },
+    {
+        "name": "סירופ אגבה כחולה – נטורפוד (קטן)  330גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7503012779306-265936.jpg?_a=1649179832881",
+        "code": "7503012779306",
+        "price": 21.9,
+        "weight": 330,
+        "weight_unit": "GRAM",
+        "ingridients": "100% סירופ אגבה כחולה אורגני",
+        "production_country": "MX"
+    },
+    {
+        "name": "גריל עוף טעם וריח 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324069-195577.jpg?_a=1650945403130",
+        "code": "7290015324069",
+        "price": 5.9,
+        "weight": 2.8,
+        "weight_unit": "OZ",
+        "ingridients": "תבלינים, מלח, מונוסודיום גלוטומט (E621), דקסטרוזה, חומר מונע התגיישות (E551).",
+        "production_country": "IL"
+    },
+    {
+        "name": "תערובת תיבול על האש 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324168-195559.jpg?_a=1650893871276",
+        "code": "7290015324168",
+        "price": 5.9,
+        "weight": 2.8,
+        "weight_unit": "OZ",
+        "ingridients": "תבלינים, דקסטרוזה, מלח, חומר מונע התגיישות (E551), חומר טעם וריח טבעי.",
+        "production_country": "IL"
+    },
+    {
+        "name": "תערובת תיבול גריל עוף 120 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290014217225-220297.jpg?_a=1650946508116",
+        "code": "7290014217225",
+        "price": 10.9,
+        "weight": 120,
+        "weight_unit": "GRAM",
+        "ingridients": "תבלינים, מלח, מונוסודיום גלוטמט (E621), דקסטרוזה, חומר מונע התגיישות (E551).",
+        "production_country": "IL"
+    },
+    {
+        "name": "תערובת תיבול לפרגיות 100 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290014217263-220294.jpg?_a=1615362587678",
+        "code": "7290014217263",
+        "price": 10.9,
+        "weight": 100,
+        "weight_unit": "GRAM",
+        "ingridients": "תבלינים, דקסטרוזה, מלח, חומר מונע התגיישות, (E551)",
+        "production_country": "IL"
+    },
+    {
+        "name": "סוכר גולדן קלאסי סוגת 1 ק\"ג",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290001990148-204979.jpg?_a=1649353668237",
+        "code": "1990148",
+        "price": 13.5,
+        "weight": 1,
+        "weight_unit": "KILOGRAM",
+        "ingridients": "סוכר קנה חום גולדן לא מזוקק",
+        "production_country": "IL"
+    },
+    {
+        "name": "סוכרזית קלאסי 100 שקיות",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290014725348-783450.jpg?_a=1652304306807",
+        "code": "7290014725348",
+        "price": 14.9,
+        "weight": 100,
+        "weight_unit": "CT",
+        "ingridients": "אריתריטול, ממתיק (סודיום סכרין 3.5%)",
+        "production_country": "IL"
+    },
+    {
+        "name": "סוכרלוז מותר לשבת 100 שקיות",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290014725294-783453.jpg?_a=1652239431569",
+        "code": "7290014725294",
+        "price": 21.7,
+        "weight": 100,
+        "weight_unit": "CT",
+        "ingridients": "אריתריטול, ממתיק (סוכרלוז 1.7%)",
+        "production_country": "IL"
+    },
+    {
+        "name": "ממתיק סוכרזית קנקן 1200 טבליות",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000504049-783492.jpg?_a=1653480943050",
+        "code": "504049",
+        "price": 23.9,
+        "weight": 1200,
+        "weight_unit": "CT",
+        "ingridients": "מווסת חומציות (סודיום בי קרבונט, חומצה פומרית ), ממתיק (סודיום סכרין 22.3%), עמילן. ללא ציקלמט.",
+        "production_country": "IL"
+    },
+    {
+        "name": "ממתיק סוכרזית פטנט 700 טבליות",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000504278-783481.jpg?_a=1652302197350",
+        "code": "504278",
+        "price": 18.9,
+        "weight": 700,
+        "weight_unit": "CT",
+        "ingridients": "מווסת חומציות (סודיום בי קרבונט, חומצה פומרית), ממתיק (סודיום סכרין 22.3%), עמילן. לא ציקלמט.",
+        "production_country": "IL"
+    },
+    {
+        "name": "מתוק וקל טבליות 1000 יחידות",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000518169-785336.jpg?_a=1628039525324",
+        "code": "518169",
+        "price": 8.9,
+        "weight": 1000,
+        "weight_unit": "CT",
+        "ingridients": "סודיות ביקרבונט, סודיום סכרין 24.2%, חומצת מאכל - חומצה פורמית.nמשקל כל טבליה 80 מ\"ג",
+        "production_country": "IL"
+    },
+    {
+        "name": "סוכרה דיאט 100 שקיות",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000518220-784008.jpg?_a=1628036755209",
+        "code": "518220",
+        "price": 28.9,
+        "weight": 100,
+        "weight_unit": "CT",
+        "ingridients": "דקסטרוזה (חומר מילוי) 97.125%, סוכרלוז (ממתיק) 1.625%, קלציום לקטט (מגביר חוזק) 1.25%",
+        "production_country": "IL"
+    },
+    {
+        "name": "עץ הזית שמן קנולה בריאות 1 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000144474-837042.jpg?_a=1649355056823",
+        "code": "144474",
+        "price": 16.9,
+        "weight": 1,
+        "weight_unit": "LITER",
+        "ingridients": "שמן קנולה מזוכך, טוקופרולים (PPM300 ממקור סויה).",
+        "production_country": "EE"
+    },
+    {
+        "name": "צילי גרוס חריף אש במיכל 70 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324663-834319.jpg?_a=1650805001414",
+        "code": "7290015324663",
+        "price": 10.9,
+        "weight": 70,
+        "weight_unit": "GRAM",
+        "ingridients": "פלפל צ'ילי חריף, שמן צ'ילי.",
+        "production_country": "IL"
+    },
+    {
+        "name": "צ\"ילי כתוש חריף 30 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002517801-194384.jpg?_a=1650894482343",
+        "code": "2517801",
+        "price": 6.9,
+        "weight": 30,
+        "weight_unit": "GRAM",
+        "ingridients": "100% פלפל צ׳ילי טהורn",
+        "production_country": "IL"
+    },
+    {
+        "name": "קינמון טחון שקית 50 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134307-195703.jpg?_a=1650893302062",
+        "code": "134307",
+        "price": 5.9,
+        "weight": 50,
+        "weight_unit": "GRAM",
+        "ingridients": "100% קינמון טהור.",
+        "production_country": "IL"
+    },
+    {
+        "name": "מקלות קינמון 15 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002517726-198197.jpg?_a=1650892065066",
+        "code": "2517726",
+        "price": 6.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "100% קינמון טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "קינמון טחון 40 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002517290-194390.jpg?_a=1650804973789",
+        "code": "2517290",
+        "price": 6.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "100% קינמון טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "מלח לימון טעם וריח 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324083-195571.jpg?_a=1650896993182",
+        "code": "7290015324083",
+        "price": 5.9,
+        "weight": 2.8,
+        "weight_unit": "OZ",
+        "ingridients": "100% מלח לימון טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "ציפורן טחון 40 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002517863-194375.jpg?_a=1650895954768",
+        "code": "2517863",
+        "price": 9.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "100% ציפורן טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "שמן קוקוס אורגני גרין קוקו 300 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/4796019790013-204723.jpg?_a=1649180784207",
+        "code": "4796019790013",
+        "price": 23.9,
+        "weight": 300,
+        "weight_unit": "ML",
+        "ingridients": "שמן קוקוס אורגני",
+        "production_country": "LK"
+    },
+    {
+        "name": "תרסיס PAM שמן זית 148 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/064144090020-771219.jpg?_a=1647951407077",
+        "code": "64144090020",
+        "price": 19.9,
+        "weight": 148,
+        "weight_unit": "ML",
+        "ingridients": "שמן זית כתית מעולה (76%), חומרי הדף (איזובוטאן, פרופאן), מתחלב (לציטין סויה), מים, חומצות שומן סויה.",
+        "production_country": "US"
+    },
+    {
+        "name": "תרסיס PAM שמן קנולה 148 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/064144090051-771213.jpg?_a=1647947178143",
+        "code": "64144090051",
+        "price": 19.9,
+        "weight": 148,
+        "weight_unit": "ML",
+        "ingridients": "שמן קנולה (72%), חומרי הדף (איזובוטאן, פרופאן), מתחלב (לציטין סויה), מים, חומצות שומן סויה. ",
+        "production_country": "US"
+    },
+    {
+        "name": "שמן תירס 1 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290003882502-790415.jpg?_a=1641642396938",
+        "code": "3882502",
+        "price": 13.9,
+        "weight": 1,
+        "weight_unit": "LITER",
+        "ingridients": "100% שמן תירס מזוכך ",
+        "production_country": "TR"
+    },
+    {
+        "name": "כמון 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324090-195568.jpg?_a=1650896049697",
+        "code": "7290015324090",
+        "price": 5.9,
+        "weight": 80,
+        "weight_unit": "GRAM",
+        "ingridients": "100% כמון טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "כמון מזרחי 40 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134109-230705.jpg?_a=1615362175972",
+        "code": "134109",
+        "price": 6.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "כמון מזרחי, 100% טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "סוכר קוקוס אורגני 454 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/8997206332016-207686.jpg?_a=1649174779025",
+        "code": "8997206332016",
+        "price": 21.9,
+        "weight": 454,
+        "weight_unit": "GRAM",
+        "ingridients": "סוכר אורגני המופק מצוף פרחי הקוקוס. nמכיל גם- חומצות אמינו, מגנזיום ואשלגן.",
+        "production_country": "ID"
+    },
+    {
+        "name": "שום גבישי 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324120-232402.jpg?_a=1650898201383",
+        "code": "7290015324120",
+        "price": 5.9,
+        "weight": 3.5,
+        "weight_unit": "OZ",
+        "ingridients": "שום, חומר מונע התגיישות (E551)",
+        "production_country": "IL"
+    },
+    {
+        "name": "שום גבישי 50 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002517849-230554.jpg?_a=1615361931304",
+        "code": "2517849",
+        "price": 6.9,
+        "weight": 50,
+        "weight_unit": "GRAM",
+        "ingridients": "שום, חומר מונע התגיישות (E551)",
+        "production_country": "IL"
+    },
+    {
+        "name": "תבלין אבקת שום  90 גר \"מיכל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134338-230696.jpg?_a=1650552323247",
+        "code": "134338",
+        "price": 10.9,
+        "weight": 90,
+        "weight_unit": "GRAM",
+        "ingridients": "שום,חומר מונע התגיישות (E551).",
+        "production_country": "IL"
+    },
+    {
+        "name": "זנגביל 30 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134673-194405.jpg?_a=1650555362890",
+        "code": "134673",
+        "price": 6.9,
+        "weight": 30,
+        "weight_unit": "GRAM",
+        "ingridients": "100% ג'ינג'ר טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "קמח תירס אינסטנט 500 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290005175428-680422.jpg?_a=1648254445182",
+        "code": "5175428",
+        "price": 6.9,
+        "weight": 500,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח תירס ",
+        "production_country": "AR"
+    },
+    {
+        "name": "קמח שקדים דגש 250 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7297488098305-768899.jpg?_a=1649173213172",
+        "code": "7297488098305",
+        "price": 27.9,
+        "weight": 250,
+        "weight_unit": "GRAM",
+        "ingridients": "שקדים טחונים",
+        "production_country": "IL"
+    },
+    {
+        "name": "קמח תירס ללא גלוטן 500 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7297488098169-768896.jpg?_a=1649176187231",
+        "code": "7297488098169",
+        "price": 10.9,
+        "weight": 500,
+        "weight_unit": "GRAM",
+        "ingridients": "תירס",
+        "production_country": "IL"
+    },
+    {
+        "name": "שמן גרעיני ענבים 1 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/8007270999012-265882.jpg?_a=1649163148063",
+        "code": "8007270999012",
+        "price": 31.9,
+        "weight": 1,
+        "weight_unit": "LITER",
+        "ingridients": "שמן גרעיני ענבים בלבד.",
+        "production_country": "IT"
+    },
+    {
+        "name": "חוויאג למרק 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324151-789978.jpg?_a=1650897253821",
+        "code": "7290015324151",
+        "price": 5.9,
+        "weight": 80,
+        "weight_unit": "GRAM",
+        "ingridients": "תבלינים ",
+        "production_country": "IL"
+    },
+    {
+        "name": "נוזל ממתיק דיאט סוכרזית 220 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000504209-783489.jpg?_a=1652144155829",
+        "code": "504209",
+        "price": 22.9,
+        "weight": 220,
+        "weight_unit": "ML",
+        "ingridients": "מים, ממתיקים (סודיום ציקלמאט 2.3% סוכרלוז 1.5% סודיום סכרין 0.35%) חומר משמר (חומצה בנזואית)",
+        "production_country": "IL"
+    },
+    {
+        "name": "תבלין בזליקום 30 גר  שקית",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002517375-195679.jpg?_a=1650895134193",
+        "code": "2517375",
+        "price": 5.9,
+        "weight": 3,
+        "weight_unit": "OZ",
+        "ingridients": "100% בזיליקום מיובש טהור.",
+        "production_country": "IL"
+    },
+    {
+        "name": "בזיליקום ריחן 10 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002517603-230578.jpg?_a=1650896715244",
+        "code": "2517603",
+        "price": 6.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "100% בזיליקום טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "טימין 20 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134994-194399.jpg?_a=1650897691144",
+        "code": "134994",
+        "price": 6.9,
+        "weight": 20,
+        "weight_unit": "GRAM",
+        "ingridients": "100% טימין טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "טימין  מיכל גדול 30 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324540-788075.jpg?_a=1650898194810",
+        "code": "7290015324540",
+        "price": 10.9,
+        "weight": 30,
+        "weight_unit": "GRAM",
+        "ingridients": "100% טימין טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "עלי דפנה בשקית 20 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134550-267461.jpg?_a=1651027303113",
+        "code": "134550",
+        "price": 5.9,
+        "weight": 20,
+        "weight_unit": "GRAM",
+        "ingridients": "עלי דפנה (ער אציל)",
+        "production_country": "IL"
+    },
+    {
+        "name": "רוזמרין 15 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134666-194408.jpg?_a=1615360390989",
+        "code": "134666",
+        "price": 6.9,
+        "weight": 15,
+        "weight_unit": "GRAM",
+        "ingridients": "רוזמרין, 100% טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "עשבי תיבול איטלקי ים תיכוני 30 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290014217478-220279.jpg?_a=1615359359283",
+        "code": "7290014217478",
+        "price": 10.9,
+        "weight": 30,
+        "weight_unit": "GRAM",
+        "ingridients": "100% עשבי תיבול מיובשים (ארוגנו,בזילקום,טימין,זעתר,מיורן,רוזמרין).",
+        "production_country": "IL"
+    },
+    {
+        "name": "תיבולית קנור בזיליקום 72 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290003804368-834941.jpg?_a=1650382049563",
+        "code": "3804368",
+        "price": 11.9,
+        "weight": 72,
+        "weight_unit": "GRAM",
+        "ingridients": "שמן צמחי ושמן צמחי מוקשה, מלח, מלטודקסטרין, מחזק טעם (מונוסודיום גלוטמט), סוכר, תבלינים, פטרוזיליה מיובשת (2.2%), בזיליקום (1%), עמילן תפו\"א מעובד (E1450), חומר טעם וריח.",
+        "production_country": "IL"
+    },
+    {
+        "name": "תערובת לפיצה שקית 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324519-794400.jpg?_a=1650890168165",
+        "code": "7290015324519",
+        "price": 5.9,
+        "weight": 80,
+        "weight_unit": "GRAM",
+        "ingridients": "תבלינים , סוכר, מלח, מונוסודיות גלוטומט (E621).",
+        "production_country": "IL"
+    },
+    {
+        "name": "תערובת תיבול סומק מיכל 45 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290014217201-236428.jpg?_a=1650894506356",
+        "code": "7290014217201",
+        "price": 6.9,
+        "weight": 45,
+        "weight_unit": "GRAM",
+        "ingridients": "סומק טחון (95%), מלח.",
+        "production_country": "IL"
+    },
+    {
+        "name": "בהרט 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324113-195562.jpg?_a=1650900645776",
+        "code": "7290015324113",
+        "price": 5.9,
+        "weight": 80,
+        "weight_unit": "GRAM",
+        "ingridients": "תבלינים.",
+        "production_country": "IL"
+    },
+    {
+        "name": "ראס אל חנות מיכל 100 גר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290014217140-220306.jpg?_a=1615360480452",
+        "code": "7290014217140",
+        "price": 10.9,
+        "weight": 100,
+        "weight_unit": "GRAM",
+        "ingridients": "תבלינים, מלח",
+        "production_country": "IL"
+    },
+    {
+        "name": "טוסקנה 120 גר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290014217157-220303.jpg?_a=1615364725129",
+        "code": "7290014217157",
+        "price": 10.9,
+        "weight": 120,
+        "weight_unit": "GRAM",
+        "ingridients": "תבלינים, מלח, שמן צמחי, חומר מונע התגיישות (E551), תמצית פפריקה.",
+        "production_country": "IL"
+    },
+    {
+        "name": "תיבול לפיצה מיכל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134314-236698.jpg?_a=1650945023114",
+        "code": "134314",
+        "price": 10.9,
+        "weight": 120,
+        "weight_unit": "GRAM",
+        "ingridients": "תבלינים, סוכר, מלח, מונוסודיום גלוטומט (E621)",
+        "production_country": "IL"
+    },
+    {
+        "name": "תיבול פילדלפיה 100 גר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290014217492-220273.jpg?_a=1615358133980",
+        "code": "7290014217492",
+        "price": 10.9,
+        "weight": 100,
+        "weight_unit": "GRAM",
+        "ingridients": "תבלינים ושמני תבלין,מלח,דקסטרוזה,ירק מיובש (אבקת בצל),חומר מונע התגיישות (E551),חומר טעם וריח",
+        "production_country": "IL"
+    },
+    {
+        "name": "מוסקט טחון 40 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134147-773396.jpg?_a=1650553820342",
+        "code": "134147",
+        "price": 16.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "100% מוסקט טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "שמן זית זיתא כתית מעולה 750 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290003427154-757835.jpg?_a=1648382852363",
+        "code": "3427154",
+        "price": 36.9,
+        "weight": 750,
+        "weight_unit": "ML",
+        "ingridients": "שמן זית כתית מעולהt",
+        "production_country": "IL"
+    },
+    {
+        "name": "שמן זית כתית מעולה בטעם מודגש 750 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000144160-836981.jpg?_a=1652705121733",
+        "code": "144160",
+        "price": 36.9,
+        "weight": 750,
+        "weight_unit": "ML",
+        "ingridients": "שמן זית כתית מעולה",
+        "production_country": "IT"
+    },
+    {
+        "name": "שמן זית כתית מעולה עץ הזית 750 מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002692478-836962.jpg?_a=1649356468421",
+        "code": "2692478",
+        "price": 36.9,
+        "weight": 750,
+        "weight_unit": "ML",
+        "ingridients": "שמן זית כתית מעולה",
+        "production_country": "IT"
+    },
+    {
+        "name": "שמן זית כתית מעולה עשיר אליעד 750מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290013068699-792737.jpg?_a=1617857884363",
+        "code": "7290013068699",
+        "price": 34.9,
+        "weight": 750,
+        "weight_unit": "ML",
+        "ingridients": "שמן זית כתית מעולה ישראלי",
+        "production_country": "IL"
+    },
+    {
+        "name": "שמן זית כתית מעולה קטיפתי אליעד750 מל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290013068705-792734.jpg?_a=1617858736669",
+        "code": "7290013068705",
+        "price": 34.9,
+        "weight": 750,
+        "weight_unit": "ML",
+        "ingridients": "שמן זית כתית מעולה ישראלי",
+        "production_country": "IL"
+    },
+    {
+        "name": "שמן זית אליעד כתית מעולה 750 מל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290013068361-792743.jpg?_a=1617858711109",
+        "code": "7290013068361",
+        "price": 34.9,
+        "weight": 750,
+        "weight_unit": "ML",
+        "ingridients": "שמן זית כתית מעולה ישראלי",
+        "production_country": "IL"
+    },
+    {
+        "name": "שמן זית כתית מעולה BORGES 750  מ\"ל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/8410179100043-258866.jpg?_a=1599736173639",
+        "code": "8410179100043",
+        "price": 34.9,
+        "weight": 750,
+        "weight_unit": "ML",
+        "ingridients": "שמן זית כתית מעולה",
+        "production_country": "ES"
+    },
+    {
+        "name": "תבלין אורגנו בשקית 20 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002517337-232581.jpg?_a=1650896715772",
+        "code": "2517337",
+        "price": 5.9,
+        "weight": 20,
+        "weight_unit": "GRAM",
+        "ingridients": "100% אורגנו טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "אורגנו 10 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002517108-230590.jpg?_a=1650803407131",
+        "code": "2517108",
+        "price": 6.9,
+        "weight": 10,
+        "weight_unit": "GRAM",
+        "ingridients": "100% אורגנו טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "פירורי לחם יפנים פנקו 300 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290013358363-177838.jpg?_a=1650950859427",
+        "code": "7290013358363",
+        "price": 10.8,
+        "weight": 300,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה לבן (מכיל גלוטן), גלוטן חיטה, שמרים , סוכר, מלח, שמן חמניות, צבע מאכל ממקור צמחי (תמצית פפריקה).",
+        "production_country": "IL"
+    },
+    {
+        "name": "פפריקה בשמן 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324038-195586.jpg?_a=1615358212788",
+        "code": "7290015324038",
+        "price": 5.9,
+        "weight": 2.8,
+        "weight_unit": "OZ",
+        "ingridients": "פלפל פפריקה מתוקה (92%), שמן צמחי (7%), חומר מונע התגיישות (E551).",
+        "production_country": "IL"
+    },
+    {
+        "name": "פפריקה חריפה 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324045-195583.jpg?_a=1650900618484",
+        "code": "7290015324045",
+        "price": 5.9,
+        "weight": 80,
+        "weight_unit": "GRAM",
+        "ingridients": "פפריקה חריפה, 100% טהור.",
+        "production_country": "IL"
+    },
+    {
+        "name": "פפריקה מתוקה 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324052-195580.jpg?_a=1650899219777",
+        "code": "7290015324052",
+        "price": 5.9,
+        "weight": 2.8,
+        "weight_unit": "OZ",
+        "ingridients": "100% פלפל פפריקה מתוקה טהור.",
+        "production_country": "IL"
+    },
+    {
+        "name": "תבלין פפריקה מתוקה בשמן 90 מיכ",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134376-220540.jpg?_a=1650555115044",
+        "code": "134376",
+        "price": 10.9,
+        "weight": 90,
+        "weight_unit": "GRAM",
+        "ingridients": "פלפל פפריקה מתוקה (92%) שמן צמחי (7%), חומר מונע התגיישות (E551).",
+        "production_country": "IL"
+    },
+    {
+        "name": "פפריקה מעושנת 90 גרם מיכל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290014217003-236431.jpg?_a=1650903912517",
+        "code": "7290014217003",
+        "price": 10.9,
+        "weight": 90,
+        "weight_unit": "GRAM",
+        "ingridients": "פפריקה (99%) תמצית עשן (1%)",
+        "production_country": "IL"
+    },
+    {
+        "name": "פפריקה מתוקה 40 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134116-230702.jpg?_a=1615362181227",
+        "code": "134116",
+        "price": 6.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "פפריקה מתוקה, 100% טהור.n",
+        "production_country": "IL"
+    },
+    {
+        "name": "פלפל שחור טחון 100 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134871-193986.jpg?_a=1650897578373",
+        "code": "134871",
+        "price": 14.9,
+        "weight": 100,
+        "weight_unit": "GRAM",
+        "ingridients": "100% פלפל שחור טהורn",
+        "production_country": "IL"
+    },
+    {
+        "name": "פלפל שחור גרוס 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324007-195592.jpg?_a=1650893301589",
+        "code": "7290015324007",
+        "price": 11.9,
+        "weight": 80,
+        "weight_unit": "GRAM",
+        "ingridients": "פלפל שחור גרוס",
+        "production_country": "IL"
+    },
+    {
+        "name": "פלפל שחור טחון 80 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290015324014-195589.jpg?_a=1650899401779",
+        "code": "7290015324014",
+        "price": 11.9,
+        "weight": 80,
+        "weight_unit": "GRAM",
+        "ingridients": "100% פלפל שחור.",
+        "production_country": "IL"
+    },
+    {
+        "name": "פלפל לבן טחון 40 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002517825-194378.jpg?_a=1650895656779",
+        "code": "2517825",
+        "price": 9.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "100% פלפל לבן טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "פלפל שחור גרוס 40 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002517283-230581.jpg?_a=1615362165394",
+        "code": "2517283",
+        "price": 9.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "100% פלפל שחור טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "פלפל שחור שלם 35 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290002517269-230587.jpg?_a=1615360822198",
+        "code": "2517269",
+        "price": 9.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "פלפל שחור שלם, 100% טהור",
+        "production_country": "IL"
+    },
+    {
+        "name": "פלפל שחור גרוס 90 גר  \"מכיל",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134987-193980.jpg?_a=1650897998568",
+        "code": "134987",
+        "price": 14.9,
+        "weight": 90,
+        "weight_unit": "GRAM",
+        "ingridients": "100% פלפל שחור",
+        "production_country": "IL"
+    },
+    {
+        "name": "פלפל שחור טחון 40 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000134123-230699.jpg?_a=1615361397790",
+        "code": "134123",
+        "price": 9.9,
+        "weight": 40,
+        "weight_unit": "GRAM",
+        "ingridients": "פלפל שחור טחון, %100 טהור ",
+        "production_country": "IL"
+    },
+    {
+        "name": "פירורית זהב שומשום 200 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290105693952-751673.jpg?_a=1652302669526",
+        "code": "7290105693952",
+        "price": 6.9,
+        "weight": 200,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן), שומשום (20%), שמרים, מלח, שמנים מהצומח, צבע מאכל טבעי (תמצית פפריקה), מעכב חמצון טבעי (תמצית רוזמרין)",
+        "production_country": "IL"
+    },
+    {
+        "name": "פירורית זהב 200 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290000067544-230766.jpg?_a=1652308330641",
+        "code": "67544",
+        "price": 7.5,
+        "weight": 200,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן), שמרים, מלח, שמנים מהצומח, צבע מאכל טבעי (תמצית פפריקה), מעכב חמצון (תמצית רוזמרין)",
+        "production_country": "IL"
+    },
+    {
+        "name": "פירורי לחם ללא צורך בביצה 300 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290013358486-177832.jpg?_a=1650948478869",
+        "code": "7290013358486",
+        "price": 10.9,
+        "weight": 300,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה לבן (מכיל גלוטן), עמילן מעובד, גלוטן חיטה, מלח, שומן מהצומח, שמרים,צבע מאכל (תמצית פפריקה)",
+        "production_country": "IL"
+    },
+    {
+        "name": "שמן חמניות שארית ישראל 1 ליטר",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290003578672-815835.jpg?_a=1641638450413",
+        "code": "3578672",
+        "price": 11.9,
+        "weight": 1,
+        "weight_unit": "LITER",
+        "ingridients": "100% שמן חמניות מזוכך ",
+        "production_country": "TR"
+    },
+    {
+        "name": "מלח שולחן מעולה דק 1 ק\"ג פיקוח",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290004063016-766895.jpg?_a=1649357394695",
+        "code": "4063016",
+        "price": 2.07,
+        "weight": 1,
+        "weight_unit": "KILOGRAM",
+        "ingridients": "קמח חיטה לבן (מכיל גלוטן), סידן, ויטמין C, ברזל, סיסטאין, ניאצין, ויטמין B1, ויטמין B2, חומצה פוליתtttt",
+        "production_country": "IL"
+    },
+    {
+        "name": "פירורי גריסיני 200 גרם",
+        "picture": "https://storage.googleapis.com/sp-public/gs1-products/2/medium/7290008493413-805188.jpg?_a=1649063122741",
+        "code": "8493413",
+        "price": 7.5,
+        "weight": 200,
+        "weight_unit": "GRAM",
+        "ingridients": "קמח חיטה (מכיל גלוטן), שומן צמחי, סוכר, מלח, שמרים, לתת שעורה (מכיל גלוטן)",
+        "production_country": "IL"
+    }
+]
