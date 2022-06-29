@@ -71,9 +71,9 @@ def __parse_json_to_data(data):
                     'code': code,
                     'price': price,
                     'weight': weight,
-                    'weight_unit': weight_unit,
-                    'ingridients': ingridients,
-                    'production_country': production_country,
+                    'weightUnit': weight_unit,
+                    'ingredients': ingridients,
+                    'productionCountry': production_country,
                 })
 
     return products_complete_data
