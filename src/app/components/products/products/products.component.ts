@@ -5,6 +5,8 @@ import { ProductService } from 'src/app/services/product/product.service';
 import { CreateProductComponent } from '../../create-product/create-product/create-product.component';
 import { DeleteProductComponent } from '../../delete-product/delete-product/delete-product.component';
 import { UpdateProductComponent } from '../../update-product/update-product/update-product.component';
+import * as io from 'socket.io-client';
+
 
 @Component({
   selector: 'app-products',
@@ -16,17 +18,24 @@ export class ProductsComponent implements OnInit {
   products!: any
   productsClone!: any
   searchField!: any
+  socket!: any
 
   constructor(private productService: ProductService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.productService.getProducts().subscribe(data => {
+      this.products = this.productsClone = data
+    })
     this.updateProducts()
   }
 
   updateProducts() {
-    this.productService.getProducts().subscribe(data => {
-      this.products = this.productsClone = data
-      this.searchField = ''
+    this.socket = io.io('localhost:3210')
+    this.socket.on('productUpdate', () => {
+      this.productService.getProducts().subscribe(data => {
+        this.products = this.productsClone = data
+        this.searchField = ''
+      })
     })
   }
 

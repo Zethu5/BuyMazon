@@ -20,9 +20,17 @@ app.get('/', (req, res) => {
     // handle root
 })
 
-
 app.use('/api/products', products)
 app.use('/api/manufacturers', manufacturers)
+
+
+const socket = require('socket.io')(3210, {
+    cors: {
+        origin: '*',
+    }
+})
+
+app.set('socket', socket)
 
 
 app.listen(PORT)

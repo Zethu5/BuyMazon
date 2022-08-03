@@ -13,6 +13,8 @@ router
 .post(async (req, res) => {
     const product = new ProductModel(req.body)
     await product.save()
+    const socket = req.app.get('socket')
+    socket.emit('productUpdate')
     res.json({result: 'Added product ' + product._id})
 })
 
@@ -23,10 +25,14 @@ router
 })
 .put(async (req, res) => {
     await ProductModel.findOneAndUpdate({_id: req.params.id}, req.body)
+    const socket = req.app.get('socket')
+    socket.emit('productUpdate')
     res.json({result: 'Updated product ' + req.params.id})
 })
 .delete(async (req, res) => {
     await ProductModel.findOneAndDelete({_id: req.params.id})
+    const socket = req.app.get('socket')
+    socket.emit('productUpdate')
     res.json({result: 'Deleted product ' + req.params.id})
 })
 

@@ -6,6 +6,7 @@ import { CreateManufacturerComponent } from '../../create-manufacturer/create-ma
 import { Manufacturer } from 'src/app/models/manufacturer';
 import { DeleteManufacturerComponent } from '../../delete-manufacturer/delete-manufacturer/delete-manufacturer.component';
 import { UpdateManufacturerComponent } from '../../update-manufacturer/update-manufacturer/update-manufacturer.component';
+import * as io from 'socket.io-client';
 
 @Component({
   selector: 'app-manufacturers',
@@ -17,21 +18,24 @@ export class ManufacturersComponent implements OnInit {
   manufacturers!: any
   manufacturersClone!: any
   searchField!: any
+  socket!: any
 
   constructor(private manufacturerService: ManufacturerService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.updateManufacturers()
-
-    // interval(10 * 1000).subscribe(() => {
-    //   this.updateManufacturers()
-    // })
-  }
-
-  updateManufacturers() {
     this.manufacturerService.getManufacturers().subscribe(data => {
       this.manufacturersClone = this.manufacturers = data
       this.searchField = ''
+    })
+    this.updateManufacturers()
+  }
+
+  updateManufacturers() {
+    this.socket = io.io('localhost:3210')
+    this.socket.on('manufacturerUpdate', () => {
+      this.manufacturerService.getManufacturers().subscribe(data => {
+        this.manufacturersClone = this.manufacturers = data
+      })
     })
   }
 
