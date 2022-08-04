@@ -29,6 +29,9 @@ import { ProductsComponent } from './components/products/products/products.compo
 import { DeleteProductComponent } from './components/delete-product/delete-product/delete-product.component';
 import { UpdateProductComponent } from './components/update-product/update-product/update-product.component';
 import { BranchesComponent } from './components/branches/branches/branches.component';
+import { CreateBranchComponent } from './components/create-branch/create-branch/create-branch.component';
+import { DeleteBranchComponent } from './components/delete-branch/delete-branch/delete-branch.component';
+import { UpdateBranchComponent } from './components/update-branch/update-branch/update-branch.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { BranchesComponent } from './components/branches/branches/branches.compo
     ProductsComponent,
     DeleteProductComponent,
     UpdateProductComponent,
-    BranchesComponent
+    BranchesComponent,
+    CreateBranchComponent,
+    DeleteBranchComponent,
+    UpdateBranchComponent
   ],
   imports: [
     BrowserModule,
