@@ -14,7 +14,7 @@ export class BranchService {
     return this.http.get(url)
   }
 
-  createBranchs(branch: Branch) {
+  createBranch(branch: Branch) {
     const url = `${api_base}/branches`
     this.http.post(url, branch).subscribe()
   }
