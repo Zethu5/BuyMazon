@@ -76,11 +76,11 @@ export class BranchesComponent implements OnInit {
     });
   }
 
-  openDeleteDialog(product: Branch): void {
+  openDeleteDialog(branch: Branch): void {
     const dialogRef = this.dialog.open(DeleteBranchComponent, {
       width: '25rem',
       data: {
-        product: product
+        branch: branch
       }
     });
 
@@ -89,10 +89,10 @@ export class BranchesComponent implements OnInit {
     });
   }
 
-  openUpdateDialog(product: Branch): void {
+  openUpdateDialog(branch: Branch): void {
     const dialogRef = this.dialog.open(UpdateBranchComponent, {
       data: {
-        product: product
+        branch: branch
       }
     });
 
