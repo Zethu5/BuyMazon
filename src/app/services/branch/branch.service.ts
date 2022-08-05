@@ -29,7 +29,7 @@ export class BranchService {
     this.http.delete(url).subscribe()
   }
 
-  updateBranchs(id: string, branch: Branch) {
+  updateBranch(id: string, branch: Branch) {
     const url = `${api_base}/branches/${id}`
     this.http.put(url, branch).subscribe()
   }
