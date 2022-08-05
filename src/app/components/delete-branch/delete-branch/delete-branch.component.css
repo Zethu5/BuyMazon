@@ -1,0 +1,13 @@
+img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 1rem;
+}
+
+#deleteDiv {
+    text-align: center;
+}
+
+#warning {
+    color: rgb(218, 71, 71);
+}

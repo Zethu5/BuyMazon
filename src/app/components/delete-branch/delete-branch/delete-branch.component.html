@@ -1,1 +1,10 @@
-<p>delete-branch works!</p>
+<div id="deleteDiv">
+    <h1>{{ branch.city }}</h1>
+    <img src="{{ branch.picture }}">
+    <div>
+        <p>id: <b>{{ branch._id }}</b></p>
+        <p>address: <b>{{ branch.address }}</b></p>
+        <p>phone: <b>{{ branch.phone }}</b><p>
+    </div>
+    <button mat-raised-button color="warn" (click)="deleteProduct()">Delete Branch</button>
+</div>
