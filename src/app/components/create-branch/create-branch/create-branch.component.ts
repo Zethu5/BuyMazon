@@ -76,7 +76,7 @@ export class CreateBranchComponent implements OnInit {
     return null
   }
 
-  onProductSubmit() {
+  onBranchSubmit() {
     if(!this.createBranchForm.valid) return
 
     let branch: Branch = {
