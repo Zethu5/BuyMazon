@@ -1,0 +1,22 @@
+#updateBranchForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+}
+
+mat-form-field {
+    margin-bottom: 1%;
+}
+
+#weight {
+    text-align: center;
+}
+
+#weight mat-form-field{
+    width: 30%;
+}
+
+#title {
+    text-align: center;
+}
