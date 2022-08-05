@@ -1,0 +1,19 @@
+#createBranchForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    margin: 0 auto;
+}
+
+mat-form-field {
+    margin-bottom: 1rem;
+}
+
+#weight {
+    text-align: center;
+}
+
+#weight mat-form-field{
+    width: 30%;
+}

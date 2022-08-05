@@ -1,1 +1,42 @@
-<p>create-branch works!</p>
+<form [formGroup]="createBranchForm" id="createBranchForm" (ngSubmit)="onProductSubmit()">
+    <mat-form-field>
+      <mat-label>City</mat-label>
+      <mat-select formControlName="city">
+        <mat-option *ngFor="let city of cities" [value]="city">
+          {{ city }}
+        </mat-option>
+    </mat-select>
+      <mat-error *ngIf="createBranchForm.controls['city'].errors?.['required']">
+        City is required...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <input matInput formControlName="address">
+      <mat-error *ngIf="createBranchForm.controls['address'].errors?.['required']">
+        Address is required...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Phone</mat-label>
+      <input matInput required type="text" maxlength=10 formControlName="phone" placeholder="01-2345678">
+      <mat-error *ngIf="createBranchForm.controls['phone'].errors?.['required']">
+        Phone is required...
+      </mat-error>
+      <mat-error *ngIf="createBranchForm.controls['phone'].errors?.['invalidPhoneNumber']">
+        Phone number is invalid...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Picture</mat-label>
+      <input matInput required type="text" formControlName="picture">
+      <mat-error *ngIf="createBranchForm.controls['picture'].errors?.['required']">
+        Picture is required...
+      </mat-error>
+      <mat-error *ngIf="createBranchForm.controls['picture'].errors?.['invalidImageURI']">
+        Not a valid image uri...
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" (click)="closeDialog()" [disabled]="createBranchForm.invalid">Create Branch</button>
+  </form>
+  
