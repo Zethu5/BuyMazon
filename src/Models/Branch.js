@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const branchesSchema = new mongoose.Schema({
+    city: String,
     address: String,
     phone: String,
     picture: String
