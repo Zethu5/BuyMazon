@@ -24,7 +24,7 @@ export class BranchService {
     return this.http.get(url)
   }
 
-  deleteBranchs(id: string) {
+  deleteBranch(id: string) {
     const url = `${api_base}/branches/${id}`
     this.http.delete(url).subscribe()
   }
