@@ -7,6 +7,8 @@ export const environment = {
 };
 
 export const socket_connection = 'localhost:3210'
+export const api_port = 3000
+export const api_base = `http://localhost:${api_port}/api`
 
 /*
  * For easier debugging in development mode, you can import the following file

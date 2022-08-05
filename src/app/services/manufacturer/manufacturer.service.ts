@@ -1,42 +1,36 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Manufacturer } from '../../models/manufacturer'
+import { api_base } from '../../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ManufacturerService {
-
-  private apiBase: String
-  private port: Number
-
-  constructor(private http: HttpClient) { 
-    this.port = 3000
-    this.apiBase = `http://localhost:${this.port}/api`
-  }
+  constructor(private http: HttpClient) {}
 
   getManufacturers() {
-    const url = `${this.apiBase}/manufacturers`
+    const url = `${api_base}/manufacturers`
     return this.http.get(url)
   }
 
   createManufacturer(manufacturer: Manufacturer) {
-    const url = `${this.apiBase}/manufacturers`
+    const url = `${api_base}/manufacturers`
     this.http.post(url, manufacturer).subscribe()
   }
 
   getManufacturer(id: string) {
-    const url = `${this.apiBase}/manufacturers/${id}`
+    const url = `${api_base}/manufacturers/${id}`
     return this.http.get(url)
   }
 
   deleteManufacturer(id: string) {
-    const url = `${this.apiBase}/manufacturers/${id}`
+    const url = `${api_base}/manufacturers/${id}`
     this.http.delete(url).subscribe()
   }
 
   updateManufacturer(id: string, manufacturer: Manufacturer) {
-    const url = `${this.apiBase}/manufacturers/${id}`
+    const url = `${api_base}/manufacturers/${id}`
     this.http.put(url, manufacturer).subscribe()
   }
 }
