@@ -5,6 +5,7 @@ import { ProductService } from 'src/app/services/product/product.service';
 import { CreateProductComponent } from '../../create-product/create-product/create-product.component';
 import { DeleteProductComponent } from '../../delete-product/delete-product/delete-product.component';
 import { UpdateProductComponent } from '../../update-product/update-product/update-product.component';
+import { socket_connection } from '../../../../environments/environment';
 import * as io from 'socket.io-client';
 
 
@@ -30,11 +31,11 @@ export class ProductsComponent implements OnInit {
   }
 
   updateProducts() {
-    this.socket = io.io('localhost:3210')
+    this.socket = io.io(socket_connection)
     this.socket.on('productUpdate', () => {
       this.productService.getProducts().subscribe(data => {
-        this.products = this.productsClone = data
-        this.searchField = ''
+        this.productsClone = data
+        this.search()
       })
     })
   }

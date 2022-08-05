@@ -6,6 +6,7 @@ import { CreateManufacturerComponent } from '../../create-manufacturer/create-ma
 import { Manufacturer } from 'src/app/models/manufacturer';
 import { DeleteManufacturerComponent } from '../../delete-manufacturer/delete-manufacturer/delete-manufacturer.component';
 import { UpdateManufacturerComponent } from '../../update-manufacturer/update-manufacturer/update-manufacturer.component';
+import { socket_connection } from '../../../../environments/environment';
 import * as io from 'socket.io-client';
 
 @Component({
@@ -31,10 +32,11 @@ export class ManufacturersComponent implements OnInit {
   }
 
   updateManufacturers() {
-    this.socket = io.io('localhost:3210')
+    this.socket = io.io(socket_connection)
     this.socket.on('manufacturerUpdate', () => {
       this.manufacturerService.getManufacturers().subscribe(data => {
-        this.manufacturersClone = this.manufacturers = data
+        this.manufacturersClone = data
+        this.search()
       })
     })
   }
