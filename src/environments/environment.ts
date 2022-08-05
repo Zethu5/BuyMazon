@@ -6,7 +6,9 @@ export const environment = {
   production: false,
 };
 
-export const socket_connection = 'localhost:3210'
+export const socket_port = 3210
+export const socket_connection = `localhost:${socket_port}`
+
 export const api_port = 3000
 export const api_base = `http://localhost:${api_port}/api`
 
