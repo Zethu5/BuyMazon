@@ -1,5 +1,5 @@
 export class Branch {
-    city: string,
+    city: string
     address: string
     phone: string
     picture: string
