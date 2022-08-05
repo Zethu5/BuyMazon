@@ -47,7 +47,7 @@ export class BranchesComponent implements OnInit {
   }
 
   search() {
-    if (this.searchField.length > 0) {
+    if (this.searchField?.length > 0) {
       this.branches = this.branchesClone.filter(
         (branch: Branch) => 
         this.searchFilter(
@@ -97,7 +97,7 @@ export class BranchesComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(() => {
-      this.updateBranches()
+      this.getBranches()
     });
   }
 }
