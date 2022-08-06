@@ -9,7 +9,7 @@ import { api_base } from '../../../environments/environment'
 export class BranchService {
   constructor(private http: HttpClient) {}
 
-  getBranchs() {
+  getBranches() {
     const url = `${api_base}/branches`
     return this.http.get(url)
   }
