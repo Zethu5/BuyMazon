@@ -12,7 +12,7 @@ export const socket_connection = `localhost:${socket_port}`
 export const api_port = 3000
 export const api_base = `http://localhost:${api_port}/api`
 
-export const google_maps_api_key = 'AIzaSyBtu2pB94m6KNRzivA2FMUUWanbXUH1pnY'
+export const google_maps_api_key = 'AIzaSyAjj-IXuWP_pRI_W3fqKOf5dXyBhWTRRpA'
 
 /*
  * For easier debugging in development mode, you can import the following file
