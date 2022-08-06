@@ -1,11 +1,8 @@
 <form [formGroup]="updateBranchForm" id="updateBranchForm" (ngSubmit)="onBranchSubmit()">
+  <div class='google-map' id='google-map'></div>
     <mat-form-field>
       <mat-label>City</mat-label>
-      <mat-select formControlName="city">
-        <mat-option *ngFor="let city of cities" [value]="city">
-          {{ city }}
-        </mat-option>
-    </mat-select>
+      <input matInput formControlName="city">
       <mat-error *ngIf="updateBranchForm.controls['city'].errors?.['required']">
         City is required...
       </mat-error>

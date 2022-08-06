@@ -20,3 +20,8 @@ mat-form-field {
 #title {
     text-align: center;
 }
+
+.google-map {
+    width: 26vw;
+    height: 30vh;
+}
