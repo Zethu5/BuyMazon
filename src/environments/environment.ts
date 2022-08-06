@@ -12,6 +12,8 @@ export const socket_connection = `localhost:${socket_port}`
 export const api_port = 3000
 export const api_base = `http://localhost:${api_port}/api`
 
+export const bing_api_key = 'AjgXD_JjhGykkDr6qICNbqtqQVuIttmBOO-ElRwrPrNGDaKi1VTVCg-Du2vaJVA2'
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
