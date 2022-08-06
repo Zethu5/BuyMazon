@@ -31,7 +31,7 @@ export class BranchesComponent implements OnInit {
   }
 
   getBranches() {
-    this.branchService.getBranchs().subscribe(data => {
+    this.branchService.getBranches().subscribe(data => {
       this.branches = this.branchesClone = data
     })
   }
@@ -39,7 +39,7 @@ export class BranchesComponent implements OnInit {
   updateBranches() {
     this.socket = io.io(socket_connection)
     this.socket.on('branchUpdate', () => {
-      this.branchService.getBranchs().subscribe(data => {
+      this.branchService.getBranches().subscribe(data => {
         this.branchesClone = data
         this.search()
       })
