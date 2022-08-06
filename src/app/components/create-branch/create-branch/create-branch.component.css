@@ -8,6 +8,7 @@
 
 mat-form-field {
     margin-bottom: 1rem;
+    width: 50%;
 }
 
 #weight {
@@ -16,4 +17,9 @@ mat-form-field {
 
 #weight mat-form-field{
     width: 30%;
+}
+
+.google-map {
+    width: 26vw;
+    height: 30vh;
 }

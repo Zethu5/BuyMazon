@@ -1,18 +1,18 @@
 <form [formGroup]="createBranchForm" id="createBranchForm" (ngSubmit)="onBranchSubmit()">
+  <div class="google-map">
+    <app-map (clicked_map)="onClickedMap($event)"></app-map>
+  </div>
+  <h5>* Click on the map to set branch city and address info</h5>
     <mat-form-field>
       <mat-label>City</mat-label>
-      <mat-select formControlName="city">
-        <mat-option *ngFor="let city of cities" [value]="city">
-          {{ city }}
-        </mat-option>
-    </mat-select>
+        <input matInput formControlName="city" [readonly]="true">
       <mat-error *ngIf="createBranchForm.controls['city'].errors?.['required']">
         City is required...
       </mat-error>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Address</mat-label>
-      <input matInput formControlName="address">
+      <input matInput formControlName="address" [readonly]="true">
       <mat-error *ngIf="createBranchForm.controls['address'].errors?.['required']">
         Address is required...
       </mat-error>

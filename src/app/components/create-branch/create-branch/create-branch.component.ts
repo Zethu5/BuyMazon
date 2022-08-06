@@ -14,28 +14,7 @@ export class CreateBranchComponent implements OnInit {
 
   createBranchForm!: FormGroup
   branches!: any
-  cities = [
-    'ירושלים',
-    'תל אביב',
-    'חיפה',
-    'ראשון לציון',
-    'פתח תקווה',
-    'אשדוד',
-    'נתניה',
-    'באר שבע',
-    'בני ברק',
-    'חולון',
-    'רמת גן',
-    'אשקלון',
-    'רחובות',
-    'בית שמש',
-    'בת ים',
-    'כפר סבא',
-    'הרצליה',
-    'חדרה',
-    'מודיעין-מכבים-רעות',
-    'לוד'
-  ]
+  click_data!: any
 
   constructor(private fb: FormBuilder,
     private branchService: BranchService,
@@ -87,6 +66,13 @@ export class CreateBranchComponent implements OnInit {
     }
 
     this.branchService.createBranch(branch)
+  }
+
+  onClickedMap(eventData: any) {
+    this.click_data = eventData.click_data
+    console.log(this.click_data)
+    this.createBranchForm.controls['city'].setValue(eventData.click_data.city[0].long_name)
+    this.createBranchForm.controls['address'].setValue(eventData.click_data.full_name)
   }
 
   closeDialog() {
