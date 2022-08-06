@@ -34,6 +34,7 @@ import { BranchesComponent } from './components/branches/branches/branches.compo
 import { CreateBranchComponent } from './components/create-branch/create-branch/create-branch.component';
 import { DeleteBranchComponent } from './components/delete-branch/delete-branch/delete-branch.component';
 import { UpdateBranchComponent } from './components/update-branch/update-branch/update-branch.component';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { UpdateBranchComponent } from './components/update-branch/update-branch/
     BranchesComponent,
     CreateBranchComponent,
     DeleteBranchComponent,
-    UpdateBranchComponent
+    UpdateBranchComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
