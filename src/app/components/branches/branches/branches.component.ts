@@ -7,6 +7,7 @@ import * as io from 'socket.io-client';
 import { CreateBranchComponent } from '../../create-branch/create-branch/create-branch.component';
 import { DeleteBranchComponent } from '../../delete-branch/delete-branch/delete-branch.component';
 import { UpdateBranchComponent } from '../../update-branch/update-branch/update-branch.component';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-branches',
@@ -19,9 +20,6 @@ export class BranchesComponent implements OnInit {
   branchesClone!: any
   searchField!: any
   socket!: any
-  columnsToDisplay: string[] = Object.getOwnPropertyNames(Branch);
-  columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
-  expandedElement!: Branch | null;
 
   constructor(private branchService: BranchService, public dialog: MatDialog) { }
 
