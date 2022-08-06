@@ -33,7 +33,7 @@ export class CreateBranchComponent implements OnInit {
   }
 
   getBranches() {
-    this.branchService.getBranchs().subscribe(data => {
+    this.branchService.getBranches().subscribe(data => {
       this.branches = data
     })
   }
@@ -63,6 +63,7 @@ export class CreateBranchComponent implements OnInit {
       address: this.createBranchForm.controls['address'].value,
       phone: this.createBranchForm.controls['phone'].value,
       picture: this.createBranchForm.controls['picture'].value,
+      coordinates: this.click_data.coordinates
     }
 
     this.branchService.createBranch(branch)
@@ -70,9 +71,8 @@ export class CreateBranchComponent implements OnInit {
 
   onClickedMap(eventData: any) {
     this.click_data = eventData.click_data
-    console.log(this.click_data)
-    this.createBranchForm.controls['city'].setValue(eventData.click_data.city[0].long_name)
-    this.createBranchForm.controls['address'].setValue(eventData.click_data.full_name)
+    this.createBranchForm.controls['city'].setValue(this.click_data.city[0].long_name)
+    this.createBranchForm.controls['address'].setValue(this.click_data.full_name)
   }
 
   closeDialog() {
