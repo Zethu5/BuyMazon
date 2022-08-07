@@ -8,9 +8,8 @@
     </mat-form-field>
 </div>
 
-<mat-grid-list cols="5" rowHeight="35rem">
-  <mat-grid-tile *ngFor="let manufacturer of manufacturers">
-    <mat-card>
+<div fxLayout="row wrap" fxLayoutAlign="center">
+    <mat-card *ngFor="let manufacturer of manufacturers">
         <div class="cardTitle">
             <mat-card-title>
                 {{manufacturer.name}}
@@ -29,5 +28,4 @@
             <button mat-raised-button color="accent" (click)="openUpdateDialog(manufacturer)">Update</button>
         </mat-card-actions>
     </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+</div>

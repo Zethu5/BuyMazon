@@ -27,8 +27,12 @@ img {
 }
 
 mat-card {
-    height: 30rem;
     width: 15rem;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1%;
 }
 
 mat-card-content {
@@ -36,6 +40,5 @@ mat-card-content {
 }
 
 mat-card-actions {
-    position: absolute; 
-    bottom: 20px;
+    margin: auto 0 0;
 }
