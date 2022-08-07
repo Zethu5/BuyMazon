@@ -33,4 +33,9 @@ export class ManufacturerService {
     const url = `${api_base}/manufacturers/${id}`
     this.http.put(url, manufacturer).subscribe()
   }
+
+  getManufacturerSumProducts(id: string) {
+    const url = `${api_base}/manufacturers/${id}/num_products`
+    return this.http.get(url)
+  }
 }

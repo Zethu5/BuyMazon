@@ -26,6 +26,7 @@ export class ManufacturersComponent implements OnInit {
   ngOnInit(): void {
     this.manufacturerService.getManufacturers().subscribe(data => {
       this.manufacturersClone = this.manufacturers = data
+      this.setManufacturerNumProducts(this.manufacturers)
       this.searchField = ''
     })
     this.updateManufacturers()
@@ -36,6 +37,7 @@ export class ManufacturersComponent implements OnInit {
     this.socket.on('manufacturerUpdate', () => {
       this.manufacturerService.getManufacturers().subscribe(data => {
         this.manufacturersClone = data
+        this.setManufacturerNumProducts(this.manufacturers)
         this.search()
       })
     })
@@ -98,5 +100,11 @@ export class ManufacturersComponent implements OnInit {
     } else {
       this.manufacturers = this.manufacturersClone
     }
+  }
+
+  setManufacturerNumProducts(manufacturers: any) {
+    manufacturers.forEach((manufacturer: any) => {
+      this.manufacturerService.getManufacturerSumProducts(manufacturer._id).subscribe((sum) => {manufacturer.sum_products = sum})
+    });
   }
 }
