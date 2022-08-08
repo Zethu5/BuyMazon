@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
     email: String,
     creationDate: Date,
     age: Number,
-    admin: Boolean,
+    isAdmin: Boolean,
     products: [productSchema]
 })
 
