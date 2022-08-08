@@ -55,4 +55,24 @@ router
     res.json({result: 'Deleted user ' + req.params.username})
 })
 
+router
+.route('/login')
+.post(async (req, res) => {
+    const user = await UserModel.findOne({username: req.body.username}).exec()
+
+    if (user === null) {
+        return res.status(403).json({error: 'Username or password are incorrect'})
+    }
+
+    if (!await bcrypt.compare(req.body.password, user.password)) {
+        return res.status(403).json({error: 'Username or password are incorrect'})
+    }
+
+    res.status(200).json({
+        username: user.username,
+        isAdmin: user.isAdmin,
+        logged_in: true
+    })
+})
+
 module.exports = router
