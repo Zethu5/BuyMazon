@@ -1,0 +1,25 @@
+mat-card {
+    width: 15vw;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+
+mat-form-field {
+    margin-top: 4vh;
+}
+
+#createUserForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.registerButton {
+    margin-top: 3vh;
+}
+
+.formTitle {
+    text-align: center;
+}

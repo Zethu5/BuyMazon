@@ -1,1 +1,71 @@
-<p>create-user works!</p>
+<mat-card>
+  <div class="formTitle">
+    <h1>Register</h1>
+  </div>
+  <form [formGroup]="createUserForm" id="createUserForm" (ngSubmit)="register()">
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input matInput required type="text" formControlName="username">
+      <mat-error *ngIf="createUserForm.controls['username'].errors?.['required']">
+        Username is required...
+      </mat-error>
+      <mat-error *ngIf="createUserForm.controls['username'].errors?.['minlength']">
+        Username has to have at least 3 characters...
+      </mat-error>
+      <mat-error *ngIf="createUserForm.controls['username'].errors?.['maxlength']">
+        Username has to have at most 15 characters...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput required type="password" formControlName="password">
+      <mat-error *ngIf="createUserForm.controls['password'].errors?.['required']">
+        Password is required...
+      </mat-error>
+      <mat-error *ngIf="createUserForm.controls['password'].errors?.['invalidPassword']">
+        Password must be at least 8 characters long and contain letters and numbers...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput required type="email" formControlName="email">
+      <mat-error *ngIf="createUserForm.controls['email'].errors?.['required']">
+        Email is required...
+      </mat-error>
+      <mat-error *ngIf="createUserForm.controls['email'].errors?.['invalidEmail']">
+        Email is not valid...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input matInput required type="text" formControlName="firstName">
+      <mat-error *ngIf="createUserForm.controls['firstName'].errors?.['required']">
+        First name is required...
+      </mat-error>
+      <mat-error *ngIf="createUserForm.controls['firstName'].errors?.['invalidName']">
+        First name is not valid...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Last Name</mat-label>
+      <input matInput required type="text" formControlName="lastName">
+      <mat-error *ngIf="createUserForm.controls['lastName'].errors?.['required']">
+        Last name is required...
+      </mat-error>
+      <mat-error *ngIf="createUserForm.controls['lastName'].errors?.['invalidName']">
+        Last name is not valid...
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Date of Birth</mat-label>
+      <input matInput required type="date" formControlName="dateOfBirth">
+      <mat-error *ngIf="createUserForm.controls['dateOfBirth'].errors?.['required']">
+        Date of Birth is required...
+      </mat-error>
+      <mat-error *ngIf="createUserForm.controls['dateOfBirth'].errors?.['invalidDateOfBirth']">
+        You must be atleast 18 years old...
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button class="registerButton" color="primary" type="submit">CreateUser</button>
+  </form>
+</mat-card>
