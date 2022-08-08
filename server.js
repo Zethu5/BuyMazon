@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const products = require('./src/routes/products')
 const manufacturers = require('./src/routes/manufacturers')
 const branches = require('./src/routes/branches')
+const users = require('./src/routes/users')
 
 
 app.use(cors({
@@ -24,6 +25,7 @@ app.get('/', (req, res) => {})
 app.use('/api/products', products)
 app.use('/api/manufacturers', manufacturers)
 app.use('/api/branches', branches)
+app.use('/api/users', users)
 
 // socket config
 const socket = require('socket.io')(3210, {
