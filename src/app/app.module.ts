@@ -34,6 +34,7 @@ import { BranchesComponent } from './components/branches/branches/branches.compo
 import { CreateBranchComponent } from './components/create-branch/create-branch/create-branch.component';
 import { DeleteBranchComponent } from './components/delete-branch/delete-branch/delete-branch.component';
 import { UpdateBranchComponent } from './components/update-branch/update-branch/update-branch.component';
+import { CreateUserComponent } from './components/create-user/create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { UpdateBranchComponent } from './components/update-branch/update-branch/
     CreateBranchComponent,
     DeleteBranchComponent,
     UpdateBranchComponent,
+    CreateUserComponent,
   ],
   imports: [
     BrowserModule,
