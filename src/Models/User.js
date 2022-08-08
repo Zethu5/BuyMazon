@@ -6,9 +6,11 @@ const userSchema = new mongoose.Schema({
     password: String,
     email: String,
     creationDate: Date,
-    age: Number,
+    firstName: String,
+    lastName: String,
+    dateOfBirth: Date,
     isAdmin: Boolean,
-    products: [productSchema]
+    products: []
 })
 
 module.exports.UserModel = mongoose.model('User', userSchema)
