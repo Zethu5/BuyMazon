@@ -7,7 +7,6 @@ import * as io from 'socket.io-client';
 import { CreateBranchComponent } from '../../create-branch/create-branch/create-branch.component';
 import { DeleteBranchComponent } from '../../delete-branch/delete-branch/delete-branch.component';
 import { UpdateBranchComponent } from '../../update-branch/update-branch/update-branch.component';
-import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-branches',
