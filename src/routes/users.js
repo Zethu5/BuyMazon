@@ -70,7 +70,7 @@ router
 
     res.status(200).json({
         username: user.username,
-        isAdmin: user.isAdmin,
+        isAdmin: user.isAdmin
     })
 })
 

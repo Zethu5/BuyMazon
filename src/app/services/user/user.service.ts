@@ -33,4 +33,9 @@ export class UserService {
     const url = `${api_base}/users/${id}`
     this.http.put(url, user).subscribe()
   }
+
+  login(username: string, password: string) {
+    const url = `${api_base}/users/login`
+    return this.http.post(url, {username: username, password: password})
+  }
 }
