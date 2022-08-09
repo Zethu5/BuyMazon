@@ -2,3 +2,7 @@ mat-toolbar div {
     margin: 0 auto;
     font-size: larger;
 }
+
+.actionBtns {
+    margin-left: 1vw;
+}

@@ -1,3 +1,7 @@
 <mat-toolbar>
     <div>BuyMazon</div>
+    <h3>{{username}}</h3>
+    <button class='actionBtns' mat-raised-button *ngIf="username" (click)="logout()">Log out</button>
+    <button class='actionBtns' mat-raised-button *ngIf="!username" (click)="login()">Login</button>
+    <button class='actionBtns' mat-raised-button *ngIf="!username" (click)="register()">Register</button>
 </mat-toolbar>

@@ -72,6 +72,8 @@ router
         username: user.username,
         isAdmin: user.isAdmin
     })
+    const socket = req.app.get('socket')
+    socket.emit('loggedIn', user.username)
 })
 
 module.exports = router
