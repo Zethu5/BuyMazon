@@ -7,6 +7,7 @@ import { DeleteProductComponent } from '../../delete-product/delete-product/dele
 import { UpdateProductComponent } from '../../update-product/update-product/update-product.component';
 import { socket_connection } from '../../../../environments/environment';
 import * as io from 'socket.io-client';
+import { UserService } from 'src/app/services/user/user.service';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class ProductsComponent implements OnInit {
   searchField!: any
   socket!: any
 
-  constructor(private productService: ProductService, public dialog: MatDialog) { }
+  constructor(private productService: ProductService, private userService: UserService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(data => {
@@ -99,5 +100,13 @@ export class ProductsComponent implements OnInit {
     dialogRef.afterClosed().subscribe(() => {
       this.updateProducts()
     });
+  }
+
+  isLoggedIn() {
+    return this.userService.isLoggedIn()
+  }
+
+  isAdmin() {
+    return this.userService.isAdmin()
   }
 }

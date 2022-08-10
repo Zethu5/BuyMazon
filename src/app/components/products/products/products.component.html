@@ -8,7 +8,7 @@
   </mat-form-field>
 </div>
 
-<div fxLayout="row wrap" fxLayoutAlign="center">
+<div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutAlign="center">
   <mat-card *ngFor="let product of products">
     <div class="cardTitle">
       <mat-card-title>
@@ -28,8 +28,9 @@
       <p><b>Manufacturer</b>: {{ product.manufacturer.name }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="warn" (click)="openDeleteDialog(product)">DELETE</button>
-      <button mat-raised-button color="accent" (click)="openUpdateDialog(product)">Update</button>
+      <button mat-raised-button color="primary" *ngIf="isLoggedIn()">ADD</button>
+      <button mat-raised-button color="accent" (click)="openUpdateDialog(product)" *ngIf="isAdmin()">Update</button>
+      <button mat-raised-button color="warn" (click)="openDeleteDialog(product)" *ngIf="isAdmin()">DELETE</button>
     </mat-card-actions>
   </mat-card>
 </div>

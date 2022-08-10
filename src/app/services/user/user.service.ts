@@ -38,4 +38,12 @@ export class UserService {
     const url = `${api_base}/users/login`
     return this.http.post(url, {username: username, password: password})
   }
+
+  isLoggedIn() {
+    return localStorage.getItem('buymazon_username') ? true : false
+  }
+
+  isAdmin() {
+    return localStorage.getItem('buymazon_isAdmin') === 'true' ? true : false
+  }
 }
