@@ -88,6 +88,6 @@ export class CreateUserComponent implements OnInit {
     }
 
     this.userService.createUser(user)
-    this.router.navigateByUrl('/')
+    this.router.navigate(['/']);
   }
 }

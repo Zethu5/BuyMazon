@@ -12,6 +12,10 @@ mat-toolbar div {
     left: 47vw;
 }
 
+#siteTitle a:hover {
+    cursor:pointer;
+}
+
 #cart {
     position: absolute;
     right: 1vw;

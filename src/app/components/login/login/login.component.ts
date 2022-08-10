@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
-    if (localStorage.getItem(local_storage_username_property_name)) this.router.navigateByUrl('/')
+    if (localStorage.getItem(local_storage_username_property_name)) this.router.navigate(['/']);
 
     this.loginForm = this.fb.group({
       username: [null, [Validators.required]],
@@ -38,6 +38,6 @@ export class LoginComponent implements OnInit {
   handleLogin(data: any) {
     localStorage.setItem(local_storage_username_property_name, data.username)
     localStorage.setItem(local_storage_is_admin_property_name, data.isAdmin)
-    this.router.navigateByUrl('/')
+    this.router.navigate(['/']);
   }
 }

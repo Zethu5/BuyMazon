@@ -38,11 +38,11 @@ export class NavbarComponent implements OnInit {
   }
 
   login() {
-    this.router.navigateByUrl('/login')
+    this.router.navigate(['/login']);
   }
 
   register() {
-    this.router.navigateByUrl('/register')
+    this.router.navigate(['/register']);
   }
 
   logout() {
@@ -54,5 +54,13 @@ export class NavbarComponent implements OnInit {
     this.userService.getUserByUsername(this.userService.getLocalStorageUserName()!).subscribe((user: any) => {
       this.numProductsInCart = user.products.length
     })
+  }
+
+  goToCart() {
+    this.router.navigate(['/cart']);
+  }
+
+  goToHomePage() {
+    this.router.navigate(['/']);
   }
 }

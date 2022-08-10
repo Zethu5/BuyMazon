@@ -1,8 +1,11 @@
 <mat-toolbar>
-    <div id="siteTitle">BuyMazon</div>
-    <h3>{{username}}</h3>
-    <button class='actionBtns' mat-raised-button *ngIf="username" (click)="logout()">Log out</button>
-    <button class='actionBtns' mat-raised-button *ngIf="!username" (click)="login()">Login</button>
-    <button class='actionBtns' mat-raised-button *ngIf="!username" (click)="register()">Register</button>
-    <button id="cart" mat-button *ngIf="username"><span *ngIf="numProductsInCart > 0" matBadge="{{numProductsInCart}}" matBadgePosition="before" matBadgeColor="primary"></span><mat-icon>shopping_cart</mat-icon></button>
+  <div id="siteTitle"><a (click)="goToHomePage()">BuyMazon</a></div>
+  <h3>{{ username }}</h3>
+  <button class='actionBtns' mat-raised-button *ngIf="username" (click)="logout()">Log out</button>
+  <button class='actionBtns' mat-raised-button *ngIf="!username" (click)="login()">Login</button>
+  <button class='actionBtns' mat-raised-button *ngIf="!username" (click)="register()">Register</button>
+  <button id="cart" mat-button *ngIf="username" (click)="goToCart()"><span *ngIf="numProductsInCart > 0" matBadge="{{ numProductsInCart }}"
+      matBadgePosition="before" matBadgeColor="primary"></span>
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
 </mat-toolbar>
