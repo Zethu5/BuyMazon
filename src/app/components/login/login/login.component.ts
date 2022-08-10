@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user/user.service';
+import { local_storage_is_admin_property_name, local_storage_username_property_name } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
-    if (localStorage.getItem('buymazon_username')) this.router.navigateByUrl('/')
+    if (localStorage.getItem(local_storage_username_property_name)) this.router.navigateByUrl('/')
 
     this.loginForm = this.fb.group({
       username: [null, [Validators.required]],
@@ -35,8 +36,8 @@ export class LoginComponent implements OnInit {
   }
 
   handleLogin(data: any) {
-    localStorage.setItem('buymazon_username', data.username)
-    localStorage.setItem('buymazon_isAdmin', data.isAdmin)
+    localStorage.setItem(local_storage_username_property_name, data.username)
+    localStorage.setItem(local_storage_is_admin_property_name, data.isAdmin)
     this.router.navigateByUrl('/')
   }
 }

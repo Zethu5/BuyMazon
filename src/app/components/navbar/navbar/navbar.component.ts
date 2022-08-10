@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as io from 'socket.io-client';
-import { socket_connection } from 'src/environments/environment';
+import { local_storage_username_property_name, socket_connection } from 'src/environments/environment';
 
 @Component({
   selector: 'app-navbar',
@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.username = localStorage.getItem('buymazon_username')
+    this.username = localStorage.getItem(local_storage_username_property_name)
     this.updateUserState()
   }
 

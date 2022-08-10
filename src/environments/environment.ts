@@ -14,6 +14,9 @@ export const api_base = `http://localhost:${api_port}/api`
 
 export const google_maps_api_key = 'AIzaSyAjj-IXuWP_pRI_W3fqKOf5dXyBhWTRRpA'
 
+export const local_storage_username_property_name = 'buymazon_username'
+export const local_storage_is_admin_property_name = 'buymazon_isAdmin'
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

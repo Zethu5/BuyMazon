@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from 'src/app/models/user';
-import { api_base } from '../../../environments/environment'
+import { api_base, local_storage_is_admin_property_name, local_storage_username_property_name } from '../../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -40,10 +40,10 @@ export class UserService {
   }
 
   isLoggedIn() {
-    return localStorage.getItem('buymazon_username') ? true : false
+    return localStorage.getItem(local_storage_username_property_name) ? true : false
   }
 
   isAdmin() {
-    return localStorage.getItem('buymazon_isAdmin') === 'true' ? true : false
+    return localStorage.getItem(local_storage_is_admin_property_name) === 'true' ? true : false
   }
 }
