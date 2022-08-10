@@ -37,6 +37,7 @@ import { DeleteBranchComponent } from './components/delete-branch/delete-branch/
 import { UpdateBranchComponent } from './components/update-branch/update-branch/update-branch.component';
 import { CreateUserComponent } from './components/create-user/create-user/create-user.component';
 import { LoginComponent } from './components/login/login/login.component';
+import { CartComponent } from './components/cart/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { LoginComponent } from './components/login/login/login.component';
     UpdateBranchComponent,
     CreateUserComponent,
     LoginComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
