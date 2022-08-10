@@ -80,6 +80,7 @@ router
     })
     const socket = req.app.get('socket')
     socket.emit('loggedIn', user.username)
+    socket.emit('userCartUpdate')
 })
 
 router
