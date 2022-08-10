@@ -1,12 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from 'src/app/models/product';
+import { User } from 'src/app/models/user';
 import { api_base } from '../../../environments/environment'
+import { UserService } from '../user/user.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
+  userService = new UserService(this.http)
+
   constructor(private http: HttpClient) {}
 
   getProducts() {

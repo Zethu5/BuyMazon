@@ -56,6 +56,12 @@ router
 })
 
 router
+.route('/username/:username')
+.get(async (req, res) => {
+    res.json(await UserModel.findOne({username: req.params.username}).exec())
+})
+
+router
 .route('/login')
 .post(async (req, res) => {
     const user = await UserModel.findOne({username: req.body.username}).exec()
@@ -74,6 +80,21 @@ router
     })
     const socket = req.app.get('socket')
     socket.emit('loggedIn', user.username)
+})
+
+router
+.route('/:id/addproduct')
+.put(async (req, res) => {
+    let user = await UserModel.findOne({_id: req.params.id}).exec()
+
+    const product = req.body.product
+    user.products.push(product)
+    await user.save()
+
+    const socket = req.app.get('socket')
+    socket.emit('userCartUpdate')
+
+    res.json({result: `Added ${product.name} to ${user.username}`})
 })
 
 module.exports = router

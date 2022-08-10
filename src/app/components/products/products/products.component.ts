@@ -109,4 +109,8 @@ export class ProductsComponent implements OnInit {
   isAdmin() {
     return this.userService.isAdmin()
   }
+
+  addProductToUser(product: Product) {
+    this.userService.addProductToUser(product)
+  }
 }
