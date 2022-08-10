@@ -17,4 +17,9 @@ export class CartService {
       this.http.put(url, {product: product}).subscribe()
     })
   }
+
+  getUserCartById(id: string) {
+      const url = `${api_base}/cart/${id}`
+      return this.http.get(url)
+  }
 }
