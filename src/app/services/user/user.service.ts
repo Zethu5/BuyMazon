@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Product } from 'src/app/models/product';
 import { User } from 'src/app/models/user';
 import { api_base, local_storage_is_admin_property_name, local_storage_username_property_name } from '../../../environments/environment'
 
@@ -55,12 +54,5 @@ export class UserService {
 
   getLocalStorageUserName() {
     return localStorage.getItem(local_storage_username_property_name)
-  }
-
-  addProductToUser(product: Product) {
-    this.getUserByUsername(this.getLocalStorageUserName()!).subscribe((user: any) => {
-      const url = `${api_base}/users/${user._id}/addproduct`
-      this.http.put(url, {product: product}).subscribe()
-    })
   }
 }

@@ -8,6 +8,7 @@ import { UpdateProductComponent } from '../../update-product/update-product/upda
 import { socket_connection } from '../../../../environments/environment';
 import * as io from 'socket.io-client';
 import { UserService } from 'src/app/services/user/user.service';
+import { CartService } from 'src/app/services/cart/cart.service';
 
 
 @Component({
@@ -22,7 +23,10 @@ export class ProductsComponent implements OnInit {
   searchField!: any
   socket!: any
 
-  constructor(private productService: ProductService, private userService: UserService, public dialog: MatDialog) { }
+  constructor(private productService: ProductService,
+    private userService: UserService,
+    private cartService: CartService,
+    public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(data => {
@@ -111,6 +115,6 @@ export class ProductsComponent implements OnInit {
   }
 
   addProductToUser(product: Product) {
-    this.userService.addProductToUser(product)
+    this.cartService.addProductToUser(product)
   }
 }

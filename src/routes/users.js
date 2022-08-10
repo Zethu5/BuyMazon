@@ -83,19 +83,4 @@ router
     socket.emit('userCartUpdate')
 })
 
-router
-.route('/:id/addproduct')
-.put(async (req, res) => {
-    let user = await UserModel.findOne({_id: req.params.id}).exec()
-
-    const product = req.body.product
-    user.products.push(product)
-    await user.save()
-
-    const socket = req.app.get('socket')
-    socket.emit('userCartUpdate')
-
-    res.json({result: `Added ${product.name} to ${user.username}`})
-})
-
 module.exports = router
