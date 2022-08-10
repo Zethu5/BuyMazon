@@ -21,6 +21,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
 
 import { CreateManufacturerComponent } from './components/create-manufacturer/create-manufacturer/create-manufacturer.component';
 import { ManufacturersComponent } from './components/manufacturers/manufacturers/manufacturers.component';
@@ -76,6 +77,7 @@ import { LoginComponent } from './components/login/login/login.component';
     FlexLayoutModule,
     MatTableModule,
     MatIconModule,
+    MatBadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

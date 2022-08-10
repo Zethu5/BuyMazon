@@ -28,9 +28,9 @@
       <p><b>Manufacturer</b>: {{ product.manufacturer.name }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" *ngIf="isLoggedIn()" (click)="addProductToUser(product)">ADD</button>
-      <button mat-raised-button color="accent" (click)="openUpdateDialog(product)" *ngIf="isAdmin()">Update</button>
-      <button mat-raised-button color="warn" (click)="openDeleteDialog(product)" *ngIf="isAdmin()">DELETE</button>
+      <button mat-raised-button color="primary" *ngIf="isLoggedIn()" (click)="addProductToUser(product)"><mat-icon>add_shopping_cart</mat-icon></button>
+      <button mat-raised-button color="accent" (click)="openUpdateDialog(product)" *ngIf="isAdmin()"><mat-icon>edit</mat-icon></button>
+      <button mat-raised-button color="warn" (click)="openDeleteDialog(product)" *ngIf="isAdmin()"><mat-icon>delete</mat-icon></button>
     </mat-card-actions>
   </mat-card>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as io from 'socket.io-client';
+import { UserService } from 'src/app/services/user/user.service';
 import { local_storage_username_property_name, socket_connection } from 'src/environments/environment';
 
 @Component({
@@ -12,8 +13,9 @@ export class NavbarComponent implements OnInit {
 
   username!: any
   socket!: any
+  numProductsInCart: number = this.getNumProductsInUserCart()!
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private userService: UserService) {}
 
   ngOnInit(): void {
     this.username = localStorage.getItem(local_storage_username_property_name)
@@ -24,6 +26,14 @@ export class NavbarComponent implements OnInit {
     this.socket = io.io(socket_connection)
     this.socket.on('loggedIn', (username: string) => {
       this.username = username
+    })
+
+    this.socket.on('loggedIn', (username: string) => {
+      this.username = username
+    })
+
+    this.socket.on('userCartUpdate', () => {
+      this.getNumProductsInUserCart()
     })
   }
 
@@ -40,5 +50,9 @@ export class NavbarComponent implements OnInit {
     this.ngOnInit()
   }
 
-
+  getNumProductsInUserCart() {
+    this.userService.getUserByUsername(this.userService.getLocalStorageUserName()!).subscribe((user: any) => {
+      this.numProductsInCart = user.products.length
+    })
+  }
 }

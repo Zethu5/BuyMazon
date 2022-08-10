@@ -6,3 +6,19 @@ mat-toolbar div {
 .actionBtns {
     margin-left: 1vw;
 }
+
+#siteTitle {
+    position: absolute;
+    left: 47vw;
+}
+
+#cart {
+    position: absolute;
+    right: 1vw;
+}
+
+#cart span {
+    display: inline-block;
+    left: -0.6vw;
+    top: -1vh;
+}
