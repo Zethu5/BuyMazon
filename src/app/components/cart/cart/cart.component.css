@@ -1,0 +1,36 @@
+.pageTitle {
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.pageTitle h1 {
+    font-size: 3vw;
+}
+
+.tableContainer {
+    height: 50vh;
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 5vh;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.tableContainer::-webkit-scrollbar {
+    display: none;
+}
+  
+img {
+    height: 100px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+th.mat-header-cell {
+    text-align: center;
+}
+  
