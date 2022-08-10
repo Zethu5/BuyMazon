@@ -9,7 +9,7 @@ export class User {
     lastName: string
     dateOfBirth: Date
     isAdmin: boolean
-    products: []
+    products: [Product?]
 
     constructor(user?: User) {
         this.username = user?.username ?? '',

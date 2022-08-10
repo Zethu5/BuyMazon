@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
     lastName: String,
     dateOfBirth: Date,
     isAdmin: Boolean,
-    products: []
+    products: [productSchema]
 })
 
 module.exports.UserModel = mongoose.model('User', userSchema)
