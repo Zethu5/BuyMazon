@@ -37,3 +37,8 @@ th.mat-header-cell {
 .mat-column-amount {
     width: 10vw;
 }
+
+.checkoutBtn {
+    margin-top: 5vh;
+    text-align: center;
+}

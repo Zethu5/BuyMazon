@@ -38,6 +38,7 @@ import { UpdateBranchComponent } from './components/update-branch/update-branch/
 import { CreateUserComponent } from './components/create-user/create-user/create-user.component';
 import { LoginComponent } from './components/login/login/login.component';
 import { CartComponent } from './components/cart/cart/cart.component';
+import { CheckoutComponent } from './components/checkout/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { CartComponent } from './components/cart/cart/cart.component';
     CreateUserComponent,
     LoginComponent,
     CartComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

@@ -74,4 +74,8 @@ export class CartComponent implements OnInit {
     this.products.forEach((product: any) => total += product.amount * product.price)
     return total.toFixed(2)
   }
+
+  goToCheckout() {
+    this.router.navigate(['/checkout']);
+  }
 }
