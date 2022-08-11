@@ -1,1 +1,104 @@
-<p>checkout works!</p>
+<mat-card class="checkoutContainer">
+  <mat-stepper linear #stepper>
+    <mat-step [stepControl]="addressForm" label="Shipping Address" state="address">
+      <div class="addressForm">
+        <form [formGroup]="addressForm">
+          <div>
+            <mat-form-field class="spaceRight">
+              <input matInput formControlName="firstName" placeholder="First Name">
+              <mat-error *ngIf="addressForm.controls['firstName'].errors?.['required']">
+                First name is required...
+              </mat-error>
+              <mat-error *ngIf="addressForm.controls['firstName'].errors?.['invalidName']">
+                Invalid first name...
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput formControlName="lastName" placeholder="Last Name">
+              <mat-error *ngIf="addressForm.controls['lastName'].errors?.['required']">
+                Last name is required...
+              </mat-error>
+              <mat-error *ngIf="addressForm.controls['lastName'].errors?.['invalidName']">
+                Invalid last name...
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="fillRow">
+              <input matInput formControlName="firstAddress" placeholder="Address 1">
+              <mat-error *ngIf="addressForm.controls['firstAddress'].errors?.['required']">
+                Address is required...
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="fillRow">
+              <input matInput formControlName="secondAddress" placeholder="Address 2">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="spaceRight">
+              <input matInput formControlName="city" placeholder="City">
+              <mat-error *ngIf="addressForm.controls['city'].errors?.['required']">
+                City name is required...
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput formControlName="region" placeholder="State / Province / Region">
+              <mat-error *ngIf="addressForm.controls['region'].errors?.['required']">
+                Region is required...
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="spaceRight">
+              <input matInput formControlName="zipCode" placeholder="Zip Code">
+              <mat-error *ngIf="addressForm.controls['zipCode'].errors?.['required']">
+                Zip code is required...
+              </mat-error>
+              <mat-error *ngIf="addressForm.controls['zipCode'].errors?.['invalidZipCode']">
+                Invalid zip code...
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput formControlName="phone" placeholder="Phone">
+              <mat-error *ngIf="addressForm.controls['phone'].errors?.['required']">
+                Phone is required...
+              </mat-error>
+              <mat-error *ngIf="addressForm.controls['phone'].errors?.['invalidPhoneNumber']">
+                Invalid phone number...
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <mat-form-field class="fillRow">
+            <input matInput formControlName="email" placeholder="Email">
+            <mat-error *ngIf="addressForm.controls['email'].errors?.['required']">
+              Email is required...
+            </mat-error>
+            <mat-error *ngIf="addressForm.controls['email'].errors?.['invalidEmail']">
+              Invalid email...
+            </mat-error>
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="nextBtn">
+        <button mat-raised-button matStepperNext color="primary">Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Billing Information" state="billing">
+    </mat-step>
+    <mat-step label="Summary" state="summary">
+    </mat-step>
+
+    <!-- Icon overrides. -->
+    <ng-template matStepperIcon="address">
+      <mat-icon>location_on</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="billing">
+      <mat-icon>credit_card</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="summary">
+      <mat-icon>description</mat-icon>
+    </ng-template>
+  </mat-stepper>
+</mat-card>

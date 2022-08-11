@@ -1,0 +1,33 @@
+.checkoutContainer {
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+
+.addressForm {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+
+.spaceRight {
+    margin-right: 1rem;
+}
+
+.sideBySide {
+    flex-grow: 1;
+}
+
+.fillRow {
+    width: 100%;
+}
+
+.nextBtn {
+    margin-top: 5%;
+    text-align: center;
+}
+
+mat-form-field {
+    margin-top: 5%;
+}

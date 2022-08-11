@@ -22,6 +22,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatStepperModule} from '@angular/material/stepper';
 
 import { CreateManufacturerComponent } from './components/create-manufacturer/create-manufacturer/create-manufacturer.component';
 import { ManufacturersComponent } from './components/manufacturers/manufacturers/manufacturers.component';
@@ -82,6 +83,7 @@ import { CheckoutComponent } from './components/checkout/checkout/checkout.compo
     MatTableModule,
     MatIconModule,
     MatBadgeModule,
+    MatStepperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
