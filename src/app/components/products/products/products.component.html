@@ -1,5 +1,5 @@
 <div id="topBar">
-  <div>
+  <div *ngIf="isAdmin()">
     <button mat-raised-button color="primary" (click)="openCreateDialog()">Add Product</button>
   </div>
   <mat-form-field appearance="fill">
