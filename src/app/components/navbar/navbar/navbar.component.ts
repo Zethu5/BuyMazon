@@ -13,12 +13,13 @@ export class NavbarComponent implements OnInit {
 
   username!: any
   socket!: any
-  numProductsInCart: number = this.getNumProductsInUserCart()!
+  numProductsInCart: number = 0
 
   constructor(private router: Router, private userService: UserService) {}
 
   ngOnInit(): void {
     this.username = localStorage.getItem(local_storage_username_property_name)
+    if(this.username) this.getNumProductsInUserCart(this.username)
     this.updateUserState()
   }
 
@@ -30,10 +31,11 @@ export class NavbarComponent implements OnInit {
 
     this.socket.on('loggedIn', (username: string) => {
       this.username = username
+      this.getNumProductsInUserCart(this.username)
     })
 
     this.socket.on('userCartUpdate', () => {
-      this.getNumProductsInUserCart()
+      this.getNumProductsInUserCart(this.username)
     })
   }
 
@@ -48,10 +50,11 @@ export class NavbarComponent implements OnInit {
   logout() {
     localStorage.clear()
     this.ngOnInit()
+    this.router.navigate(['/']);
   }
 
-  getNumProductsInUserCart() {
-    this.userService.getUserByUsername(this.userService.getLocalStorageUserName()!).subscribe((user: any) => {
+  getNumProductsInUserCart(username: string) {
+    this.userService.getUserByUsername(username).subscribe((user: any) => {
       this.numProductsInCart = user.products.length
     })
   }
