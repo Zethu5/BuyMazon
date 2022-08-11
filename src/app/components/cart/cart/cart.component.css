@@ -8,7 +8,7 @@
 }
 
 .tableContainer {
-    height: 50vh;
+    max-height: 50vh;
     width: 60vw;
     margin: 0 auto;
     margin-top: 5vh;
@@ -34,3 +34,6 @@ th.mat-header-cell {
     text-align: center;
 }
   
+.mat-column-amount {
+    width: 10vw;
+}
