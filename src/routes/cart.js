@@ -4,9 +4,11 @@ const mongodb = require('mongodb')
 const { emit } = require('process');
 const { UserModel } = require('../Models/User')
 
-const client = new mongodb.MongoClient('mongodb://localhost:27017/BuyMazon')
+require('dotenv').config({path:__dirname + '../../.env'})
+
+mongoose.connect(process.env.mongo_db_connection_uri);
+const client = new mongodb.MongoClient(process.env.mongo_db_connection_uri)
 const db = client.db('BuyMazon')
-mongoose.connect('mongodb://localhost:27017/BuyMazon');
 
 let router = express.Router()
 

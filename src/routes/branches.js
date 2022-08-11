@@ -2,8 +2,10 @@ const express = require('express')
 const mongoose = require('mongoose')
 const { BranchesModel } = require('../Models/Branch')
 
+require('dotenv').config({path:__dirname + '../../.env'})
+
+mongoose.connect(process.env.mongo_db_connection_uri);
 let router = express.Router()
-mongoose.connect('mongodb://localhost:27017/BuyMazon');
 
 router
 .route('/')

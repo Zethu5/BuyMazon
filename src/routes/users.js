@@ -3,8 +3,11 @@ const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const { UserModel } = require('../Models/User')
 
+require('dotenv').config({path:__dirname + '../../.env'})
+
+mongoose.connect(process.env.mongo_db_connection_uri);
 let router = express.Router()
-mongoose.connect('mongodb://localhost:27017/BuyMazon');
+
 
 router
 .route('/')
