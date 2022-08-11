@@ -18,7 +18,7 @@
     <ng-container matColumnDef="code">
       <th mat-header-cell *matHeaderCellDef> Code </th>
       <td mat-cell *matCellDef="let element"> {{ element.code }} </td>
-      <td mat-footer-cell *matFooterCellDef></td>
+      <td mat-footer-cell *matFooterCellDef><b>{{ getAmountProducts() }} Products</b></td>
     </ng-container>
 
     <ng-container matColumnDef="price">
@@ -50,12 +50,16 @@
           <button mat-icon-button color="primary" (click)="decreaseAmount(element)" [disabled]="element.amount == 1">
             <mat-icon>remove_circle</mat-icon>
           </button>
-          <button mat-icon-button color="warn">
+          <button mat-icon-button color="warn" (click)="removeProduct(element)">
             <mat-icon>delete_forever</mat-icon>
           </button>
         </div>
       </td>
-      <td mat-footer-cell *matFooterCellDef class=""><b>{{getTotalCost()}} ₪</b></td>
+      <td mat-footer-cell *matFooterCellDef class="">
+        <b>
+          {{ getTotalCost() }} ₪
+        </b>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
