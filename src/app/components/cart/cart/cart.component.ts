@@ -28,6 +28,7 @@ export class CartComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    if (!this.userService.isLoggedIn()) this.router.navigate(['/'])
     this.getCart()
   }
 
