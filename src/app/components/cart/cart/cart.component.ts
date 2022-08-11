@@ -15,7 +15,7 @@ export class CartComponent implements OnInit {
 
   user!: any
   products: [Product?] = []
-  displayedColumns: string[] = ['name', 'picture', 'code', 'price', 'weight', 'manufacturer', 'times'];
+  displayedColumns: string[] = ['name', 'picture', 'code', 'price', 'weight', 'manufacturer', 'amount']
 
   constructor(
     private userService: UserService, 
@@ -32,11 +32,24 @@ export class CartComponent implements OnInit {
         this.productService.getProducts().subscribe((data: any) => {
           this.products = data.filter((x: any) => cartProductIds.includes(x._id))
           this.products.forEach((element: any) => {
-            element.times = cart.filter((x: any) => element._id === x._id)[0].value
+            element.amount = cart.filter((x: any) => element._id === x._id)[0].value
           });
         })
       })
     })
   }
 
+  increaseAmount(product: any) {
+    product.amount++
+  }
+
+  decreaseAmount(product: any) {
+    product.amount--
+  }
+
+  getTotalCost() {
+    let sum = 0
+    this.products.forEach((product: any) => sum += product.amount * product.price)
+    return sum.toFixed(2)
+  }
 }
