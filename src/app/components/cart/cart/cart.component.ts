@@ -5,6 +5,8 @@ import { User } from 'src/app/models/user';
 import { CartService } from 'src/app/services/cart/cart.service';
 import { ProductService } from 'src/app/services/product/product.service';
 import { UserService } from 'src/app/services/user/user.service';
+import * as io from 'socket.io-client';
+import { socket_connection } from 'src/environments/environment';
 
 @Component({
   selector: 'app-cart',
@@ -16,6 +18,7 @@ export class CartComponent implements OnInit {
   user!: any
   products: [Product?] = []
   displayedColumns: string[] = ['name', 'picture', 'code', 'price', 'weight', 'manufacturer', 'amount']
+  socket!: any
 
   constructor(
     private userService: UserService, 
@@ -25,6 +28,10 @@ export class CartComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    this.getCart()
+  }
+
+  getCart() {
     this.userService.getUserByUsername(this.userService.getLocalStorageUserName()!).subscribe((user: any) => {
       this.user = user
       this.cartService.getUserCartById(this.user._id).subscribe((cart: any) => {
@@ -41,15 +48,30 @@ export class CartComponent implements OnInit {
 
   increaseAmount(product: any) {
     product.amount++
+    this.cartService.addProductToUser(product)
+
   }
 
   decreaseAmount(product: any) {
     product.amount--
+    this.cartService.decreaseProductFromUser(product)
+  }
+
+  removeProduct(product: any) {
+    this.cartService.removeProductFromUser(product)
+    this.getCart()
+  }
+
+
+  getAmountProducts() {
+    let total = 0
+    this.products.forEach((product: any) => total += product.amount)
+    return total
   }
 
   getTotalCost() {
-    let sum = 0
-    this.products.forEach((product: any) => sum += product.amount * product.price)
-    return sum.toFixed(2)
+    let total = 0
+    this.products.forEach((product: any) => total += product.amount * product.price)
+    return total.toFixed(2)
   }
 }

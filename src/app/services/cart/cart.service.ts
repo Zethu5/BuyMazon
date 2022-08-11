@@ -18,6 +18,20 @@ export class CartService {
     })
   }
 
+  decreaseProductFromUser(product: Product) {
+    this.userService.getUserByUsername(this.userService.getLocalStorageUserName()!).subscribe((user: any) => {
+      const url = `${api_base}/cart/${user._id}/decreaseproduct`
+      this.http.put(url, {product: product}).subscribe()
+    })
+  }
+
+  removeProductFromUser(product: Product) {
+    this.userService.getUserByUsername(this.userService.getLocalStorageUserName()!).subscribe((user: any) => {
+      const url = `${api_base}/cart/${user._id}/removeproduct`
+      this.http.put(url, {product: product}).subscribe()
+    })
+  }
+
   getUserCartById(id: string) {
       const url = `${api_base}/cart/${id}`
       return this.http.get(url)
