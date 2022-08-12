@@ -43,6 +43,7 @@ import { CreateUserComponent } from './components/create-user/create-user/create
 import { LoginComponent } from './components/login/login/login.component';
 import { CartComponent } from './components/cart/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout/checkout.component';
+import { OrderSuccessComponent } from './components/order-success/order-success/order-success.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { CheckoutComponent } from './components/checkout/checkout/checkout.compo
     LoginComponent,
     CartComponent,
     CheckoutComponent,
+    OrderSuccessComponent,
   ],
   imports: [
     BrowserModule,
