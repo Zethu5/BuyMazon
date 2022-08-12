@@ -23,3 +23,55 @@
     margin-top: 5%;
     text-align: center;
 }
+
+.summary::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    height: 40px
+}
+
+.tableContainer {
+    max-height: 40vh;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.tableContainer::-webkit-scrollbar {
+    display: none;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+th.mat-header-cell {
+    text-align: center;
+}
+
+.summaryContainer {
+    margin-top: 2%;
+}
+
+mat-card {
+    width: 40%;
+}
+
+mat-card-title {
+    margin-bottom: 5%;
+}
+
+.billingSummary {
+    margin-top: 2%;
+}
+
+.budgeRight {
+    margin-right: 2%;
+}
+
+.nameOnCard {
+    margin-top: 3%;
+}

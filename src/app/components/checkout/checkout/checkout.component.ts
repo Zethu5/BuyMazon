@@ -9,6 +9,12 @@ import {defaultFormat as _rollupMoment, Moment} from 'moment';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MAT_MOMENT_DATE_ADAPTER_OPTIONS, MomentDateAdapter } from '@angular/material-moment-adapter';
 import { MatDatepicker } from '@angular/material/datepicker';
+import { CartService } from 'src/app/services/cart/cart.service';
+import { ProductService } from 'src/app/services/product/product.service';
+import { MatDialog } from '@angular/material/dialog';
+import { OrderSuccessComponent } from '../../order-success/order-success/order-success.component';
+import { Order } from 'src/app/models/order';
+import { OrderService } from 'src/app/services/order/order.service';
 
 const moment = _rollupMoment || _moment;
 
@@ -46,30 +52,42 @@ export class CheckoutComponent implements OnInit {
 
   addressForm!: FormGroup
   billingForm!: FormGroup
+  user!: any
+  products!: any
+  displayedColumns: string[] = ['name', 'picture', 'price', 'amount']
 
-  constructor(private userService: UserService, private router: Router, private fb: FormBuilder) { }
+  constructor(
+    private userService: UserService,
+    private cartService: CartService,
+    private productService: ProductService,
+    private orderService: OrderService,
+    private router: Router,
+    private fb: FormBuilder,
+    public dialog: MatDialog) { }
 
   ngOnInit(): void {
     if (!this.userService.isLoggedIn()) this.router.navigate(['/'])
 
     this.addressForm = this.fb.group({
-      firstName: [null, [Validators.required, this.isNameValid]],
-      lastName: [null, [Validators.required, this.isNameValid]],
-      firstAddress: [null, [Validators.required]],
-      secondAddress: [null, []],
-      city: [null, [Validators.required]],
-      region: [null, [Validators.required]],
-      zipCode: [null, [Validators.required, this.isZipCode]],
-      phone: [null, [Validators.required, this.isPhone]],
-      email: [null, [Validators.required, this.isEmail]],
+      firstName: ['Zvika', [Validators.required, this.isNameValid]],
+      lastName: ['Ravet', [Validators.required, this.isNameValid]],
+      firstAddress: ['Neot Shikma, Rival 12 St. Apt 26', [Validators.required]],
+      secondAddress: ['Neot Shikma, Rival 12 St. Apt 26', []],
+      city: ['Rishon Letzion', [Validators.required]],
+      region: ['Merkaz', [Validators.required]],
+      zipCode: ['7574307', [Validators.required, this.isZipCode]],
+      phone: ['0508482759', [Validators.required, this.isPhone]],
+      email: ['ravet.zvika93@gmail.com', [Validators.required, this.isEmail]],
     })
 
     this.billingForm = this.fb.group({
-      cardNumber: [null, [Validators.required, this.isValidCreditCard]],
-      nameOnCard: [null, [Validators.required, this.isNameOnCardValid]],
+      cardNumber: ['371449635398431', [Validators.required, this.isValidCreditCard]],
+      nameOnCard: ['Zvika Card', [Validators.required, this.isNameOnCardValid]],
       expirationDate: [null, [Validators.required, this.isValidExpirationDate]],
       securityCode: [null, [Validators.required, this.isValidSecurityCode]],
     })
+
+    this.getCart()
   }
 
   isEmail(control: AbstractControl) {
@@ -183,5 +201,70 @@ export class CheckoutComponent implements OnInit {
     ctrlValue.year(normalizedMonthAndYear.year());
     this.billingForm.controls['expirationDate'].setValue(ctrlValue);
     datepicker.close();
+  }
+
+  getCart() {
+    this.userService.getUserByUsername(this.userService.getLocalStorageUserName()!).subscribe((user: any) => {
+      this.user = user
+      this.cartService.getUserCartById(this.user._id).subscribe((cart: any) => {
+        const cartProductIds = cart.map((x: any) => x._id)
+        this.productService.getProducts().subscribe((data: any) => {
+          this.products = data.filter((x: any) => cartProductIds.includes(x._id))
+          this.products.forEach((element: any) => {
+            element.amount = cart.filter((x: any) => element._id === x._id)[0].value
+          });
+        })
+      })
+    })
+  }
+
+  getAmountProducts() {
+    let total = 0
+    this.products.forEach((product: any) => total += product.amount)
+    return total
+  }
+
+  getTotalCost() {
+    let total = 0
+    this.products.forEach((product: any) => total += product.amount * product.price)
+    return total.toFixed(2)
+  }
+
+  sendOrder() {
+    const order: Order = {
+      addressInformation: {
+        firstName: this.addressForm.controls['firstName'].value,
+        lastName: this.addressForm.controls['lastName'].value,
+        firstAddress: this.addressForm.controls['firstAddress'].value,
+        secondAddress: this.addressForm.controls['secondAddress'].value,
+        city: this.addressForm.controls['city'].value,
+        region: this.addressForm.controls['region'].value,
+        zipCode: this.addressForm.controls['zipCode'].value,
+        phone: this.addressForm.controls['phone'].value,
+        email: this.addressForm.controls['email'].value
+      },
+      billingInformation: {
+        cardNumber: this.billingForm.controls['cardNumber'].value,
+        nameOnCard: this.billingForm.controls['nameOnCard'].value,
+        expirationDate: this.billingForm.controls['expirationDate'].value,
+        securityCode: this.billingForm.controls['securityCode'].value
+      },
+      products: this.products,
+      price: Number.parseFloat(this.getTotalCost()),
+      userId: this.user._id
+    }
+
+    this.orderService.createOrder(order).subscribe((recievedOrder: any) => {
+      const dialogRef = this.dialog.open(OrderSuccessComponent, {
+        data: {
+          order_id: recievedOrder.order_id
+        }
+      })
+
+      dialogRef.afterClosed().subscribe(() => {
+        this.cartService.clearCart(this.user._id)
+        this.router.navigate(['/'])
+      });
+    })
   }
 }
