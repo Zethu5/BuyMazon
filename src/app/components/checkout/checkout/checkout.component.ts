@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user/user.service';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS} from '@angular/material-moment-adapter';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 
 @Component({
   selector: 'app-checkout',
@@ -13,6 +15,13 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
       provide: STEPPER_GLOBAL_OPTIONS,
       useValue: {displayDefaultIndicatorType: false},
     },
+    {
+      provide: DateAdapter,
+      useClass: MomentDateAdapter,
+      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+    },
+
+    {provide: MAT_DATE_FORMATS, useValue: "MM/YYYY"},
   ],
 })
 export class CheckoutComponent implements OnInit {
@@ -35,6 +44,13 @@ export class CheckoutComponent implements OnInit {
       zipCode: [null, [Validators.required, this.isZipCode]],
       phone: [null, [Validators.required, this.isPhone]],
       email: [null, [Validators.required, this.isEmail]],
+    })
+
+    this.billingForm = this.fb.group({
+      cardNumber: [null, [Validators.required, this.isValidCreditCard]],
+      nameOnCard: [null, [Validators.required, this.isNameOnCardValid]],
+      expirationDate: [null, [Validators.required]],
+      securityCode: [null, [Validators.required]],
     })
   }
 
@@ -70,6 +86,31 @@ export class CheckoutComponent implements OnInit {
 
     if (!phoneRegex.test(control.value)) {
       return { invalidPhoneNumber: true}
+    }
+    return null
+  }
+
+  // Luhn algorithm
+  isValidCreditCard(creditCardNumber: string) {
+    let nDigits = creditCardNumber.length
+    let sum = 0
+    let parity = (nDigits - 2) % 2
+
+    for (let i = 0; i < nDigits - 1; i++) {
+      let digit = Number.parseInt(creditCardNumber[i])
+      if (i % 2 == parity) digit *= 2
+      if (digit > 9) digit -= 9
+      sum += digit
+    }
+
+    return (sum % 10) == 0
+  }
+
+  isNameOnCardValid(control: AbstractControl) {
+    const nameOnCardRegex = /^[a-z]+\s[a-z]+$/i
+
+    if (!nameOnCardRegex.test(control.value)) {
+      return { invalidNameOnCard: true}
     }
     return null
   }
