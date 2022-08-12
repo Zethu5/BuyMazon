@@ -3,8 +3,26 @@ import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user/user.service';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS} from '@angular/material-moment-adapter';
-import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import * as _moment from 'moment';
+
+import {defaultFormat as _rollupMoment, Moment} from 'moment';
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MAT_MOMENT_DATE_ADAPTER_OPTIONS, MomentDateAdapter } from '@angular/material-moment-adapter';
+import { MatDatepicker } from '@angular/material/datepicker';
+
+const moment = _rollupMoment || _moment;
+
+export const MY_FORMATS = {
+  parse: {
+    dateInput: 'MM/YYYY',
+  },
+  display: {
+    dateInput: 'MM/YYYY',
+    monthYearLabel: 'MMM YYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY',
+  },
+};
 
 @Component({
   selector: 'app-checkout',
@@ -18,10 +36,10 @@ import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/
     {
       provide: DateAdapter,
       useClass: MomentDateAdapter,
-      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
     },
 
-    {provide: MAT_DATE_FORMATS, useValue: "MM/YYYY"},
+    {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
   ],
 })
 export class CheckoutComponent implements OnInit {
@@ -49,8 +67,8 @@ export class CheckoutComponent implements OnInit {
     this.billingForm = this.fb.group({
       cardNumber: [null, [Validators.required, this.isValidCreditCard]],
       nameOnCard: [null, [Validators.required, this.isNameOnCardValid]],
-      expirationDate: [null, [Validators.required]],
-      securityCode: [null, [Validators.required]],
+      expirationDate: [null, [Validators.required, this.isValidExpirationDate]],
+      securityCode: [null, [Validators.required, this.isValidSecurityCode]],
     })
   }
 
@@ -90,20 +108,34 @@ export class CheckoutComponent implements OnInit {
     return null
   }
 
-  // Luhn algorithm
-  isValidCreditCard(creditCardNumber: string) {
-    let nDigits = creditCardNumber.length
-    let sum = 0
-    let parity = (nDigits - 2) % 2
+  isValidCreditCard(control: AbstractControl) {
+    const creditCardNumberRegex = /^\d+$/i
 
-    for (let i = 0; i < nDigits - 1; i++) {
-      let digit = Number.parseInt(creditCardNumber[i])
-      if (i % 2 == parity) digit *= 2
-      if (digit > 9) digit -= 9
-      sum += digit
+    if (!control.value || !creditCardNumberRegex.test(control.value)) {
+      return { invalidCreditCard: true}
     }
 
-    return (sum % 10) == 0
+    // Luhn algorithm
+    let s = 0;
+    let doubleDigit = false;
+    for (const d of [...control.value].reverse()) {
+      let digit = +d;
+      if (doubleDigit) {
+        digit *= 2;
+        if (digit > 9)
+          digit -= 9;
+      }
+      s += digit;
+      doubleDigit = !doubleDigit;
+    }
+
+    const checkLuhn = s % 10 === 0;
+
+    if (!checkLuhn) {
+      return { invalidCreditCard: true}
+    }
+
+    return null
   }
 
   isNameOnCardValid(control: AbstractControl) {
@@ -112,6 +144,44 @@ export class CheckoutComponent implements OnInit {
     if (!nameOnCardRegex.test(control.value)) {
       return { invalidNameOnCard: true}
     }
+
     return null
+  }
+
+  isValidExpirationDate(control: AbstractControl) {
+    const expDate = _moment(control.value).toDate()
+
+    if (!_moment(control.value).isValid()) {
+      return { invalidExpirationDate: true}
+    }
+
+    if (expDate.getTime() - Date.now() < 0) {
+      return { invalidExpirationDate: true}
+    }
+
+    return null
+  }
+
+  isValidSecurityCode(control: AbstractControl) {
+    const securityCodeRegex = /^\d{3,4}$/i
+
+    if (!securityCodeRegex.test(control.value)) {
+      return { invalidSecurityCode: true}
+    }
+
+    return null
+  }
+
+  setMonthAndYear(normalizedMonthAndYear: Moment, datepicker: MatDatepicker<Moment>) {
+    const ctrlValue = _moment();
+    ctrlValue.set('date', 31)
+    ctrlValue.set('hour', 23)
+    ctrlValue.set('minute', 59)
+    ctrlValue.set('second', 59)
+    ctrlValue.set('millisecond', 999)
+    ctrlValue.month(normalizedMonthAndYear.month());
+    ctrlValue.year(normalizedMonthAndYear.year());
+    this.billingForm.controls['expirationDate'].setValue(ctrlValue);
+    datepicker.close();
   }
 }

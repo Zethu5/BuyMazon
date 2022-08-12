@@ -4,7 +4,7 @@
     margin-top: 5vh;
 }
 
-.addressForm {
+.form {
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
@@ -13,10 +13,6 @@
 
 .spaceRight {
     margin-right: 1rem;
-}
-
-.sideBySide {
-    flex-grow: 1;
 }
 
 .fillRow {
