@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-// const { manufacturerSchema } = require('./Manufacturer');
 
-const purchaseSchema = new mongoose.Schema({
+const orderSchema = new mongoose.Schema({
     addressInformation: {
         firstName: String,
         lastName: String,
@@ -14,9 +13,12 @@ const purchaseSchema = new mongoose.Schema({
         email: String,
     },
     billingInformation: {
-
+        cardNumber: String,
+        nameOnCard: String,
+        expirationDate: Date,
+        securityCode: String
     }
 })
 
-module.exports.PurchaseModel = mongoose.model('Purcahse', purchaseSchema)
-module.exports.purchaseSchema = purchaseSchema
+module.exports.OrderModel = mongoose.model('Purcahse', orderSchema)
+module.exports.orderSchema = orderSchema

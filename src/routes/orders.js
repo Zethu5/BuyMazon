@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const { PurchaseModel } = require('../Models/Purchase')
+const { OrderModel } = require('../Models/Order')
 
 require('dotenv').config({path:__dirname + '../../.env'})
 
@@ -11,14 +11,14 @@ let router = express.Router()
 router
 .route('/')
 .get(async (req, res) => {
-    res.json(await PurchaseModel.find().exec())
+    res.json(await OrderModel.find().exec())
 })
 .post(async (req, res) => {
-    const purchase = new PurchaseModel(req.body)
-    await purchase.save()
+    const order = new OrderModel(req.body)
+    await order.save()
     const socket = req.app.get('socket')
-    socket.emit('newPurchase')
-    res.json({result: 'Added purchase ' + purchase._id})
+    socket.emit('newOrder')
+    res.json({result: 'Added order ' + order._id})
 })
 
 
