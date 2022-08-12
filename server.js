@@ -11,6 +11,7 @@ const manufacturers = require('./src/routes/manufacturers')
 const branches = require('./src/routes/branches')
 const users = require('./src/routes/users')
 const cart = require('./src/routes/cart')
+const orders = require('./src/routes/orders')
 
 
 app.use(cors({
@@ -28,6 +29,7 @@ app.use('/api/manufacturers', manufacturers)
 app.use('/api/branches', branches)
 app.use('/api/users', users)
 app.use('/api/cart', cart)
+app.use('/api/orders', orders)
 
 // socket config
 const socket = require('socket.io')(3210, {
