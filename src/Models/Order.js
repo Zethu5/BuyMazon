@@ -19,9 +19,10 @@ const orderSchema = new mongoose.Schema({
         expirationDate: Date,
         securityCode: String
     },
-    products: [Product],
-    price: Number
+    products: [],
+    price: Number,
+    userId: String
 })
 
-module.exports.OrderModel = mongoose.model('Purcahse', orderSchema)
+module.exports.OrderModel = mongoose.model('Order', orderSchema)
 module.exports.orderSchema = orderSchema

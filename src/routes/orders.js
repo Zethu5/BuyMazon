@@ -18,7 +18,7 @@ router
     await order.save()
     const socket = req.app.get('socket')
     socket.emit('newOrder')
-    res.json({result: 'Added order ' + order._id})
+    res.json({order_id: order._id})
 })
 
 
