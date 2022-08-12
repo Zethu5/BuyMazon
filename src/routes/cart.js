@@ -94,4 +94,15 @@ router
     res.json({result: `Removed ${product.name} from ${user.username}`})
 })
 
+router.route('/:id/clearcart')
+.delete(async (req, res) => {
+    let user = await UserModel.findOne({_id: req.params.id}).exec()
+    user.products = []
+    await user.save()
+
+    const socket = req.app.get('socket')
+    socket.emit('userCartUpdate')
+    res.json({result: `Cleared the cart of ${user.username}`})
+})
+
 module.exports = router

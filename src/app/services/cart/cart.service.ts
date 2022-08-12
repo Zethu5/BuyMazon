@@ -36,4 +36,9 @@ export class CartService {
       const url = `${api_base}/cart/${id}`
       return this.http.get(url)
   }
+
+  clearCart(id: string) {
+    const url = `${api_base}/cart/${id}/clearcart`
+    this.http.delete(url).subscribe()
+  }
 }
