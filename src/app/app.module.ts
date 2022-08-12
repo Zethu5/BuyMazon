@@ -24,7 +24,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core'
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatListModule} from '@angular/material/list';
 
 import { CreateManufacturerComponent } from './components/create-manufacturer/create-manufacturer/create-manufacturer.component';
 import { ManufacturersComponent } from './components/manufacturers/manufacturers/manufacturers.component';
@@ -88,6 +89,7 @@ import { CheckoutComponent } from './components/checkout/checkout/checkout.compo
     MatStepperModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatListModule,
   ],
   providers: [
     MatDatepickerModule,
