@@ -3,7 +3,7 @@
     <h1>Register</h1>
   </div>
   <form [formGroup]="createUserForm" id="createUserForm" (ngSubmit)="register()">
-    <mat-form-field>
+    <mat-form-field appearance="fill">
       <mat-label>Username</mat-label>
       <input matInput required type="text" formControlName="username">
       <mat-error *ngIf="createUserForm.controls['username'].errors?.['required']">
@@ -16,7 +16,7 @@
         Username has to have at most 15 characters...
       </mat-error>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="fill">
       <mat-label>Password</mat-label>
       <input matInput required type="password" formControlName="password">
       <mat-error *ngIf="createUserForm.controls['password'].errors?.['required']">
@@ -26,7 +26,7 @@
         Password must be at least 8 characters long and contain letters and numbers...
       </mat-error>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
       <input matInput required type="email" formControlName="email">
       <mat-error *ngIf="createUserForm.controls['email'].errors?.['required']">
@@ -36,7 +36,7 @@
         Email is not valid...
       </mat-error>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="fill">
       <mat-label>First Name</mat-label>
       <input matInput required type="text" formControlName="firstName">
       <mat-error *ngIf="createUserForm.controls['firstName'].errors?.['required']">
@@ -46,7 +46,7 @@
         First name is not valid...
       </mat-error>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="fill">
       <mat-label>Last Name</mat-label>
       <input matInput required type="text" formControlName="lastName">
       <mat-error *ngIf="createUserForm.controls['lastName'].errors?.['required']">
@@ -56,9 +56,12 @@
         Last name is not valid...
       </mat-error>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="fill">
       <mat-label>Date of Birth</mat-label>
-      <input matInput required type="date" formControlName="dateOfBirth">
+      <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
       <mat-error *ngIf="createUserForm.controls['dateOfBirth'].errors?.['required']">
         Date of Birth is required...
       </mat-error>
@@ -66,6 +69,6 @@
         You must be atleast 18 years old...
       </mat-error>
     </mat-form-field>
-    <button mat-raised-button class="registerButton" color="primary" type="submit">CreateUser</button>
+    <button mat-raised-button class="registerButton" color="primary" type="submit">Create User</button>
   </form>
 </mat-card>

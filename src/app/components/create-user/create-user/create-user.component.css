@@ -23,3 +23,7 @@ mat-form-field {
 .formTitle {
     text-align: center;
 }
+
+mat-form-field {
+    width: 100%;
+}

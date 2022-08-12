@@ -23,6 +23,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core'
 
 import { CreateManufacturerComponent } from './components/create-manufacturer/create-manufacturer/create-manufacturer.component';
 import { ManufacturersComponent } from './components/manufacturers/manufacturers/manufacturers.component';
@@ -84,8 +86,12 @@ import { CheckoutComponent } from './components/checkout/checkout/checkout.compo
     MatIconModule,
     MatBadgeModule,
     MatStepperModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
-  providers: [],
+  providers: [
+    MatDatepickerModule,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
