@@ -18,8 +18,9 @@ export class Order {
         expirationDate: Date,
         securityCode: String
     }
-    products: [Product?]
+    products: []
     price: Number
+    userId: String
 
     constructor(order?: Order) {
         this.addressInformation = order?.addressInformation ?? {
@@ -40,6 +41,7 @@ export class Order {
                 securityCode: ''
         },
         this.products = order?.products ?? [],
-        this.price = order?.price ? 0
+        this.price = order?.price ?? 0,
+        this.userId = order?.userId ?? ''
     }
 }
