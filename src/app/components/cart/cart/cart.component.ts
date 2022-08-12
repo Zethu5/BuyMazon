@@ -5,8 +5,6 @@ import { User } from 'src/app/models/user';
 import { CartService } from 'src/app/services/cart/cart.service';
 import { ProductService } from 'src/app/services/product/product.service';
 import { UserService } from 'src/app/services/user/user.service';
-import * as io from 'socket.io-client';
-import { socket_connection } from 'src/environments/environment';
 
 @Component({
   selector: 'app-cart',
@@ -18,7 +16,6 @@ export class CartComponent implements OnInit {
   user!: any
   products: [Product?] = []
   displayedColumns: string[] = ['name', 'picture', 'code', 'price', 'weight', 'manufacturer', 'amount']
-  socket!: any
 
   constructor(
     private userService: UserService, 
