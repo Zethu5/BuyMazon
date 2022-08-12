@@ -1,3 +1,5 @@
+import { Product } from "./product"
+
 export class Order {
     addressInformation: {
         firstName: String
@@ -16,6 +18,8 @@ export class Order {
         expirationDate: Date,
         securityCode: String
     }
+    products: [Product?]
+    price: Number
 
     constructor(order?: Order) {
         this.addressInformation = order?.addressInformation ?? {
@@ -34,6 +38,8 @@ export class Order {
                 nameOnCard: '',
                 expirationDate: new Date(),
                 securityCode: ''
-        }
+        },
+        this.products = order?.products ?? [],
+        this.price = order?.price ? 0
     }
 }

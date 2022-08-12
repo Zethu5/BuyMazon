@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { Product } = require('./Product');
 
 const orderSchema = new mongoose.Schema({
     addressInformation: {
@@ -17,7 +18,9 @@ const orderSchema = new mongoose.Schema({
         nameOnCard: String,
         expirationDate: Date,
         securityCode: String
-    }
+    },
+    products: [Product],
+    price: Number
 })
 
 module.exports.OrderModel = mongoose.model('Purcahse', orderSchema)
