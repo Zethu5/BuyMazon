@@ -1,0 +1,10 @@
+<div class="categoryList" fxLayout="row" fxLayoutAlign="space-evenly stretch">
+  <mat-card class="categoryCard" *ngFor="let category of categories" fxLayout="column" fxLayoutAlign="center center">
+    <a (click)="goToPage(category)">
+        <div class="categoryImage" fxLayout="row" fxLayoutAlign="center center">
+            <img mat-card-image src="{{ category.image }}">
+        </div>
+        <div>{{ category.name }}</div>
+    </a>
+  </mat-card>
+</div>

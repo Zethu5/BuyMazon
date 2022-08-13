@@ -47,6 +47,7 @@ import { CartComponent } from './components/cart/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout/checkout.component';
 import { OrderSuccessComponent } from './components/order-success/order-success/order-success.component';
 import { StatisticsComponent } from './components/statistics/statistics/statistics.component';
+import { HomepageComponent } from './components/homepage/homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { StatisticsComponent } from './components/statistics/statistics/statisti
     CheckoutComponent,
     OrderSuccessComponent,
     StatisticsComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,
