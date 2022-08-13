@@ -29,7 +29,7 @@ export class ProductsComponent implements OnInit {
     public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(data => {
+    this.productService.getProducts().subscribe((data: any) => {
       this.products = this.productsClone = data
     })
     this.updateProducts()
@@ -38,7 +38,7 @@ export class ProductsComponent implements OnInit {
   updateProducts() {
     this.socket = io.io(socket_connection)
     this.socket.on('productUpdate', () => {
-      this.productService.getProducts().subscribe(data => {
+      this.productService.getProducts().subscribe((data: any) => {
         this.productsClone = data
         this.search()
       })

@@ -17,7 +17,7 @@ router
     const order = new OrderModel(req.body)
     await order.save()
     const socket = req.app.get('socket')
-    socket.emit('newOrder')
+    socket.emit('newOrder', order)
     res.json({order_id: order._id})
 })
 
