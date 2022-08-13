@@ -44,6 +44,7 @@ import { LoginComponent } from './components/login/login/login.component';
 import { CartComponent } from './components/cart/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout/checkout.component';
 import { OrderSuccessComponent } from './components/order-success/order-success/order-success.component';
+import { StatisticsComponent } from './components/statistics/statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { OrderSuccessComponent } from './components/order-success/order-success/
     CartComponent,
     CheckoutComponent,
     OrderSuccessComponent,
+    StatisticsComponent,
   ],
   imports: [
     BrowserModule,
