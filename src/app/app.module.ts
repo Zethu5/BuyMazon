@@ -26,6 +26,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatListModule} from '@angular/material/list';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSliderModule} from '@angular/material/slider';
 
 import { CreateManufacturerComponent } from './components/create-manufacturer/create-manufacturer/create-manufacturer.component';
 import { ManufacturersComponent } from './components/manufacturers/manufacturers/manufacturers.component';
@@ -94,6 +96,8 @@ import { StatisticsComponent } from './components/statistics/statistics/statisti
     MatDatepickerModule,
     MatNativeDateModule,
     MatListModule,
+    MatCheckboxModule,
+    MatSliderModule,
   ],
   providers: [
     MatDatepickerModule,
