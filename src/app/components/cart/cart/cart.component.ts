@@ -73,6 +73,12 @@ export class CartComponent implements OnInit {
     return total.toFixed(2)
   }
 
+  getTotalCostToNumber() {
+    let total = 0
+    this.products.forEach((product: any) => total += product.amount * product.price)
+    return Number.parseFloat(total.toFixed(2))
+  }
+
   goToCheckout() {
     this.router.navigate(['/checkout']);
   }
