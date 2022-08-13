@@ -69,5 +69,5 @@
 </div>
 
 <div class="checkoutBtn">
-  <button mat-raised-button color="primary" type="button" (click)="goToCheckout()">Go to checkout</button>
+  <button mat-raised-button color="primary" type="button" [disabled]="getTotalCostToNumber() == 0" (click)="goToCheckout()">Go to checkout</button>
 </div>

@@ -213,6 +213,8 @@ export class CheckoutComponent implements OnInit {
           this.products.forEach((element: any) => {
             element.amount = cart.filter((x: any) => element._id === x._id)[0].value
           });
+
+          if(this.getAmountProducts() === 0) this.router.navigate(['/cart'])
         })
       })
     })
