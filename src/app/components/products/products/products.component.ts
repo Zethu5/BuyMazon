@@ -9,6 +9,7 @@ import { socket_connection } from '../../../../environments/environment';
 import * as io from 'socket.io-client';
 import { UserService } from 'src/app/services/user/user.service';
 import { CartService } from 'src/app/services/cart/cart.service';
+import { ManufacturerService } from 'src/app/services/manufacturer/manufacturer.service';
 
 
 @Component({
@@ -22,23 +23,36 @@ export class ProductsComponent implements OnInit {
   productsClone!: any
   searchField!: any
   socket!: any
+  manufacturers!: any
+  productionCountries!: any
+  minProductPrice!: any
+  maxProductPrice!: any
+  manufacturerFilterValue!: any
+  productionCountryFilterValue!: any
+  priceFilterValue!: any
 
   constructor(private productService: ProductService,
     private userService: UserService,
     private cartService: CartService,
+    private manufacturerService: ManufacturerService,
     public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(data => {
+    this.productService.getProducts().subscribe((data: any) => {
       this.products = this.productsClone = data
+      this.getManufacturers()
+      this.getProductsProductionCountries()
+      this.minProductPrice = this.getProductsMinValue()
+      this.maxProductPrice = this.getProductsMaxValue()
     })
+
     this.updateProducts()
   }
 
   updateProducts() {
     this.socket = io.io(socket_connection)
     this.socket.on('productUpdate', () => {
-      this.productService.getProducts().subscribe(data => {
+      this.productService.getProducts().subscribe((data: any) => {
         this.productsClone = data
         this.search()
       })
@@ -60,17 +74,34 @@ export class ProductsComponent implements OnInit {
     return true
   }
 
+  manufacturerFilter(product: Product): boolean {
+    if(!this.manufacturerFilterValue) return true
+    if(this.manufacturerFilterValue.length == 0) return true
+    return this.manufacturerFilterValue.includes(product.manufacturer.name)
+  }
+
+  productionCountryFilter(product: Product): boolean {
+    if(!this.productionCountryFilterValue) return true
+    if(this.productionCountryFilterValue.length == 0) return true
+    return this.productionCountryFilterValue.includes(product.productionCountry)
+  }
+
+  priceFilter(product: Product): boolean {
+    if(!this.priceFilterValue) return true
+    return product.price >= this.priceFilterValue
+  }
+
   search() {
-    if (this.searchField.length > 0) {
-      this.products = this.productsClone.filter(
-        (product: Product) => 
-        this.searchFilter(
-          product, this.searchField.toLowerCase()
-        )
-      )
-    } else {
-      this.products = this.productsClone
-    }
+    let searchValue: string = ''
+    if (this.searchField) searchValue = this.searchField.toLowerCase()
+
+    this.products = this.productsClone.filter(
+      (product: Product) => 
+      this.searchFilter(product, searchValue) &&
+      this.manufacturerFilter(product) &&
+      this.productionCountryFilter(product) &&
+      this.priceFilter(product)
+    )
   }
 
   openCreateDialog(): void {
@@ -116,5 +147,70 @@ export class ProductsComponent implements OnInit {
 
   addProductToUser(product: Product) {
     this.cartService.addProductToUser(product)
+  }
+
+  getManufacturers() {
+    this.manufacturerService.getManufacturers().subscribe((data: any) => {
+      this.manufacturers = data
+    })
+  }
+
+  getProductsProductionCountries() {
+    this.productionCountries = this.primitiveFilterUnique(
+      this.products.map((x: any) => x.productionCountry))
+  }
+
+  primitiveFilterUnique(array: any) {
+    let tempArray: any[] = []
+    let uniqueArray: any[] = []
+
+    array.forEach((element: any) => {
+      if(!tempArray.includes(element)) {
+        uniqueArray.push(element)
+        tempArray.push(element)
+      }
+    });
+
+    return uniqueArray
+  }
+
+  getProductsMinValue() {
+    return this.getMin(this.productsClone.map((x: any) => Number.parseFloat(x.price)))
+  }
+
+  getProductsMaxValue() {
+    return this.getMax((this.productsClone.map((x: any) => Number.parseFloat(x.price))))
+  }
+
+  formatLabel(value: number) {
+    return value
+  }
+
+  getMin(array: any) {
+    let min = Number.MAX_VALUE
+
+    array.forEach((element: number) => {
+      if (element < min) min = element
+    });
+
+    return Math.floor(min)
+  }
+
+  getMax(array: any) {
+    let max = 0
+
+    array.forEach((element: number) => {
+      if (element > max) max = element
+    });
+
+    return Math.floor(max)
+  }
+
+  resetFilters() {
+    this.searchField = ''
+    this.manufacturerFilterValue = []
+    this.productionCountryFilterValue = []
+    this.priceFilterValue = this.getProductsMinValue()
+    this.search()
   }
 }

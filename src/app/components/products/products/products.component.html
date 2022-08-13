@@ -6,10 +6,45 @@
     <mat-label>Search</mat-label>
     <input matInput [(ngModel)]="searchField" (input)="search()">
   </mat-form-field>
+  <mat-card class="filterContainer">
+    <div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutAlign="center stretch">
+      <mat-form-field appearance="fill">
+        <mat-label>Manufacturers Filter</mat-label>
+        <mat-select multiple [(ngModel)]="manufacturerFilterValue" (selectionChange)="search()">
+          <mat-option *ngFor="let manufacturer of manufacturers" [value]="manufacturer.name">
+            {{ manufacturer.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Production Country Filter</mat-label>
+        <mat-select multiple [(ngModel)]="productionCountryFilterValue" (selectionChange)="search()">
+          <mat-option *ngFor="let productionCountry of productionCountries" [value]="productionCountry">
+            {{ productionCountry }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <mat-label class="priceGreaterEqualLabel">Price >=</mat-label>
+        <mat-slider
+          [(ngModel)]="priceFilterValue"
+          [value]="priceFilterValue"
+          thumbLabel 
+          [displayWith]="formatLabel" 
+          min="{{ minProductPrice }}" 
+          max="{{ maxProductPrice }}"
+          (change)="search()"
+        ></mat-slider>
+      </div>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" *ngIf="isLoggedIn()" (click)="resetFilters()">Reset Filters</button>
+    </div>
+  </mat-card>
 </div>
 
 <div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutAlign="center">
-  <mat-card *ngFor="let product of products">
+  <mat-card *ngFor="let product of products" class="productsDisplay">
     <div class="cardTitle">
       <mat-card-title>
         {{ product.name }}
@@ -28,9 +63,15 @@
       <p><b>Manufacturer</b>: {{ product.manufacturer.name }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" *ngIf="isLoggedIn()" (click)="addProductToUser(product)"><mat-icon>add_shopping_cart</mat-icon></button>
-      <button mat-raised-button color="accent" (click)="openUpdateDialog(product)" *ngIf="isAdmin()"><mat-icon>edit</mat-icon></button>
-      <button mat-raised-button color="warn" (click)="openDeleteDialog(product)" *ngIf="isAdmin()"><mat-icon>delete</mat-icon></button>
+      <button mat-raised-button color="primary" *ngIf="isLoggedIn()" (click)="addProductToUser(product)">
+        <mat-icon>add_shopping_cart</mat-icon>
+      </button>
+      <button mat-raised-button color="accent" (click)="openUpdateDialog(product)" *ngIf="isAdmin()">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-raised-button color="warn" (click)="openDeleteDialog(product)" *ngIf="isAdmin()">
+        <mat-icon>delete</mat-icon>
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>
