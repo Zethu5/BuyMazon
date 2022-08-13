@@ -50,9 +50,14 @@ img {
 }
 
 .filterContainer mat-form-field {
-    width: 100% !important;
+    width: 51% !important;
 }
 
 .priceGreaterEqualLabel {
     font-size: 20px;
+    vertical-align:middle;
+}
+
+.filterContainer mat-card-title {
+    margin-bottom: 5%;
 }

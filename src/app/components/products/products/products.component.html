@@ -7,35 +7,31 @@
     <input matInput [(ngModel)]="searchField" (input)="search()">
   </mat-form-field>
   <mat-card class="filterContainer">
-    <div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutAlign="center stretch">
-      <mat-form-field appearance="fill">
-        <mat-label>Manufacturers Filter</mat-label>
-        <mat-select multiple [(ngModel)]="manufacturerFilterValue" (selectionChange)="search()">
-          <mat-option *ngFor="let manufacturer of manufacturers" [value]="manufacturer.name">
-            {{ manufacturer.name }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Production Country Filter</mat-label>
-        <mat-select multiple [(ngModel)]="productionCountryFilterValue" (selectionChange)="search()">
-          <mat-option *ngFor="let productionCountry of productionCountries" [value]="productionCountry">
-            {{ productionCountry }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <div>
-        <mat-label class="priceGreaterEqualLabel">Price >=</mat-label>
-        <mat-slider
-          [(ngModel)]="priceFilterValue"
-          [value]="priceFilterValue"
-          thumbLabel 
-          [displayWith]="formatLabel" 
-          min="{{ minProductPrice }}" 
-          max="{{ maxProductPrice }}"
-          (change)="search()"
-        ></mat-slider>
-      </div>
+    <mat-card-title>Filters</mat-card-title>
+    <mat-form-field>
+      <mat-label>Manufacturers Filter</mat-label>
+      <mat-select multiple [(ngModel)]="manufacturerFilterValue" (selectionChange)="search()">
+        <mat-option *ngFor="let manufacturer of manufacturers" [value]="manufacturer.name">
+          {{ manufacturer.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Production Country Filter</mat-label>
+      <mat-select multiple [(ngModel)]="productionCountryFilterValue" (selectionChange)="search()">
+        <mat-option *ngFor="let productionCountry of productionCountries" [value]="productionCountry">
+          {{ productionCountry }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>
+      <div class="priceGreaterEqualLabel">Price greater than</div>
+      <mat-label class="priceGreaterEqualLabel">
+        <mat-icon>attach_money</mat-icon>
+      </mat-label>
+      <mat-slider [(ngModel)]="priceFilterValue" [value]="priceFilterValue" thumbLabel [displayWith]="formatLabel"
+        min="{{ minProductPrice }}" max="{{ maxProductPrice }}" (change)="search()"></mat-slider>
+      <span *ngIf="priceFilterValue">{{ priceFilterValue }} ₪</span>
     </div>
     <div>
       <button mat-raised-button color="primary" *ngIf="isLoggedIn()" (click)="resetFilters()">Reset Filters</button>
