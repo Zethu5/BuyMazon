@@ -69,20 +69,20 @@ export class CheckoutComponent implements OnInit {
     if (!this.userService.isLoggedIn()) this.router.navigate(['/'])
 
     this.addressForm = this.fb.group({
-      firstName: ['Zvika', [Validators.required, this.isNameValid]],
-      lastName: ['Ravet', [Validators.required, this.isNameValid]],
-      firstAddress: ['Neot Shikma, Rival 12 St. Apt 26', [Validators.required]],
-      secondAddress: ['Neot Shikma, Rival 12 St. Apt 26', []],
-      city: ['Rishon Letzion', [Validators.required]],
-      region: ['Merkaz', [Validators.required]],
-      zipCode: ['7574307', [Validators.required, this.isZipCode]],
-      phone: ['0508482759', [Validators.required, this.isPhone]],
-      email: ['ravet.zvika93@gmail.com', [Validators.required, this.isEmail]],
+      firstName: [null, [Validators.required, this.isNameValid]],
+      lastName: [null, [Validators.required, this.isNameValid]],
+      firstAddress: [null, [Validators.required]],
+      secondAddress: [null, []],
+      city: [null, [Validators.required]],
+      region: [null, [Validators.required]],
+      zipCode: [null, [Validators.required, this.isZipCode]],
+      phone: [null, [Validators.required, this.isPhone]],
+      email: [null, [Validators.required, this.isEmail]],
     })
 
     this.billingForm = this.fb.group({
-      cardNumber: ['371449635398431', [Validators.required, this.isValidCreditCard]],
-      nameOnCard: ['Zvika Card', [Validators.required, this.isNameOnCardValid]],
+      cardNumber: [null, [Validators.required, this.isValidCreditCard]],
+      nameOnCard: [null, [Validators.required, this.isNameOnCardValid]],
       expirationDate: [null, [Validators.required, this.isValidExpirationDate]],
       securityCode: [null, [Validators.required, this.isValidSecurityCode]],
     })
