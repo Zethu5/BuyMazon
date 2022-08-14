@@ -1,10 +1,7 @@
-import { createInjectorType } from '@angular/compiler/src/render3/r3_injector_compiler';
 import { Component, OnInit } from '@angular/core';
-import { Loader } from '@googlemaps/js-api-loader';
 import * as L from 'leaflet';
 import { BranchService } from 'src/app/services/branch/branch.service';
 import { GeolocationService } from 'src/app/services/geolocation/geolocation.service';
-import { google_maps_api_key } from 'src/environments/environment';
 
 @Component({
   selector: 'app-map',
