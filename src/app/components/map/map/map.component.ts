@@ -24,7 +24,7 @@ export class MapComponent implements OnInit {
   initMap(): void {
     this.map = L.map('map', {
       center: {
-        lat: 31.32,
+        lat: 32.1,
         lng: 35
       },
       zoom: 8
