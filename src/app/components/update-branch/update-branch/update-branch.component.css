@@ -21,7 +21,7 @@ mat-form-field {
     text-align: center;
 }
 
-.google-map {
+#update-branch-map {
     width: 26vw;
     height: 30vh;
 }
