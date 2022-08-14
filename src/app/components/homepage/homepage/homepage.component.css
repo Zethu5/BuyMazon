@@ -44,3 +44,10 @@ a {
 a:hover {
   cursor: pointer;
 }
+
+.mapContainer {
+  width: 50vw;
+  height: 40vh;
+  margin: 0 auto;
+  margin-top: 5vh;
+}

@@ -48,6 +48,7 @@ import { CheckoutComponent } from './components/checkout/checkout/checkout.compo
 import { OrderSuccessComponent } from './components/order-success/order-success/order-success.component';
 import { StatisticsComponent } from './components/statistics/statistics/statistics.component';
 import { HomepageComponent } from './components/homepage/homepage/homepage.component';
+import { MapComponent } from './components/map/map/map.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { HomepageComponent } from './components/homepage/homepage/homepage.compo
     OrderSuccessComponent,
     StatisticsComponent,
     HomepageComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
