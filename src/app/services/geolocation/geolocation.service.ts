@@ -12,7 +12,6 @@ export class GeolocationService {
 
 
   getLocationData(lat: Number, lng: Number) {
-    //https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=47.217954&lon=-1.552918
     let url = this.geolocation_api_url_base + `&lat=${lat}&lon=${lng}`
     return this.http.get(url)
   }
