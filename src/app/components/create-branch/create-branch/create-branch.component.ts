@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Loader } from '@googlemaps/js-api-loader';
+import * as L from 'leaflet';
 import { Branch } from 'src/app/models/branch';
 import { BranchService } from 'src/app/services/branch/branch.service';
+import { GeolocationService } from 'src/app/services/geolocation/geolocation.service';
 import { google_maps_api_key } from 'src/environments/environment';
 import { BranchesComponent } from '../../branches/branches/branches.component';
 
@@ -17,11 +19,11 @@ export class CreateBranchComponent implements OnInit {
   createBranchForm!: FormGroup
   branches!: any
   click_data!: any
-  map!: google.maps.Map
-  map_element_id: string = 'google-map'
+  map!: any
 
   constructor(private fb: FormBuilder,
     private branchService: BranchService,
+    private geoLocationService: GeolocationService,
     private dialogRef: MatDialogRef<BranchesComponent>,
   ) { }
 
@@ -34,82 +36,53 @@ export class CreateBranchComponent implements OnInit {
     })
     
     this.getBranches()
+    this.initMap()
+  }
 
-    let loader = new Loader({
-      apiKey: google_maps_api_key
+  initMap(): void {
+    this.map = L.map('create-branch-map', {
+      center: {
+        lat: 32.1,
+        lng: 35
+      },
+      zoom: 8
     })
 
-    loader.load().then(() => {
-      this.map = new google.maps.Map(document.getElementById(this.map_element_id) !, {
-        center: {
-          lat: 31.668944911571028,
-          lng: 34.867502999920276
-        },
-        zoom: 7
-      })
+    const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      minZoom: 3,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    })
 
-      this.branchService.getBranches().subscribe(data => {
-        this.setMapMarkers(this.map, data)
-      })
+    tiles.addTo(this.map)
 
-      let geocoder = new google.maps.Geocoder()
+    this.map.on('click', (event: any) => {
+      const lat = event.latlng.lat
+      const lng = event.latlng.lng
 
-      google.maps.event.addListener(this.map, 'click', (event: {
-        latLng: any;
-      }) => {
-        geocoder.geocode({
-          location: event.latLng
-        }, (results) => {
-          const city = results![0].address_components.filter(address => address.types.includes('locality'))
-          const full_name = results![0].formatted_address
-          const coordinates = {
-            lat: event.latLng.lat(),
-            lng: event.latLng.lng()
-          }
+      this.geoLocationService.getLocationData(lat, lng).subscribe((data: any) => {
+        if (!data.address?.city) return
 
-          if (city.length == 0) {
-            return
-          }
-
-          const click_data = {
-            city: city[0].long_name,
-            full_name: full_name,
-            coordinates: coordinates
-          }
-
-          this.onClickedMap(click_data)
+        this.onClickedMap({
+          city: data.address.city,
+          full_name: data.display_name,
+          coordinates: {lat: lat, lng: lng}
         })
       })
     })
+
+    this.branchService.getBranches().subscribe(data => {
+      this.setMapMarkers(this.map, data)
+    })
   }
 
-  setMapMarkers(map: google.maps.Map, branches: any) {
+  setMapMarkers(map: any, branches: any) {
     branches.forEach((branch: any) => {
-      const content_string = 
-      '<div><h4>' + branch.city + '</h4></div>' +
-      '<div><h5>' + branch.address + '</h5></div>' +
-      '<div><h5>Phone: ' + branch.phone + '</h5></div>'
-
-      let infowindow = new google.maps.InfoWindow({
-        content: content_string
-      })
-      
-      let marker = new google.maps.Marker({
-        position: {
-          lat: branch.coordinates.lat,
-          lng: branch.coordinates.lng
-        },
-        map
-      })
-
-      marker.addListener("click", () => {
-        infowindow.open({
-          anchor: marker,
-          map,
-          shouldFocus: false,
-        });
-      });
-    })
+      L.marker(
+        [branch.coordinates.lat, branch.coordinates.lng],
+      ).bindTooltip(branch.address)
+      .addTo(map)
+    });
   }
 
   getBranches() {

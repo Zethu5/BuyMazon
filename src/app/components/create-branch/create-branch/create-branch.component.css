@@ -19,7 +19,7 @@ mat-form-field {
     width: 30%;
 }
 
-.google-map {
+#create-branch-map {
     width: 26vw;
     height: 30vh;
 }
