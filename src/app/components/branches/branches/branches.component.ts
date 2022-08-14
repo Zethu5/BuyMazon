@@ -31,13 +31,15 @@ export class BranchesComponent implements OnInit {
     this.branchService.getBranches().subscribe(data => {
       this.branches = this.branchesClone = data
     })
+
+    // this.ngOnInit()
   }
 
   updateBranches() {
     this.socket = io.io(socket_connection)
     this.socket.on('branchUpdate', () => {
       this.branchService.getBranches().subscribe(data => {
-        this.branchesClone = data
+        this.branches = this.branchesClone = data
         this.search()
       })
     })
@@ -69,7 +71,7 @@ export class BranchesComponent implements OnInit {
     const dialogRef = this.dialog.open(CreateBranchComponent);
 
     dialogRef.afterClosed().subscribe(() => {
-      this.updateBranches()
+      this.socket.emit('branchUpdate')
     });
   }
 
@@ -82,7 +84,7 @@ export class BranchesComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(() => {
-      this.updateBranches()
+      this.socket.emit('branchUpdate')
     });
   }
 
@@ -94,7 +96,7 @@ export class BranchesComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(() => {
-      this.getBranches()
+      this.socket.emit('branchUpdate')
     });
   }
 }
