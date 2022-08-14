@@ -35,23 +35,6 @@ export class MapComponent implements OnInit {
 
     tiles.addTo(this.map)
 
-    this.map.on('click', (event: any) => {
-      const lat = event.latlng.lat
-      const lng = event.latlng.lng
-
-      this.geoLocationService.getLocationData(lat, lng).subscribe((data: any) => {
-        if (!data.address?.city) return
-
-        const click_data = {
-          city: data.address.city,
-          full_name: data.display_name,
-          coordinates: {lat: lat, lng: lng}
-        }
-
-        // do something with the click_data
-      })
-    })
-
     this.branchService.getBranches().subscribe(data => {
       this.setMapMarkers(this.map, data)
     })
