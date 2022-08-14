@@ -1,31 +1,33 @@
 <div id="topBar">
-    <div>
-      <button mat-raised-button color="primary" (click)="openCreateDialog()">Add Branch</button>
+  <div class="map">
+    <app-map></app-map>
+  </div>
+  <div>
+    <button mat-raised-button color="primary" (click)="openCreateDialog()">Add Branch</button>
+  </div>
+  <mat-form-field appearance="fill">
+    <mat-label>Search</mat-label>
+    <input matInput [(ngModel)]="searchField" (input)="search()">
+  </mat-form-field>
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="center">
+  <mat-card *ngFor="let branch of branches">
+    <div class="cardTitle">
+      <mat-card-title>
+        {{ branch.city }}
+      </mat-card-title>
     </div>
-    <mat-form-field appearance="fill">
-      <mat-label>Search</mat-label>
-      <input matInput [(ngModel)]="searchField" (input)="search()">
-    </mat-form-field>
-  </div>
-  
-  <div fxLayout="row wrap" fxLayoutAlign="center">
-    <mat-card *ngFor="let branch of branches">
-      <div class="cardTitle">
-        <mat-card-title>
-          {{ branch.city }}
-        </mat-card-title>
-      </div>
-      <div id="logo">
-        <img src="{{ branch.picture }}" width="100px">
-      </div>
-      <mat-card-content>
-        <p><b>Address</b>: {{ branch.address }}</p>
-        <p><b>Phone</b>: {{ branch.phone }}</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button color="warn" (click)="openDeleteDialog(branch)">DELETE</button>
-        <button mat-raised-button color="accent" (click)="openUpdateDialog(branch)">Update</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-  
+    <div id="logo">
+      <img src="{{ branch.picture }}" width="100px">
+    </div>
+    <mat-card-content>
+      <p><b>Address</b>: {{ branch.address }}</p>
+      <p><b>Phone</b>: {{ branch.phone }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="openDeleteDialog(branch)">DELETE</button>
+      <button mat-raised-button color="accent" (click)="openUpdateDialog(branch)">Update</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
