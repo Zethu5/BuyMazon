@@ -7,6 +7,7 @@ import * as io from 'socket.io-client';
 import { CreateBranchComponent } from '../../create-branch/create-branch/create-branch.component';
 import { DeleteBranchComponent } from '../../delete-branch/delete-branch/delete-branch.component';
 import { UpdateBranchComponent } from '../../update-branch/update-branch/update-branch.component';
+import * as L from 'leaflet';
 
 @Component({
   selector: 'app-branches',
@@ -19,20 +20,53 @@ export class BranchesComponent implements OnInit {
   branchesClone!: any
   searchField!: any
   socket!: any
+  map!: any
 
-  constructor(private branchService: BranchService, public dialog: MatDialog) { }
+  constructor(
+    private branchService: BranchService,
+    public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getBranches()
+    this.initMap()
     this.updateBranches()
+  }
+
+  initMap(): void {
+    this.map = L.map('branches-map', {
+      center: {
+        lat: 32.1,
+        lng: 35
+      },
+      zoom: 8
+    })
+
+    const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      minZoom: 3,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    })
+
+    tiles.addTo(this.map)
+
+    this.branchService.getBranches().subscribe(data => {
+      this.setMapMarkers(this.map, data)
+    })
+  }
+
+  setMapMarkers(map: any, branches: any) {
+    branches.forEach((branch: any) => {
+      L.marker(
+        [branch.coordinates.lat, branch.coordinates.lng],
+      ).bindTooltip(branch.address)
+      .addTo(map)
+    });
   }
 
   getBranches() {
     this.branchService.getBranches().subscribe(data => {
       this.branches = this.branchesClone = data
     })
-
-    // this.ngOnInit()
   }
 
   updateBranches() {
