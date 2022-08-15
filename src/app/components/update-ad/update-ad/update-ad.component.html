@@ -1,0 +1,15 @@
+<div class="title">
+    <h1>Create Ad</h1>
+</div>
+<form [formGroup]="updateAdForm" id="updateAdForm" (ngSubmit)="onAdSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Ad Info</mat-label>
+    <textarea matInput formControlName="info"></textarea>
+    <mat-error *ngIf="updateAdForm.controls['info'].errors?.['required']">
+      Ad info is required...
+    </mat-error>
+  </mat-form-field>
+  <mat-checkbox class="example-margin" formControlName="active">Activate ad</mat-checkbox>
+  <button mat-raised-button class="submitBtn" color="primary" type="submit" (click)="closeDialog()"
+    [disabled]="updateAdForm.invalid">Create Ad</button>
+</form>

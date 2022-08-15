@@ -1,0 +1,18 @@
+<div class="createAd">
+    <button mat-raised-button color="primary" (click)="openCreateDialog()">Create Ad</button>
+</div>
+<mat-card class="adsContainer">
+    <mat-card-title>Ads</mat-card-title>
+    <mat-list>
+        <mat-list-item *ngFor="let ad of ads" class="ad">
+            <button mat-icon-button (click)="openDeleteDialog(ad)">
+                <mat-icon class="deleteAd spaceRight">delete_forever</mat-icon>
+            </button>
+            <button mat-icon-button (click)="openUpdateDialog(ad)">
+                <mat-icon class="spaceRight">edit</mat-icon>
+            </button>
+            <mat-slide-toggle class="spaceRight" [checked]="ad.active" (change)="changeAdState(ad)"></mat-slide-toggle>
+            {{ad.info}}
+        </mat-list-item>
+    </mat-list>
+</mat-card>

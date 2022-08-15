@@ -1,0 +1,39 @@
+.adsContainer {
+    width: 50vw;
+    height: 70vh;
+    margin: 0 auto;
+    margin-top: 5vh;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.adsContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.createAd {
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.ad {
+    height: 100% !important;
+}
+
+.ad:not(:first-child) {
+    line-break: anywhere;
+    margin-top: 3vh;
+}
+
+mat-card-title {
+    text-align: center;
+}
+
+.spaceRight {
+    margin-right: 1vw;
+}
+
+.deleteAd {
+    color: red;
+}

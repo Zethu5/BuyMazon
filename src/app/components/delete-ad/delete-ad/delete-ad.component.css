@@ -1,0 +1,17 @@
+.title {
+    text-align: center;
+}
+
+.info {
+    margin-top: 3vh;
+}
+
+.warn {
+    margin-top: 5vh;
+    color: red;
+}
+
+.deleteBtn {
+    margin-top: 3vh;
+    text-align: center;
+}

@@ -12,6 +12,7 @@ const branches = require('./src/routes/branches')
 const users = require('./src/routes/users')
 const cart = require('./src/routes/cart')
 const orders = require('./src/routes/orders')
+const ads = require('./src/routes/ads')
 
 
 app.use(cors({
@@ -30,6 +31,7 @@ app.use('/api/branches', branches)
 app.use('/api/users', users)
 app.use('/api/cart', cart)
 app.use('/api/orders', orders)
+app.use('/api/ads', ads)
 
 // socket config
 const socket = require('socket.io')(3210, {

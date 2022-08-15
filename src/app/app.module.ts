@@ -28,6 +28,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSliderModule} from '@angular/material/slider';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 import { CreateManufacturerComponent } from './components/create-manufacturer/create-manufacturer/create-manufacturer.component';
 import { ManufacturersComponent } from './components/manufacturers/manufacturers/manufacturers.component';
@@ -49,6 +50,10 @@ import { OrderSuccessComponent } from './components/order-success/order-success/
 import { StatisticsComponent } from './components/statistics/statistics/statistics.component';
 import { HomepageComponent } from './components/homepage/homepage/homepage.component';
 import { MapComponent } from './components/map/map/map.component';
+import { AdsComponent } from './components/ads/ads/ads.component';
+import { CreateAdComponent } from './components/create-ad/create-ad/create-ad.component';
+import { DeleteAdComponent } from './components/delete-ad/delete-ad/delete-ad.component';
+import { UpdateAdComponent } from './components/update-ad/update-ad/update-ad.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +78,11 @@ import { MapComponent } from './components/map/map/map.component';
     OrderSuccessComponent,
     StatisticsComponent,
     HomepageComponent,
-    MapComponent
+    MapComponent,
+    AdsComponent,
+    CreateAdComponent,
+    DeleteAdComponent,
+    UpdateAdComponent
   ],
   imports: [
     BrowserModule,
@@ -102,6 +111,7 @@ import { MapComponent } from './components/map/map/map.component';
     MatListModule,
     MatCheckboxModule,
     MatSliderModule,
+    MatSlideToggleModule
   ],
   providers: [
     MatDatepickerModule,

@@ -1,0 +1,11 @@
+<div class="title">
+    <h1>Delete Ad</h1>
+</div>
+<div>
+    <div>Id: {{ad._id}}</div>
+    <div class="info">Info: {{ad.info}}</div>
+    <div class="warn">Are you sure you want to delete this ad?</div>
+    <div class="deleteBtn">
+        <button mat-raised-button color="warn" (click)="deleteAd()">Delete Ad</button>
+    </div>
+</div>
