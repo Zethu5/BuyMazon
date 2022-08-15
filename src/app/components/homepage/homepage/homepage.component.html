@@ -1,10 +1,10 @@
 <div class="categoryList" fxLayout="row" fxLayoutAlign="space-evenly stretch">
   <mat-card class="categoryCard" *ngFor="let category of categories" fxLayout="column" fxLayoutAlign="center center">
     <a (click)="goToPage(category)">
-        <div class="categoryImage" fxLayout="row" fxLayoutAlign="center center">
-            <img mat-card-image src="{{ category.image }}">
-        </div>
-        <div>{{ category.name }}</div>
+      <div class="categoryImage" fxLayout="row" fxLayoutAlign="center center">
+        <img mat-card-image src="{{ category.image }}">
+      </div>
+      <div>{{ category.name }}</div>
     </a>
   </mat-card>
 </div>
@@ -12,4 +12,16 @@
 <div class="mapContainer">
   <h1>Our Branches</h1>
   <app-map></app-map>
+  <div class="adsContainer">
+      <div class="adsTitle"><h1>Ads</h1>
+      <div *ngFor="let ad of ads">
+        <div *ngIf="ad.active" class="ad">
+          {{ ad.info }}
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+    </div>
+  </div>
 </div>
+
+

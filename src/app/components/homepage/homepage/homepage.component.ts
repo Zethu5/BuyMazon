@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdService } from 'src/app/services/ad/ad.service';
+import * as io from 'socket.io-client';
+import { socket_connection } from 'src/environments/environment';
 
 @Component({
   selector: 'app-homepage',
@@ -9,8 +12,13 @@ import { Router } from '@angular/router';
 export class HomepageComponent implements OnInit {
 
   categories: any = []
+  ads: any = []
+  socket!: any
 
-  constructor(private router: Router) { }
+  constructor(
+    private adService: AdService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.categories.push({
@@ -36,10 +44,26 @@ export class HomepageComponent implements OnInit {
       image: 'https://i.imgur.com/j8RnXQh.png',
       ref: '/statistics'
     })
+
+    this.getAds()
+    this.updateAds()
   }
 
   goToPage(category: any) {
     this.router.navigate([category.ref])
+  }
+
+  getAds() {
+    this.adService.getAds().subscribe((data: any) => {
+      this.ads = data
+    })
+  }
+
+  updateAds() {
+    this.socket = io.io(socket_connection)
+    this.socket.on('adUpdate', () => {
+      this.getAds()
+    })
   }
 
 }

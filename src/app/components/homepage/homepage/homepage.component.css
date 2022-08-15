@@ -51,3 +51,29 @@ a:hover {
   margin: 0 auto;
   margin-top: 5vh;
 }
+
+.adsContainer {
+  line-break: anywhere;
+}
+
+.adsContainer {
+  margin-top: 5vh;
+  height: 50vh;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: rgb(220, 229, 237);
+}
+
+.adsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.adsTitle {
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.ad {
+  margin: 5vh;
+}
