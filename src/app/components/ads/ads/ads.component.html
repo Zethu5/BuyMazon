@@ -2,6 +2,44 @@
   <button mat-raised-button color="primary" (click)="openCreateDialog()">Create Ad</button>
 </div>
 
+<mat-card class="filter">
+    <mat-card-title>
+        Filter ads
+    </mat-card-title>
+  <mat-form-field appearance="fill" class="productsFilter">
+    <mat-label>Products</mat-label>
+    <mat-select multiple [(ngModel)]="selectedProductsFilterValue" (selectionChange)="filter()">
+      <mat-option *ngFor="let product of products" [value]="product">
+        {{ product.name }}
+        <img src="{{ product.picture }}">
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div class="discountFilter">
+    <span>% Discount >= </span>
+    <mat-slider [(ngModel)]="discountFilterValue" [value]="discountFilterValue" thumbLabel [displayWith]="formatLabel"
+    min="1" max="99" (change)="filter()"></mat-slider>
+  </div>
+  <div class="searchWordFilter">
+    <mat-form-field appearance="fill">
+        <mat-label>Search words</mat-label>
+        <mat-chip-list #chipList aria-label="Fruit selection">
+          <mat-chip *ngFor="let searchWord of searchWordsFilterValue" (removed)="remove(searchWord)">
+            {{searchWord}}
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-chip>
+          <input placeholder="New search word..."
+                 [matChipInputFor]="chipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+      </mat-form-field>
+  </div>
+</mat-card>
+
 <div fxLayout="row" fxLayoutAlign="space-evenly stretch">
   <mat-card *ngFor="let ad of ads" class="ad">
     <mat-card-title>
@@ -14,6 +52,9 @@
           {{ product.name }}
         </mat-list-item>
       </mat-list>
+    </div>
+    <div class="discountType">
+        <h2>{{ad.discountType}}% Discount</h2>
     </div>
     <div class="dates">
       <h3>From <b>{{ dateToString(ad.startDate) }}</b> to <b>{{ dateToString(ad.endDate) }}</b></h3>

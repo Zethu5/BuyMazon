@@ -1,11 +1,10 @@
 .createAd {
     text-align: center;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 .ad {
-    width: 20vw;
     width: 15vw;
     display: flex;
     justify-content: start;
@@ -15,7 +14,7 @@
 }
 
 .ad > mat-card-title {
-    height: 20vh;
+    height: 10vh;
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -49,7 +48,42 @@ img {
     margin-right: 50px;
 }
 
+.discountType {
+    text-align: center;
+    margin-top: 2vh;
+}
+
 .dates {
     text-align: center;
     margin-top: 2vh;
+}
+
+.filter {
+    text-align: center;
+    width: 30vw;
+    margin: 0 auto;
+}
+
+.filter > mat-card-title {
+    margin-bottom: 2vh;
+}
+
+.productsFilter {
+    width: 30vw;
+}
+
+mat-option {
+    text-align: center;
+}
+
+.discountFilter > span {
+    font-size: 20px;
+}
+
+.discountFilter > mat-slider {
+    width: 70%;
+}
+
+.searchWordFilter > mat-form-field {
+    width: 100%;
 }
