@@ -49,7 +49,14 @@ export class AdsComponent implements OnInit {
   }
 
   openUpdateDialog(ad: Ad): void {
-    this.dialog.open(UpdateAdComponent, {data: ad});
+    this.dialog.open(UpdateAdComponent, {
+      width: '40vw',
+      height: '95%',
+      position: {
+        top: '2vh'
+      },
+      data: ad
+    });
   }
 
   openDeleteDialog(ad: Ad): void {
