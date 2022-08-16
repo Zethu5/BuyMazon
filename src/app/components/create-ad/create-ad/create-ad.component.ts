@@ -76,7 +76,6 @@ export class CreateAdComponent implements OnInit {
 
 
   onAdSubmit() {
-    console.log('here')
     let ad: Ad = {
       products: this.createAdForm.controls['products'].value,
       discountType: this.createAdForm.controls['discountType'].value,
