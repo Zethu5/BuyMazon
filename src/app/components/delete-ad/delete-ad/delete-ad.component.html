@@ -1,9 +1,16 @@
 <div class="title">
     <h1>Delete Ad</h1>
 </div>
-<div>
-    <div>Id: {{ad._id}}</div>
-    <div class="info">Info: {{ad.info}}</div>
+<div class="productsInAdContainer">
+    <mat-list class="productsInAd">
+        <mat-list-item *ngFor="let product of ad.products">
+            <img src="{{product.picture}}">
+            {{product.name}}
+        </mat-list-item>
+    </mat-list>
+    <div class="info">{{ad.info}}</div>
+    <div class="discordType">{{ad.discountType}}% discount type</div>
+    <div class="timespan">{{startDate}} to {{endDate}}</div>
     <div class="warn">Are you sure you want to delete this ad?</div>
     <div class="deleteBtn">
         <button mat-raised-button color="warn" (click)="deleteAd()">Delete Ad</button>

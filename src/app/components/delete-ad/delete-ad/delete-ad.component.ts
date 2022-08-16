@@ -10,12 +10,17 @@ import { AdsComponent } from '../../ads/ads/ads.component';
 })
 export class DeleteAdComponent implements OnInit {
 
+  startDate!: String
+  endDate!: String
+
   constructor(
   @Inject(MAT_DIALOG_DATA) public ad: any,
   private adService: AdService,
   private dialogRef: MatDialogRef<AdsComponent>) { }
 
   ngOnInit(): void {
+    this.startDate = (new Date(this.ad.startDate)).toLocaleDateString()
+    this.endDate = (new Date(this.ad.endDate)).toLocaleDateString()
   }
 
   deleteAd() {

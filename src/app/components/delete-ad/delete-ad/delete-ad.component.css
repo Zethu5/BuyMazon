@@ -4,14 +4,48 @@
 
 .info {
     margin-top: 3vh;
+    text-align: center;
+    width: 30rem;
 }
 
 .warn {
     margin-top: 5vh;
     color: red;
+    text-align: center;
 }
 
 .deleteBtn {
     margin-top: 3vh;
     text-align: center;
+}
+
+.productsInAd {
+    height: 30vh;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.productsInAd::-webkit-scrollbar {
+    display: none;
+}
+
+:host ::ng-deep .mat-list-base .mat-list-item .mat-list-item-content {
+    justify-content: center;
+}
+
+.discordType {
+    margin-top: 3vh;
+    text-align: center;
+}
+
+.timespan {
+    margin-top: 3vh;
+    text-align: center;
+}
+
+img {
+    height: 40px;
+    width: fit-content;
+    margin-right: 3rem;
 }
