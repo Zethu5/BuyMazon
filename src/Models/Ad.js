@@ -2,8 +2,11 @@ const mongoose = require('mongoose');
 
 const adSchema = new mongoose.Schema({
     info: String,
-    publisher: String,
-    active: Boolean
+    products: [],
+    discountType: Number,
+    active: Boolean,
+    startDate: Date,
+    endDate: Date,
 })
 
 module.exports.AdModel = mongoose.model('Ad', adSchema)

@@ -1,20 +1,89 @@
+::ng-deep.mat-dialog-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::ng-deep.mat-dialog-container::-webkit-scrollbar {
+  display: none;
+}
+
 #createAdForm {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-items: center;
-    margin: 0 auto;
-    width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  width: 20vw;
 }
 
 mat-form-field {
-    width: 100%;
+  width: 100%;
 }
 
 .submitBtn {
-    margin-top: 2vh;
+  margin-top: 2vh;
 }
 
 .title {
-    text-align: center;
+  text-align: center;
+}
+
+mat-selection-list {
+  height: 20vh;
+  overflow: scroll;
+  margin-top: 2vh;
+  width: 30vw;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  text-align: center;
+}
+
+mat-selection-list>button {
+  margin-bottom: 1vh;
+}
+
+mat-selection-list::-webkit-scrollbar {
+  display: none;
+}
+
+mat-list-option {
+  text-align: center;
+}
+
+.selectProductImg {
+  height: 30px;
+  width: fit-content;
+  position: absolute;
+  bottom: 20%;
+}
+
+.selectedProductsContainer {
+  height: 15vh;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  text-align: center;
+}
+
+.selectedProductsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.discountTypeContainer {
+  width: fit-content;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.datesContainer>mat-form-field {
+  width: 45%;
+  margin-left: 5%;
+}
+
+.datesContainer>mat-form-field:first {
+  float: left;
+}
+
+.activateAdCheckbox {
+  margin-top: 5vh;
 }
