@@ -1,18 +1,31 @@
 <div class="createAd">
-    <button mat-raised-button color="primary" (click)="openCreateDialog()">Create Ad</button>
+  <button mat-raised-button color="primary" (click)="openCreateDialog()">Create Ad</button>
 </div>
-<mat-card class="adsContainer">
-    <mat-card-title>Ads</mat-card-title>
-    <mat-list>
-        <mat-list-item *ngFor="let ad of ads" class="ad">
-            <button mat-icon-button (click)="openDeleteDialog(ad)">
-                <mat-icon class="deleteAd spaceRight">delete_forever</mat-icon>
-            </button>
-            <button mat-icon-button (click)="openUpdateDialog(ad)">
-                <mat-icon class="spaceRight">edit</mat-icon>
-            </button>
-            <mat-slide-toggle class="spaceRight" [checked]="ad.active" (change)="changeAdState(ad)"></mat-slide-toggle>
-            {{ad.info}}
+
+<div fxLayout="row" fxLayoutAlign="space-evenly stretch">
+  <mat-card *ngFor="let ad of ads" class="ad">
+    <mat-card-title>
+      {{ ad.info }}
+    </mat-card-title>
+    <div class="adProducts">
+      <mat-list>
+        <mat-list-item *ngFor="let product of ad.products">
+          <img src="{{ product.picture }}">
+          {{ product.name }}
         </mat-list-item>
-    </mat-list>
-</mat-card>
+      </mat-list>
+    </div>
+    <div class="dates">
+      <h3>From {{ dateToString(ad.startDate) }} to {{ dateToString(ad.endDate) }}</h3>
+    </div>
+    <mat-card-actions>
+      <button mat-icon-button (click)="openDeleteDialog(ad)">
+        <mat-icon class="deleteAd spaceRight">delete_forever</mat-icon>
+      </button>
+      <button mat-icon-button (click)="openUpdateDialog(ad)">
+        <mat-icon class="spaceRight">edit</mat-icon>
+      </button>
+      <mat-slide-toggle class="spaceRight" [checked]="ad.active" (change)="changeAdState(ad)"></mat-slide-toggle>
+    </mat-card-actions>
+  </mat-card>
+</div>

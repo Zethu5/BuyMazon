@@ -1,39 +1,55 @@
-.adsContainer {
-    width: 50vw;
-    height: 70vh;
-    margin: 0 auto;
+.createAd {
+    text-align: center;
     margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.ad {
+    width: 20vw;
+    width: 15vw;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1vw;
+}
+
+.ad > mat-card-title {
+    height: 20vh;
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-.adsContainer::-webkit-scrollbar {
+.ad > mat-card-title::-webkit-scrollbar {
     display: none;
 }
 
-.createAd {
-    text-align: center;
-    margin-top: 5vh;
-}
-
-.ad {
-    height: 100% !important;
-}
-
-.ad:not(:first-child) {
-    line-break: anywhere;
-    margin-top: 3vh;
-}
-
-mat-card-title {
-    text-align: center;
-}
-
-.spaceRight {
-    margin-right: 1vw;
+.ad > mat-card-actions {
+    margin: 0 auto;
 }
 
 .deleteAd {
     color: red;
+}
+
+.adProducts > mat-list {
+    height: 20vh;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.adProducts > mat-list::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    height: 30px;
+    margin-right: 50px;
+}
+
+.dates {
+    text-align: center;
+    margin-top: 2vh;
 }

@@ -31,6 +31,10 @@ export class AdsComponent implements OnInit {
     })
   }
 
+  dateToString(date: any) {
+    return (new Date(date)).toLocaleDateString()
+  }
+
   updateAds() {
     this.socket = io.io(socket_connection)
     this.socket.on('adUpdate', () => {
