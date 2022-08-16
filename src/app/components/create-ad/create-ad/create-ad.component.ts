@@ -15,7 +15,6 @@ import { AdsComponent } from '../../ads/ads/ads.component';
 export class CreateAdComponent implements OnInit {
 
   createAdForm!: FormGroup
-  socket!: any
   products!: any
   selectedProducts!: any
   discountTypes: number[] = [10,20,30,40,50,60,70,80,90]
