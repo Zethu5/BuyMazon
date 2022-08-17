@@ -29,3 +29,8 @@ img {
     margin-top: 2vh;
     text-align: center;
 }
+
+.scatterPlotContainer {
+    text-align: center;
+    margin-top: 5vh;
+}

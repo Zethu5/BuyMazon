@@ -1,5 +1,3 @@
-<!-- <h1>{{ '7290106720626' | cmsPipe | async }}</h1> -->
-
 <div class="cmsTableContainer">
   <h1>CMS Upper Bound Table</h1>
   <section class="cmsTable mat-elevation-z5" tabindex="0">
@@ -43,4 +41,10 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   </section>
+</div>
+
+<div class="scatterPlotContainer">
+    <h1>D3 Scatter plot - Ratio of the number of times a product 
+        has been bought to the number of orders it has been included in</h1>
+    <figure id="scatterPlot"></figure>
 </div>
