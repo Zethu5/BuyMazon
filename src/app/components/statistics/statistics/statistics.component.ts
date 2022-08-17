@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CMSService } from 'src/app/services/cms/cms.service';
+import { ProductService } from 'src/app/services/product/product.service';
+import { socket_connection } from 'src/environments/environment';
+import * as io from 'socket.io-client'
 
 @Component({
   selector: 'app-statistics',
@@ -8,29 +11,45 @@ import { CMSService } from 'src/app/services/cms/cms.service';
 })
 export class StatisticsComponent implements OnInit {
 
+  products!: any
   socket!: any
-  bounds: number[][] = [
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0]
-  ]
-  cms!: any
 
-  constructor(private cmsService: CMSService) {}
+  displayedColumns = [
+    'name',
+    'picture',
+    'price',
+    'manufacturer',
+    'productionCountry',
+    'code',
+    'cmsResult'
+  ]
+
+  constructor(
+    private cmsService: CMSService,
+    private productService: ProductService) {}
 
   ngOnInit(): void {
+    this.getProducts()
     this.updateUpperBound()
-    this.getAllProductsUpperBound()
+    this.updateProducts()
   }
 
   updateUpperBound() {
     this.cmsService.updateUpperBound()
   }
 
-  // Use this to get a upper bound for every product json
-  getAllProductsUpperBound() {
-    this.cmsService.getAllProductsUpperBound().subscribe((data: any) => {
-      console.log(data)
+  getProducts() {
+    this.productService.getProducts().subscribe((data) => {
+      this.products = data
+    })
+  }
+
+  updateProducts() {
+    this.socket = io.io(socket_connection)
+    this.socket.on('newOrder', () => {
+      this.productService.getProducts().subscribe((data) => {
+        this.products = data
+      })
     })
   }
 }

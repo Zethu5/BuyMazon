@@ -1,0 +1,31 @@
+.cmsTable {
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+    margin-top: 2vh;
+    overflow: auto;
+    text-align: center;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.cmsTable::-webkit-scrollbar {
+    display: none;
+}
+
+table {
+    width: 100%;
+}
+
+img {
+    height: 100px;
+}
+
+.mat-header-cell {
+    text-align: center;
+}
+
+.cmsTableContainer {
+    margin-top: 2vh;
+    text-align: center;
+}

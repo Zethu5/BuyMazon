@@ -1,2 +1,46 @@
-<h1>7290106720626</h1>
-<h1>{{ '7290106720626' | cmsPipe | async }}</h1>
+<!-- <h1>{{ '7290106720626' | cmsPipe | async }}</h1> -->
+
+<div class="cmsTableContainer">
+  <h1>CMS Upper Bound Table</h1>
+  <section class="cmsTable mat-elevation-z5" tabindex="0">
+    <table mat-table [dataSource]="products">
+      <ng-container matColumnDef="name" sticky>
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="picture">
+        <th mat-header-cell *matHeaderCellDef> Picture </th>
+        <td mat-cell *matCellDef="let element"> <img src="{{ element.picture }}"> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Price </th>
+        <td mat-cell *matCellDef="let element"> {{ element.price }} ₪</td>
+      </ng-container>
+
+      <ng-container matColumnDef="manufacturer">
+        <th mat-header-cell *matHeaderCellDef> Manufacturer </th>
+        <td mat-cell *matCellDef="let element"> {{ element.manufacturer.name }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="productionCountry" stickyEnd>
+        <th mat-header-cell *matHeaderCellDef> Production Country </th>
+        <td mat-cell *matCellDef="let element"> {{ element.productionCountry }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="code">
+        <th mat-header-cell *matHeaderCellDef> Code </th>
+        <td mat-cell *matCellDef="let element"> {{ element.code }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cmsResult" stickyEnd>
+        <th mat-header-cell *matHeaderCellDef> CMS Upper Bound </th>
+        <td mat-cell *matCellDef="let element"> {{ element.code | cmsPipe | async }} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </section>
+</div>
