@@ -72,4 +72,8 @@ export class HomepageComponent implements OnInit {
     })
   }
 
+  dateToString(date: any) {
+    return (new Date(date)).toLocaleDateString()
+  }
+
 }

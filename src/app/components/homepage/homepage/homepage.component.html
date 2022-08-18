@@ -16,7 +16,22 @@
       <div class="adsTitle"><h1>Ads</h1>
       <div *ngFor="let ad of ads">
         <div *ngIf="ad.active" class="ad">
-          {{ ad.info }}
+          <div class="categoryImage" fxLayout="row" fxLayoutAlign="center stretch">
+            <span *ngFor="let product of ad.products">
+              <img class="adProductPicture" mat-card-image src="{{ product.picture }}">
+            </span>
+          </div>
+          <div class="ad-info">
+            {{ ad.info }}
+          </div>
+          <div class="ad-discount">
+            <h1>{{ad.discountType}}% Discount!</h1>
+          </div>
+          <div>
+            <h3>
+              From <b>{{dateToString(ad.startDate)}}</b> to <b>{{dateToString(ad.endDate)}}</b>
+            </h3>
+          </div>
         </div>
         <mat-divider></mat-divider>
       </div>

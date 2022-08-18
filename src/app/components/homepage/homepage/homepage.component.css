@@ -62,7 +62,6 @@ a:hover {
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  background-color: rgb(220, 229, 237);
 }
 
 .adsContainer::-webkit-scrollbar {
@@ -76,4 +75,19 @@ a:hover {
 
 .ad {
   margin: 5vh;
+}
+
+.adProductPicture {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.ad-info {
+  width: 50%;
+  word-break: break-all;
+  margin: 0 auto;
+}
+
+.ad-discount {
+  margin-top: 2vh;
 }
