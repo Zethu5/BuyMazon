@@ -45,6 +45,12 @@ export class HomepageComponent implements OnInit {
       ref: '/statistics'
     })
 
+    this.categories.push({
+      name: 'Ads',
+      image: 'https://i.imgur.com/AiZmuRZ.png',
+      ref: '/ads'
+    })
+
     this.getAds()
     this.updateAds()
   }
