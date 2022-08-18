@@ -8,6 +8,8 @@ import { DeleteManufacturerComponent } from '../../delete-manufacturer/delete-ma
 import { UpdateManufacturerComponent } from '../../update-manufacturer/update-manufacturer/update-manufacturer.component';
 import { socket_connection } from '../../../../environments/environment';
 import * as io from 'socket.io-client';
+import { UserService } from 'src/app/services/user/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-manufacturers',
@@ -21,9 +23,15 @@ export class ManufacturersComponent implements OnInit {
   searchField!: any
   socket!: any
 
-  constructor(private manufacturerService: ManufacturerService, public dialog: MatDialog) { }
+  constructor(
+    private manufacturerService: ManufacturerService, 
+    private userService: UserService,
+    private router: Router,
+    public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    if (!this.userService.isAdmin()) this.router.navigate(['/'])
+
     this.manufacturerService.getManufacturers().subscribe(data => {
       this.manufacturersClone = this.manufacturers = data
       this.setManufacturerNumProducts(this.manufacturers)

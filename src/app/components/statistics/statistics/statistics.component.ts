@@ -8,6 +8,8 @@ import * as d3Axis from 'd3-axis';
 import { OrderService } from 'src/app/services/order/order.service';
 import { Order } from 'src/app/models/order';
 import { map } from 'rxjs';
+import { UserService } from 'src/app/services/user/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-statistics',
@@ -34,9 +36,13 @@ export class StatisticsComponent implements OnInit {
   constructor(
     private cmsService: CMSService,
     private productService: ProductService,
-    private orderService: OrderService) {}
+    private userService: UserService,
+    private orderService: OrderService,
+    private router: Router) {}
 
   ngOnInit(): void {
+    if (!this.userService.isAdmin()) this.router.navigate(['/'])
+
     this.getProducts()
     this.updateUpperBound()
     this.updateProducts()
