@@ -1,19 +1,22 @@
-<div class="categoryList" fxLayout="row" fxLayoutAlign="space-evenly stretch">
-  <mat-card class="categoryCard" *ngFor="let category of categories" fxLayout="column" fxLayoutAlign="center center">
-    <a (click)="goToPage(category)">
-      <div class="categoryImage" fxLayout="row" fxLayoutAlign="center center">
-        <img mat-card-image src="{{ category.image }}">
-      </div>
-      <div>{{ category.name }}</div>
-    </a>
-  </mat-card>
+<div class="categoryList" fxLayout="row">
+  <span *ngFor="let category of categories">
+    <mat-card class="categoryCard" *ngIf="isAllowedToDisplayCategory(category)">
+      <a (click)="goToPage(category)">
+        <div class="categoryImage" fxLayout="row" fxLayoutAlign="center center">
+          <img mat-card-image src="{{ category.image }}">
+        </div>
+        <div class="categoryName">{{ category.name }}</div>
+      </a>
+    </mat-card>
+  </span>
 </div>
 
 <div class="mapContainer">
   <h1>Our Branches</h1>
   <app-map></app-map>
   <div class="adsContainer">
-      <div class="adsTitle"><h1>Ads</h1>
+    <div class="adsTitle">
+      <h1>Ads</h1>
       <div *ngFor="let ad of ads">
         <div *ngIf="ad.active" class="ad">
           <div class="categoryImage" fxLayout="row" fxLayoutAlign="center stretch">
@@ -25,11 +28,11 @@
             {{ ad.info }}
           </div>
           <div class="ad-discount">
-            <h1>{{ad.discountType}}% Discount!</h1>
+            <h1>{{ ad.discountType }}% Discount!</h1>
           </div>
           <div>
             <h3>
-              From <b>{{dateToString(ad.startDate)}}</b> to <b>{{dateToString(ad.endDate)}}</b>
+              From <b>{{ dateToString(ad.startDate) }}</b> to <b>{{ dateToString(ad.endDate) }}</b>
             </h3>
           </div>
         </div>
@@ -38,5 +41,3 @@
     </div>
   </div>
 </div>
-
-
