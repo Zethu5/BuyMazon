@@ -23,3 +23,7 @@ mat-form-field {
     width: 26vw;
     height: 30vh;
 }
+
+.middle {
+    text-align: center;
+}
