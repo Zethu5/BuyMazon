@@ -27,6 +27,10 @@ router
     res.json(await AdModel.findById(req.params.id).exec())
 })
 .put(async (req, res) => {
+    // if no products are in the add disable it
+    // to let admins edit it later
+    if(req.body.products.length == 0) req.body.active = false
+
     await AdModel.findOneAndUpdate({_id: req.params.id}, req.body)
     const socket = req.app.get('socket')
     socket.emit('adUpdate')

@@ -15,7 +15,7 @@ export class UpdateAdComponent implements OnInit {
   updateAdForm!: FormGroup
   products!: any
   discountTypes: number[] = [10,20,30,40,50,60,70,80,90]
-  selectedProducts!: any
+  selectedProducts: any = []
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public ad: any,
@@ -35,7 +35,9 @@ export class UpdateAdComponent implements OnInit {
     })
 
     this.getProducts()
-    this.selectedProducts = this.ad.products
+
+    // sort of a workaround for cloning...
+    this.selectedProducts = Array.from(this.ad.products)
   }
 
   getProducts() {
