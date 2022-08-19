@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs';
 import { Ad } from 'src/app/models/ad';
 import { api_base } from '../../../environments/environment'
 
@@ -33,5 +34,16 @@ export class AdService {
   deleteAd(id: string, ad: any) {
     let url = `${api_base}/ads/${id}`
     this.http.delete(url, ad).subscribe()
+  }
+
+  getActiveAds() {
+    return this.getAds().pipe(map((ads: any) => {
+      const nowTime = (new Date).getTime()
+      return ads.filter(
+        (ad: any) => 
+        ad.active &&
+        (new Date(ad.startDate).getTime() <= nowTime) &&
+        (new Date(ad.endDate).getTime() >= nowTime))
+    }))
   }
 }

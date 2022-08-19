@@ -10,6 +10,7 @@ import * as io from 'socket.io-client';
 import { UserService } from 'src/app/services/user/user.service';
 import { CartService } from 'src/app/services/cart/cart.service';
 import { ManufacturerService } from 'src/app/services/manufacturer/manufacturer.service';
+import { AdService } from 'src/app/services/ad/ad.service';
 
 
 @Component({
@@ -30,11 +31,13 @@ export class ProductsComponent implements OnInit {
   manufacturerFilterValue!: any
   productionCountryFilterValue!: any
   priceFilterValue!: any
+  activeAds!: any
 
   constructor(private productService: ProductService,
     private userService: UserService,
     private cartService: CartService,
     private manufacturerService: ManufacturerService,
+    private adService: AdService,
     public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -44,9 +47,35 @@ export class ProductsComponent implements OnInit {
       this.getProductsProductionCountries()
       this.minProductPrice = this.getProductsMinValue()
       this.maxProductPrice = this.getProductsMaxValue()
+      this.getActiveAds()
     })
 
     this.updateProducts()
+  }
+
+  getActiveAds() {
+    this.adService.getActiveAds().subscribe((activeAds: any) => {
+      this.activeAds = activeAds
+    })
+  }
+
+  isProductInActiveAd(product: any) {
+    return this.activeAds
+      .filter((activeAd: any) => 
+        activeAd.products
+          .map((product: any) => product._id)
+            .includes(product._id)).length > 0
+  }
+
+  getAdDiscountForProduct(product: any) {
+    const adOfProduct = 
+    this.activeAds
+      .filter((activeAd: any) => 
+        activeAd.products
+          .map((product: any) => product._id)
+            .includes(product._id))[0]
+
+    return adOfProduct.discountType
   }
 
   updateProducts() {
