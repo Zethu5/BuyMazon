@@ -24,7 +24,7 @@ export class AdsComponent implements OnInit {
   socket!: any
   products!: any
   selectedProductsFilterValue: any = []
-  discountFilterValue!: any
+  discountFilterValue: any = 0
   searchWordsFilterValue: any = []
   addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
@@ -102,8 +102,6 @@ export class AdsComponent implements OnInit {
     if (this.selectedProductsFilterValue.length == 0) return true
 
     let found = false
-
-    console.log('here')
 
     this.selectedProductsFilterValue.forEach((product: any) => {
       if(ad.products.filter((adProduct: any) => adProduct._id == product._id).length > 0) found = true
