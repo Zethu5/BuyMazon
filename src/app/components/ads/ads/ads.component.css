@@ -43,9 +43,9 @@
     display: none;
 }
 
-img {
+.productsInAd img {
     height: 30px;
-    margin-right: 50px;
+    margin-left: 30px;
 }
 
 .discountType {
@@ -86,4 +86,8 @@ mat-option {
 
 .searchWordFilter > mat-form-field {
     width: 100%;
+}
+
+:host ::ng-deep .mat-list-base .mat-list-item .mat-list-item-content {
+    justify-content: right;
 }

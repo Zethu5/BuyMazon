@@ -46,10 +46,10 @@
       {{ ad.info }}
     </mat-card-title>
     <div class="adProducts">
-      <mat-list>
-        <mat-list-item *ngFor="let product of ad.products">
-          <img src="{{ product.picture }}">
+      <mat-list class="productsInAd">
+        <mat-list-item *ngFor="let product of ad.products" class="productInAd">
           {{ product.name }}
+          <img src="{{ product.picture }}">
         </mat-list-item>
       </mat-list>
     </div>
