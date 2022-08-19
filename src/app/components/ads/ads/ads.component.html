@@ -40,7 +40,7 @@
   </div>
 </mat-card>
 
-<div fxLayout="row" fxLayoutAlign="space-evenly stretch">
+<div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutAlign="center stretch">
   <mat-card *ngFor="let ad of ads" class="ad">
     <mat-card-title>
       {{ ad.info }}
