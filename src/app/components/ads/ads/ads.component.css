@@ -96,3 +96,8 @@ mat-option {
     text-align: center;
     margin-top: 10vh;
 }
+
+.addManufacturersWarning {
+    margin-top: 1%;
+    color: red;
+}

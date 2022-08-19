@@ -1,5 +1,8 @@
 <div *ngIf="isAdmin()" class="addProductBtn">
-  <button mat-raised-button color="primary" (click)="openCreateDialog()">Add Product</button>
+  <button mat-raised-button color="primary" [disabled]="manufacturers.length == 0" (click)="openCreateDialog()">Add Product</button>
+  <div *ngIf="manufacturers.length == 0" class="addManufacturersWarning">
+    No manufacturers found, please add manufacturers first!
+  </div>
 </div>
 <div id="topBar" *ngIf="products && products.length > 0">
   <mat-form-field appearance="fill">

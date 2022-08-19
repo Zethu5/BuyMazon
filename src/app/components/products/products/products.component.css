@@ -71,3 +71,8 @@ img {
 .filterContainer mat-card-title {
     margin-bottom: 5%;
 }
+
+.addManufacturersWarning {
+    margin-top: 1%;
+    color: red;
+}
