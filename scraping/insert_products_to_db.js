@@ -16,8 +16,8 @@ async function get_manufacturers() {
 }
 
 
-async function main() {
-    run_scraper()
+async function main(scrape) {
+    if(scrape) run_scraper()
     let rawData = fs.readFileSync('data.json')
     let products = JSON.parse(rawData)
 
@@ -30,4 +30,4 @@ async function main() {
     await ProductModel.insertMany(products)
 }
 
-main().then(() => {exit(0)})
+main(scrape=false).then(() => {exit(0)})
