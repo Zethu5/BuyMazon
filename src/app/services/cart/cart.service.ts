@@ -25,6 +25,11 @@ export class CartService {
     })
   }
 
+  removeBulkProductsFromUser(user: any, products: Product[]) {
+    const url = `${api_base}/cart/${user._id}/removebulkproducts`
+    this.http.put(url, {products: products}).subscribe()
+  }
+
   removeProductFromUser(product: Product) {
     this.userService.getUserByUsername(this.userService.getLocalStorageUserName()!).subscribe((user: any) => {
       const url = `${api_base}/cart/${user._id}/removeproduct`

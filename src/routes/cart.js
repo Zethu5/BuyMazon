@@ -20,7 +20,7 @@ function findOneProductIndexInCart(array, element) {
 }
 
 function findAndRemoveAllProductIndexesInCart(array, element) {
-    for (var i = array.length -1; i >= 0; i--) {
+    for (let i = array.length -1; i >= 0; i--) {
         if(array[i]._id == element._id) array.splice(i, 1)
     }
 }
@@ -92,6 +92,23 @@ router
     const socket = req.app.get('socket')
     socket.emit('userCartUpdate')
     res.json({result: `Removed ${product.name} from ${user.username}`})
+})
+
+router
+.route('/:id/removebulkproducts')
+.put(async (req, res) => {
+    let user = await UserModel.findOne({_id: req.params.id}).exec()
+
+    const products = req.body.products
+    
+    for (let i = 0; i < products.length; i++) {
+        findAndRemoveAllProductIndexesInCart(user.products, products[i])
+    }
+    await user.save()
+
+    const socket = req.app.get('socket')
+    socket.emit('userCartUpdate')
+    res.json({result: `Removed multiple products from ${user.username}`})
 })
 
 router.route('/:id/clearcart')

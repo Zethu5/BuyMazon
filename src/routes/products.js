@@ -36,6 +36,7 @@ router
     await ProductModel.findOneAndDelete({_id: req.params.id})
     const socket = req.app.get('socket')
     socket.emit('productUpdate')
+    socket.emit('userCartUpdate')
     res.json({result: 'Deleted product ' + req.params.id})
 })
 
