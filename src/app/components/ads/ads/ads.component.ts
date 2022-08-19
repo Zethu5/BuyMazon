@@ -10,6 +10,7 @@ import { DeleteAdComponent } from '../../delete-ad/delete-ad/delete-ad.component
 import { ProductService } from 'src/app/services/product/product.service';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatChipInputEvent} from '@angular/material/chips';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-ads',
@@ -31,6 +32,7 @@ export class AdsComponent implements OnInit {
   constructor(
     private adService: AdService, 
     private productService: ProductService,
+    private userService: UserService,
     private dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -126,6 +128,10 @@ export class AdsComponent implements OnInit {
 
   formatLabel(value: number) {
     return value + '%'
+  }
+
+  isAdmin() {
+    return this.userService.isAdmin()
   }
 
   updateAds() {

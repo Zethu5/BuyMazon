@@ -1,4 +1,4 @@
-<div class="createAd">
+<div class="createAd" *ngIf="isAdmin()">
   <button mat-raised-button color="primary" (click)="openCreateDialog()">Create Ad</button>
 </div>
 
@@ -59,7 +59,7 @@
     <div class="dates">
       <h3>From <b>{{ dateToString(ad.startDate) }}</b> to <b>{{ dateToString(ad.endDate) }}</b></h3>
     </div>
-    <mat-card-actions>
+    <mat-card-actions *ngIf="isAdmin()">
       <button mat-icon-button (click)="openDeleteDialog(ad)">
         <mat-icon class="deleteAd spaceRight">delete_forever</mat-icon>
       </button>
