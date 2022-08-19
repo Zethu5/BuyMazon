@@ -2,7 +2,7 @@
   <button mat-raised-button color="primary" (click)="openCreateDialog()">Create Ad</button>
 </div>
 
-<mat-card class="filter">
+<mat-card class="filter" *ngIf="products && products.length > 0">
     <mat-card-title>
         Filter ads
     </mat-card-title>
@@ -39,6 +39,11 @@
       </mat-form-field>
   </div>
 </mat-card>
+
+<div *ngIf="!products || products.length == 0" class="nothingFound">
+  <img src="https://i.imgur.com/La1HfmE.png">
+  <h1>Nothing found...</h1>
+</div>
 
 <div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutAlign="center stretch">
   <mat-card *ngFor="let ad of ads" class="ad">

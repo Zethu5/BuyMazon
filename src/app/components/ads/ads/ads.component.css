@@ -91,3 +91,8 @@ mat-option {
 :host ::ng-deep .mat-list-base .mat-list-item .mat-list-item-content {
     justify-content: right;
 }
+
+.nothingFound {
+    text-align: center;
+    margin-top: 10vh;
+}
