@@ -53,6 +53,7 @@ router
     ]
     ).exec()
 
+    if (!result[0]) return res.json(0)
     res.json(result[0].count)
 })
 
