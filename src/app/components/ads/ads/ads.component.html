@@ -14,7 +14,7 @@
     <mat-select multiple [(ngModel)]="selectedProductsFilterValue" (selectionChange)="filter()">
       <mat-option *ngFor="let product of products" [value]="product">
         {{ product.name }}
-        <img src="{{ product.picture }}">
+        <img class="productFilterImg" src="{{ product.picture }}">
       </mat-option>
     </mat-select>
   </mat-form-field>

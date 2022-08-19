@@ -101,3 +101,7 @@ mat-option {
     margin-top: 1%;
     color: red;
 }
+
+.productFilterImg {
+    height: 30px;
+}
