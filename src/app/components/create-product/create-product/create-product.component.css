@@ -17,3 +17,7 @@ mat-form-field {
 #weight mat-form-field{
     width: 30%;
 }
+
+.middle {
+    text-align: center;
+}

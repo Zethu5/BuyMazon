@@ -1,3 +1,6 @@
+<div class="middle">
+  <h1>Create Product Form</h1>
+</div>
 <form [formGroup]="createProductForm" id="createProductForm" (ngSubmit)="onProductSubmit()">
   <mat-form-field>
     <mat-label>Name</mat-label>
@@ -82,5 +85,5 @@
       Ingredients are required...
     </mat-error>
   </mat-form-field>
-  <button mat-raised-button color="primary" type="submit" (click)="closeDialog()">Create Product</button>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!createProductForm.valid" (click)="closeDialog()">Create Product</button>
 </form>
