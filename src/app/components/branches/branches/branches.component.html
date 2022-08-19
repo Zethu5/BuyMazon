@@ -1,6 +1,6 @@
 <div id="topBar">
     <div id="branches-map"></div>
-  <div>
+  <div *ngIf="isAdmin()">
     <button mat-raised-button color="primary" (click)="openCreateDialog()">Add Branch</button>
   </div>
   <mat-form-field appearance="fill">
@@ -23,7 +23,7 @@
       <p><b>Address</b>: {{ branch.address }}</p>
       <p><b>Phone</b>: {{ branch.phone }}</p>
     </mat-card-content>
-    <mat-card-actions>
+    <mat-card-actions *ngIf="isAdmin()">
       <button mat-raised-button color="warn" (click)="openDeleteDialog(branch)">DELETE</button>
       <button mat-raised-button color="accent" (click)="openUpdateDialog(branch)">Update</button>
     </mat-card-actions>

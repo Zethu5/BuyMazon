@@ -8,6 +8,7 @@ import { CreateBranchComponent } from '../../create-branch/create-branch/create-
 import { DeleteBranchComponent } from '../../delete-branch/delete-branch/delete-branch.component';
 import { UpdateBranchComponent } from '../../update-branch/update-branch/update-branch.component';
 import * as L from 'leaflet';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-branches',
@@ -24,6 +25,7 @@ export class BranchesComponent implements OnInit {
 
   constructor(
     private branchService: BranchService,
+    private userService: UserService,
     public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -99,6 +101,10 @@ export class BranchesComponent implements OnInit {
       branch.phone.toLowerCase().includes(search)
     }
     return true
+  }
+
+  isAdmin() {
+    return this.userService.isAdmin()
   }
 
   openCreateDialog(): void {
