@@ -4,7 +4,7 @@
     No manufacturers found, please add manufacturers first!
   </div>
 </div>
-<div id="topBar" *ngIf="products && products.length > 0">
+<div id="topBar" *ngIf="productsClone && productsClone.length > 0">
   <mat-form-field appearance="fill">
     <mat-label>Search</mat-label>
     <input matInput [(ngModel)]="searchField" (input)="search()">
@@ -42,7 +42,7 @@
   </mat-card>
 </div>
 
-<div *ngIf="!products || products.length == 0" class="nothingFound">
+<div *ngIf="!productsClone || productsClone.length == 0" class="nothingFound">
   <img src="https://i.imgur.com/La1HfmE.png">
   <h1>Nothing found...</h1>
 </div>
