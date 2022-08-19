@@ -18,6 +18,7 @@
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    text-align: center;
 }
 
 .ad > mat-card-title::-webkit-scrollbar {
