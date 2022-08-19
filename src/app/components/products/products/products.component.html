@@ -1,7 +1,7 @@
-<div id="topBar">
-  <div *ngIf="isAdmin()">
-    <button mat-raised-button color="primary" (click)="openCreateDialog()">Add Product</button>
-  </div>
+<div *ngIf="isAdmin()" class="addProductBtn">
+  <button mat-raised-button color="primary" (click)="openCreateDialog()">Add Product</button>
+</div>
+<div id="topBar" *ngIf="products && products.length > 0">
   <mat-form-field appearance="fill">
     <mat-label>Search</mat-label>
     <input matInput [(ngModel)]="searchField" (input)="search()">
@@ -37,6 +37,11 @@
       <button mat-raised-button color="primary" *ngIf="isLoggedIn()" (click)="resetFilters()">Reset Filters</button>
     </div>
   </mat-card>
+</div>
+
+<div *ngIf="!products || products.length == 0" class="nothingFound">
+  <img src="https://i.imgur.com/La1HfmE.png">
+  <h1>Nothing found...</h1>
 </div>
 
 <div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutAlign="center">

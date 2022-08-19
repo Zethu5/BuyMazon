@@ -17,12 +17,17 @@ table {
     width: 100%;
 }
 
-img {
+.tableImg {
     height: 100px;
 }
 
 .mat-header-cell {
     text-align: center;
+}
+
+.nothingFound > img {
+    width: 35%;
+    margin-top: 3%;
 }
 
 .cmsTableContainer {
