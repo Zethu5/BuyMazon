@@ -57,7 +57,7 @@ export class DeleteManufacturerComponent implements OnInit {
           // clear ads from products of manufacturer
           adData.forEach((ad: any) => {
             ad.products = ad.products.filter(
-              (porduct: any) => !manufacturerProductsIds.includes(porduct._id.toString())
+              (p: any) => !manufacturerProductsIds.includes(p._id.toString())
             )
 
             this.adService.updateAd(ad._id, ad)
