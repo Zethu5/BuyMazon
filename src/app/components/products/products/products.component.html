@@ -64,7 +64,19 @@
     </div>
     <mat-card-content>
       <p><b>Code</b>: {{ product.code }}</p>
-      <p><b>Price</b>: {{ product.price }} ₪</p>
+      <span *ngIf="activeAds && isProductInActiveAd(product)">
+        <!-- <span matBadge="{{getAdDiscountForProduct(product)}}% off" matBadgePosition="before" matBadgeColor="accent"></span> -->
+        <p>
+          <b>Price</b><span>: </span>
+          <span class="priceBeforeDiscount">{{ product.price }} ₪</span><span>&nbsp;&nbsp;&nbsp;</span>
+          <span class="priceAfterDiscount">
+            {{ getProductPriceAfterDiscount(product.price, getAdDiscountForProduct(product)) }} ₪
+          </span>
+        </p>
+      </span>
+      <span *ngIf="!activeAds || !isProductInActiveAd(product)">
+        <p><b>Price</b>: {{ product.price }} ₪</p>
+      </span>
       <p><b>Weight</b>: {{ product.weight }}</p>
       <p><b>Weight Unit</b>: {{ product.weightUnit }}</p>
       <p><b>Ingredients</b>: {{ product.ingredients }}</p>

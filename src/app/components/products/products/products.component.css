@@ -90,3 +90,11 @@ img {
 .discountBadge {
     margin-left: 100%;
 }
+
+.priceBeforeDiscount {
+    text-decoration: line-through;
+}
+
+.priceAfterDiscount {
+    color: green;
+}

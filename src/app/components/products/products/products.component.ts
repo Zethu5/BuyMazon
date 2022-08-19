@@ -51,6 +51,7 @@ export class ProductsComponent implements OnInit {
     })
 
     this.updateProducts()
+    this.updateAds()
   }
 
   getActiveAds() {
@@ -78,6 +79,10 @@ export class ProductsComponent implements OnInit {
     return adOfProduct.discountType
   }
 
+  getProductPriceAfterDiscount(originalPrice: number, discount: number) {
+    return (originalPrice * (1-discount/100)).toFixed(2)
+  }
+
   updateProducts() {
     this.socket = io.io(socket_connection)
     this.socket.on('productUpdate', () => {
@@ -85,6 +90,13 @@ export class ProductsComponent implements OnInit {
         this.productsClone = data
         this.search()
       })
+    })
+  }
+
+  updateAds() {
+    this.socket = io.io(socket_connection)
+    this.socket.on('adUpdate', () => {
+      this.getActiveAds()
     })
   }
 
