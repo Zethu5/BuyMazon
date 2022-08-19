@@ -1,6 +1,6 @@
 <div *ngIf="isAdmin()" class="addProductBtn">
-  <button mat-raised-button color="primary" [disabled]="manufacturers.length == 0" (click)="openCreateDialog()">Add Product</button>
-  <div *ngIf="manufacturers.length == 0" class="addManufacturersWarning">
+  <button mat-raised-button color="primary" [disabled]="manufacturers?.length == 0" (click)="openCreateDialog()">Add Product</button>
+  <div *ngIf="manufacturers?.length == 0" class="addManufacturersWarning">
     No manufacturers found, please add manufacturers first!
   </div>
 </div>
