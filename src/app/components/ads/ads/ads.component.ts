@@ -139,6 +139,13 @@ export class AdsComponent implements OnInit {
     })
   }
 
+  resetFilters() {
+    this.selectedProductsFilterValue = []
+    this.discountFilterValue = 0
+    this.searchWordsFilterValue = []
+    this.filter()
+  }
+
   openCreateDialog(): void {
     this.dialog.open(CreateAdComponent, {
       width: '40vw',
