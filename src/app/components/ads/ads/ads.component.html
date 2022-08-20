@@ -53,6 +53,9 @@
   <mat-card *ngFor="let ad of ads" class="ad">
     <mat-card-title>
       {{ ad.info }}
+      <span *ngIf="isAdActive(ad)" class="discountBadge">
+        <span matBadge="active" matBadgePosition="before" matBadgeColor="accent"></span>
+      </span>
     </mat-card-title>
     <div class="adProducts">
       <mat-list class="productsInAd">

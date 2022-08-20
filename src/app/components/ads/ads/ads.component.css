@@ -106,3 +106,17 @@ mat-option {
 .productFilterImg {
     height: 30px;
 }
+
+.mat-badge-content {
+    width: auto;
+    display: grid;
+    min-width: 32px;
+    min-height: 28px;
+    text-align: center;
+    align-items: center;
+    padding: 5px 3px;
+}
+
+.discountBadge {
+    margin-left: 80%;
+}

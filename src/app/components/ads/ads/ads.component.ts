@@ -57,6 +57,14 @@ export class AdsComponent implements OnInit {
     return (new Date(date)).toLocaleDateString()
   }
 
+  isAdActive(ad: any) {
+    const nowTime = (new Date).getTime()
+
+    return ad.active &&
+    (new Date(ad.startDate).getTime() <= nowTime) &&
+    (new Date(ad.endDate).getTime() >= nowTime)
+  }
+
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 
