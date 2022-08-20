@@ -187,7 +187,14 @@ export class ProductsComponent implements OnInit {
   }
 
   addProductToUser(product: Product) {
-    this.cartService.addProductToUser(product)
+    let copyProduct = {...product}
+
+    if (this.isProductInActiveAd(copyProduct)) {
+      const discount = this.getAdDiscountForProduct(copyProduct)
+      copyProduct.price = Number.parseFloat(this.getProductPriceAfterDiscount(copyProduct.price, discount))
+    }
+
+    this.cartService.addProductToUser(copyProduct)
   }
 
   getManufacturers() {
