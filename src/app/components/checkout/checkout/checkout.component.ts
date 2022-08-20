@@ -266,8 +266,9 @@ export class CheckoutComponent implements OnInit {
       const dialogRef = this.dialog.open(OrderSuccessComponent, {
         data: {
           order_id: recievedOrder.order_id
-        }
-      })
+        },
+        disableClose: true
+      },)
 
       dialogRef.afterClosed().subscribe(() => {
         this.cartService.clearCart(this.user._id)
