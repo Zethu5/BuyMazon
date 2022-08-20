@@ -5,6 +5,8 @@ import { User } from 'src/app/models/user';
 import { CartService } from 'src/app/services/cart/cart.service';
 import { ProductService } from 'src/app/services/product/product.service';
 import { UserService } from 'src/app/services/user/user.service';
+import { socket_connection } from 'src/environments/environment';
+import * as io from 'socket.io-client'
 
 @Component({
   selector: 'app-cart',
@@ -15,7 +17,17 @@ export class CartComponent implements OnInit {
 
   user!: any
   products: [Product?] = []
-  displayedColumns: string[] = ['name', 'picture', 'code', 'price', 'weight', 'manufacturer', 'amount']
+  displayedColumns: string[] = [
+    'name', 
+    'picture', 
+    'code', 
+    'price', 
+    'weight', 
+    'manufacturer', 
+    'amount'
+  ]
+
+  socket!: any
 
   constructor(
     private userService: UserService, 
@@ -27,6 +39,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     if (!this.userService.isLoggedIn()) this.router.navigate(['/'])
     this.getCart()
+    this.updateCart()
   }
 
   getCart() {
@@ -50,6 +63,13 @@ export class CartComponent implements OnInit {
     })
   }
 
+  updateCart() {
+    this.socket = io.io(socket_connection)
+    this.socket.on('userCartUpdate', () => {
+      this.getCart()
+    })
+  }
+
   increaseAmount(product: any) {
     product.amount++
     this.cartService.addProductToUser(product)
@@ -63,7 +83,6 @@ export class CartComponent implements OnInit {
 
   removeProduct(product: any) {
     this.cartService.removeProductFromUser(product)
-    this.getCart()
   }
 
 
