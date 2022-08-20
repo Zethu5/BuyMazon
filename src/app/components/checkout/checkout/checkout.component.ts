@@ -211,8 +211,14 @@ export class CheckoutComponent implements OnInit {
         this.productService.getProducts().subscribe((data: any) => {
           this.products = data.filter((x: any) => cartProductIds.includes(x._id))
           this.products.forEach((element: any) => {
+            // get amount of times product is in cart
             element.amount = cart.filter((x: any) => element._id === x._id)[0].value
-          });
+
+            // change the price of the product in cart if it's in an ad
+            let sameProduct = this.user.products.filter(
+              (userProduct: any) => userProduct._id == element._id)[0]
+              element.price = sameProduct.price
+          })
 
           if(this.getAmountProducts() === 0) this.router.navigate(['/cart'])
         })
