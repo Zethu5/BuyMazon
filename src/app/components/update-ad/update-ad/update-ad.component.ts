@@ -76,7 +76,10 @@ export class UpdateAdComponent implements OnInit {
         })
       })
 
-      return products.filter((product: any) => !productsIdsInAds.includes(product._id))
+      return this.ad.products.concat(products.
+      filter(
+        (product: any) => 
+        !productsIdsInAds.includes(product._id)))
     }))
   }
 
