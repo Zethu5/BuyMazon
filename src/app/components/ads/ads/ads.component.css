@@ -118,5 +118,6 @@ mat-option {
 }
 
 .discountBadge {
-    margin-left: 80%;
+    position: absolute;
+    right: 30px;
 }
