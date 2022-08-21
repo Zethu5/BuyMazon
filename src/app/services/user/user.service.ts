@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs';
 import { User } from 'src/app/models/user';
 import { api_base, local_storage_is_admin_property_name, local_storage_username_property_name } from '../../../environments/environment'
 
@@ -54,5 +55,11 @@ export class UserService {
 
   getLocalStorageUserName() {
     return localStorage.getItem(local_storage_username_property_name)
+  }
+
+  isUsernameNotTaken(username: string) {
+    return this.getUsers().pipe(map((users: any) => {
+      return users.filter((user: any) => user.username == username).length > 0
+    }))
   }
 }

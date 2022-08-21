@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, AsyncValidatorFn, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { map, Observable, of } from 'rxjs';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user/user.service';
 
@@ -19,7 +20,10 @@ export class CreateUserComponent implements OnInit {
 
   ngOnInit(): void {
     this.createUserForm = this.fb.group({
-      username: [null, [Validators.required,Validators.minLength(3),Validators.maxLength(15)]],
+      username: [null, [
+        Validators.required,Validators.minLength(3),
+        Validators.maxLength(15), 
+      ],[this.isUsernameNotTaken(this.userService)]],
       password: [null, [Validators.required, this.isPasswordValid]],
       email: [null, [Validators.required, this.isEmail]],
       firstName: [null, [Validators.required, this.isNameValid]],
@@ -57,6 +61,18 @@ export class CreateUserComponent implements OnInit {
       return { invalidName: true}
     }
     return null
+  }
+
+  isUsernameNotTaken(userService: UserService): AsyncValidatorFn {
+    return (control: AbstractControl): Observable<any> => {
+      return userService
+      .isUsernameNotTaken(control.value)
+      .pipe(
+        map((result: boolean) => 
+          result ? { usernameTaken: true } : null
+        )
+      )
+    }
   }
 
   isDateOfBirthValid(control: AbstractControl) {
