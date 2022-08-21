@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { map } from 'rxjs';
 import { Ad } from 'src/app/models/ad';
 import { AdService } from 'src/app/services/ad/ad.service';
 import { ProductService } from 'src/app/services/product/product.service';
 import { AdsComponent } from '../../ads/ads/ads.component';
+import * as io from 'socket.io-client';
+import { socket_connection } from 'src/environments/environment';
 
 
 @Component({
@@ -18,6 +21,7 @@ export class CreateAdComponent implements OnInit {
   products!: any
   selectedProducts!: any
   discountTypes: number[] = [10,20,30,40,50,60,70,80,90]
+  socket!: any
 
   constructor(
     private fb: FormBuilder,
@@ -36,12 +40,40 @@ export class CreateAdComponent implements OnInit {
     })
 
     this.getProducts()
+    this.updateAds()
   }
 
   getProducts() {
-    this.productService.getProducts().subscribe((data: any) => {
-      this.products = data
+    this.productService.getProducts().subscribe((productsData: any) => {
+      // a product can only be in 1 ad
+      this.getProductsNotInAds(productsData).subscribe((prodcutsNotInAdsData) =>{
+        this.products = prodcutsNotInAdsData
+      })
     })
+  }
+
+  updateAds() {
+    this.socket = io.io(socket_connection)
+    this.socket.on('adUpdate', () => {
+      this.getProducts()
+    })
+
+    this.socket.on('productUpdate', () => {
+      this.getProducts()
+    })
+  }
+
+  getProductsNotInAds(products: any) {
+    let productsIdsInAds: any = []
+    return this.adService.getAds().pipe(map((data: any) => {
+      data.forEach((ad: any) => {
+        ad.products.forEach((product: any) => {
+          productsIdsInAds.push(product._id)
+        })
+      })
+
+      return products.filter((product: any) => !productsIdsInAds.includes(product._id))
+    }))
   }
 
   unselectAll() {

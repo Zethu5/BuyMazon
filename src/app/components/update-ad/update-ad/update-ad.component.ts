@@ -4,6 +4,9 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AdService } from 'src/app/services/ad/ad.service';
 import { ProductService } from 'src/app/services/product/product.service';
 import { AdsComponent } from '../../ads/ads/ads.component';
+import * as io from 'socket.io-client'
+import { socket_connection } from 'src/environments/environment';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-update-ad',
@@ -16,6 +19,7 @@ export class UpdateAdComponent implements OnInit {
   products!: any
   discountTypes: number[] = [10,20,30,40,50,60,70,80,90]
   selectedProducts: any = []
+  socket!: any
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public ad: any,
@@ -35,15 +39,43 @@ export class UpdateAdComponent implements OnInit {
     })
 
     this.getProducts()
+    this.updateAds()
 
     // sort of a workaround for cloning...
     this.selectedProducts = Array.from(this.ad.products)
   }
 
   getProducts() {
-    this.productService.getProducts().subscribe((data: any) => {
-      this.products = data
+    this.productService.getProducts().subscribe((productsData: any) => {
+      // a product can only be in 1 ad
+      this.getProductsNotInAds(productsData).subscribe((prodcutsNotInAdsData) =>{
+        this.products = prodcutsNotInAdsData
+      })
     })
+  }
+
+  updateAds() {
+    this.socket = io.io(socket_connection)
+    this.socket.on('adUpdate', () => {
+      this.getProducts()
+    })
+
+    this.socket.on('productUpdate', () => {
+      this.getProducts()
+    })
+  }
+
+  getProductsNotInAds(products: any) {
+    let productsIdsInAds: any = []
+    return this.adService.getAds().pipe(map((data: any) => {
+      data.forEach((ad: any) => {
+        ad.products.forEach((product: any) => {
+          productsIdsInAds.push(product._id)
+        })
+      })
+
+      return products.filter((product: any) => !productsIdsInAds.includes(product._id))
+    }))
   }
 
   unselectAll() {
