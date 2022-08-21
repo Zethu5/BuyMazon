@@ -38,6 +38,8 @@ export class UpdateAdComponent implements OnInit {
       active: [this.ad.active, []],
     })
 
+    this.updateAdForm.controls['startDate'].clearValidators()
+
     this.getProducts()
     this.updateAds()
 
@@ -76,6 +78,11 @@ export class UpdateAdComponent implements OnInit {
 
       return products.filter((product: any) => !productsIdsInAds.includes(product._id))
     }))
+  }
+
+  putBackValidators() {
+    this.updateAdForm.controls['startDate'].setValidators([Validators.required, this.isDateValid])
+    this.updateAdForm.controls['startDate'].reset(this.updateAdForm.controls['startDate'].value)
   }
 
   unselectAll() {
