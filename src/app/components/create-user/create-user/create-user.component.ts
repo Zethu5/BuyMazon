@@ -29,7 +29,7 @@ export class CreateUserComponent implements OnInit {
       firstName: [null, [Validators.required, this.isNameValid]],
       lastName: [null, [Validators.required, this.isNameValid]],
       dateOfBirth: [null, [Validators.required, this.isDateOfBirthValid]],
-      creationDate: [null, [Validators.required]],
+      creationDate: [null, []],
       isAdmin: [false, []],
       products: [[], []],
     })
@@ -64,7 +64,7 @@ export class CreateUserComponent implements OnInit {
   }
 
   isUsernameNotTaken(userService: UserService): AsyncValidatorFn {
-    return (control: AbstractControl): Observable<any> => {
+    return (control: AbstractControl): Observable<ValidationErrors | null> => {
       return userService
       .isUsernameNotTaken(control.value)
       .pipe(
