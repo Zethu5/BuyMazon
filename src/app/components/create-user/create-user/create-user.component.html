@@ -72,6 +72,6 @@
         You must be atleast 18 years old...
       </mat-error>
     </mat-form-field>
-    <button mat-raised-button class="registerButton" color="primary" type="submit">Create User</button>
+    <button mat-raised-button class="registerButton" [disabled]="!createUserForm.valid" color="primary" type="submit">Create User</button>
   </form>
 </mat-card>
