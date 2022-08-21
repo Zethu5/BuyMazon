@@ -73,7 +73,7 @@ router
         return res.status(403).json({error: 'Username or password are incorrect'})
     }
 
-    if (!bcrypt.compare(req.body.password, user.password)) {
+    if (!await bcrypt.compare(req.body.password, user.password)) {
         return res.status(403).json({error: 'Username or password are incorrect'})
     }
 
