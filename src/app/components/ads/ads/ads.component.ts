@@ -11,6 +11,7 @@ import { ProductService } from 'src/app/services/product/product.service';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatChipInputEvent} from '@angular/material/chips';
 import { UserService } from 'src/app/services/user/user.service';
+import { Emit, Trie } from '@tanishiking/aho-corasick';
 
 @Component({
   selector: 'app-ads',
@@ -91,19 +92,15 @@ export class AdsComponent implements OnInit {
     if(this.searchWordsFilterValue.length == 0) return true
 
     let found = false
-
-    this.searchWordsFilterValue.forEach((searchWord: any) => {
-      if(
-        ad.info.includes(searchWord) ||
-        ad.discountType.toString().concat('%').includes(searchWord) ||
-        this.dateToString(ad.startDate).includes(searchWord) ||
-        this.dateToString(ad.endDate).includes(searchWord) ||
-        ad.products.filter((product: any) => product.name.includes(searchWord)).length > 0) {
-          found = true
-        }
-    })
-
-    return found
+      // aho corasick algorithm package use
+      const trie = new Trie(this.searchWordsFilterValue)
+      const emits: Emit[] = trie.parseText(
+        ad.info + " " +
+        ad.discountType.toString().concat('%')  + " " +
+        this.dateToString(ad.startDate) + " " + 
+        this.dateToString(ad.endDate) + " " +
+        ad.products.map((product: any) => " " + product.name))
+      return (emits.length > 0 ? true : false)
   }
 
   productsFilter(ad: any) {

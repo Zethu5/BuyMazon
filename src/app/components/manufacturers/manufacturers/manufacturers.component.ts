@@ -10,6 +10,7 @@ import { socket_connection } from '../../../../environments/environment';
 import * as io from 'socket.io-client';
 import { UserService } from 'src/app/services/user/user.service';
 import { Router } from '@angular/router';
+import { Emit, Trie } from '@tanishiking/aho-corasick';
 
 @Component({
   selector: 'app-manufacturers',
@@ -89,10 +90,14 @@ export class ManufacturersComponent implements OnInit {
 
   searchFilter(manufacturer: Manufacturer, search: string): boolean {
     if(search.length > 0) {
-      return manufacturer.name.toLowerCase().includes(search) || 
-      manufacturer.industry.toLowerCase().includes(search) ||
-      manufacturer.owner.toLowerCase().includes(search) ||
-      manufacturer.type.toLowerCase().includes(search)
+      // aho corasick algorithm package use
+      const trie = new Trie(search.split(/\s+/))
+      const emits: Emit[] = trie.parseText(
+        manufacturer.name.toLowerCase() + " " +
+        manufacturer.industry.toLowerCase() + " " +
+        manufacturer.owner.toLowerCase() + " " +
+        manufacturer.type.toLowerCase())
+        return (emits.length > 0 ? true : false)
     }
     return true
   }

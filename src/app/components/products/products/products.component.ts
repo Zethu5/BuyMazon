@@ -12,7 +12,7 @@ import { CartService } from 'src/app/services/cart/cart.service';
 import { ManufacturerService } from 'src/app/services/manufacturer/manufacturer.service';
 import { AdService } from 'src/app/services/ad/ad.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import { Trie, Emit } from '@tanishiking/aho-corasick'
 
 @Component({
   selector: 'app-products',
@@ -104,15 +104,17 @@ export class ProductsComponent implements OnInit {
 
   searchFilter(product: Product, search: string): boolean {
     if(search.length > 0) {
-      return product.name.toLowerCase().includes(search) ||
-      product.picture.toLowerCase().includes(search) ||
-      product.code.toLowerCase().includes(search) ||
-      product.price.toString().toLowerCase().includes(search) ||
-      product.weight.toString().toLowerCase().includes(search) ||
-      product.weightUnit.toLowerCase().includes(search) ||
-      product.ingredients.toLowerCase().includes(search) ||
-      product.productionCountry.toLowerCase().includes(search) ||
-      product.manufacturer.name.toLowerCase().includes(search)
+      // aho corasick algorithm package use
+      const trie = new Trie(search.split(/\s+/))
+      const emits: Emit[] = trie.parseText(product.name.toLocaleLowerCase() + " " +
+      product.code.toLocaleLowerCase() + " " +
+      product.price.toString().toLocaleLowerCase() + " " +
+      product.weight.toString().toLocaleLowerCase() + " " +
+      product.weightUnit.toLocaleLowerCase() + " " +
+      product.ingredients.toLocaleLowerCase() + " " +
+      product.productionCountry.toLocaleLowerCase() + " " +
+      product.manufacturer.name.toLocaleLowerCase())
+      return (emits.length > 0 ? true : false)
     }
     return true
   }

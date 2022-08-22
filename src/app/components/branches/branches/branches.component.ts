@@ -9,6 +9,7 @@ import { DeleteBranchComponent } from '../../delete-branch/delete-branch/delete-
 import { UpdateBranchComponent } from '../../update-branch/update-branch/update-branch.component';
 import * as L from 'leaflet';
 import { UserService } from 'src/app/services/user/user.service';
+import { Emit, Trie } from '@tanishiking/aho-corasick';
 
 @Component({
   selector: 'app-branches',
@@ -96,9 +97,14 @@ export class BranchesComponent implements OnInit {
 
   searchFilter(branch: Branch, search: string): boolean {
     if(search.length > 0) {
-      return branch.city.toLowerCase().includes(search) ||
-      branch.address.toLowerCase().includes(search) ||
-      branch.phone.toLowerCase().includes(search)
+      // aho corasick algorithm package use
+      const trie = new Trie(search.split(/\s+/))
+      const emits: Emit[] = trie.parseText(
+        branch.city.toLowerCase() + " " +
+        branch.address.toLowerCase() + " " +
+        branch.phone.toLowerCase())
+      return (emits.length > 0 ? true : false)
+
     }
     return true
   }
