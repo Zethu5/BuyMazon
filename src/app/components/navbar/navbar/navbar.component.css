@@ -1,3 +1,8 @@
+mat-toolbar {
+    background-color: rgb(54, 133, 236);
+    color: white;
+}
+
 mat-toolbar div {
     margin: 0 auto;
     font-size: larger;
@@ -9,7 +14,8 @@ mat-toolbar div {
 
 #siteTitle {
     position: absolute;
-    left: 47vw;
+    left: 46vw;
+    font-size: 3rem;
 }
 
 #siteTitle a:hover {
@@ -21,8 +27,17 @@ mat-toolbar div {
     right: 1vw;
 }
 
+#cart:hover {
+    background-color: rgb(37, 96, 174);
+}
+
 #cart span {
     display: inline-block;
     left: -0.6vw;
     top: -1vh;
+}
+
+.mat-badge-content {
+    background-color: white;
+    color: black
 }

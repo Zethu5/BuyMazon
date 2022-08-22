@@ -5,7 +5,7 @@
   <button class='actionBtns' mat-raised-button *ngIf="!username" (click)="login()">Login</button>
   <button class='actionBtns' mat-raised-button *ngIf="!username" (click)="register()">Register</button>
   <button id="cart" mat-button *ngIf="username" (click)="goToCart()"><span *ngIf="numProductsInCart > 0" matBadge="{{ numProductsInCart }}"
-      matBadgePosition="before" matBadgeColor="primary"></span>
+      matBadgePosition="before" class="cartBadge"></span>
     <mat-icon>shopping_cart</mat-icon>
   </button>
 </mat-toolbar>
