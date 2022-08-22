@@ -24,6 +24,7 @@
     "@angular/router": "~13.3.0",
     "@asymmetrik/ngx-leaflet": "^13.0.2",
     "@googlemaps/js-api-loader": "^1.14.3",
+    "@tanishiking/aho-corasick": "^0.0.1",
     "@types/d3": "^7.4.0",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
