@@ -46,12 +46,20 @@ img {
 }
 
 .productsDisplay mat-card-actions {
-    margin: auto;
+    margin: 0 auto;
 }
 
 .productsDisplay mat-card-actions button {
-    margin: 0 auto;
-    margin-left: 1vw;
+    margin: 0.3vw;
+}
+
+.productsDisplay mat-card-header {
+    flex-shrink: 0;
+}
+  
+.productsDisplay mat-card-content{
+  flex-grow: 1;
+  overflow: auto;
 }
 
 .filterContainer {
