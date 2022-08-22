@@ -45,7 +45,7 @@ export class ProductsComponent implements OnInit {
       this.products = this.productsClone = data
       this.getManufacturers()
       this.getProductsProductionCountries()
-      this.minProductPrice = this.getProductsMinValue()
+      this.priceFilterValue = this.minProductPrice = this.getProductsMinValue()
       this.maxProductPrice = this.getProductsMaxValue()
       this.getActiveAds()
     })
