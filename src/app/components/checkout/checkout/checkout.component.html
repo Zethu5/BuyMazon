@@ -85,7 +85,7 @@
         <button mat-raised-button matStepperNext color="primary" [disabled]="!addressForm.valid">Next</button>
       </div>
     </mat-step>
-    <mat-step label="Billing Information" state="billing">
+    <mat-step label="Billing Information" [stepControl]="billingForm" state="billing">
       <div class="form">
         <form [formGroup]="billingForm">
           <div>
