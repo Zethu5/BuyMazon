@@ -39,7 +39,7 @@ img {
 .productsDisplay {
     width: 15vw;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 1vw;

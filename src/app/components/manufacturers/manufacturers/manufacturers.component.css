@@ -29,7 +29,7 @@ img {
 mat-card {
     width: 15rem;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 1%;
