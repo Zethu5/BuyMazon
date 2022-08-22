@@ -11,6 +11,7 @@ import { UserService } from 'src/app/services/user/user.service';
 import { CartService } from 'src/app/services/cart/cart.service';
 import { ManufacturerService } from 'src/app/services/manufacturer/manufacturer.service';
 import { AdService } from 'src/app/services/ad/ad.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -38,7 +39,8 @@ export class ProductsComponent implements OnInit {
     private cartService: CartService,
     private manufacturerService: ManufacturerService,
     private adService: AdService,
-    public dialog: MatDialog) { }
+    public dialog: MatDialog,
+    private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe((data: any) => {
@@ -195,6 +197,12 @@ export class ProductsComponent implements OnInit {
     }
 
     this.cartService.addProductToUser(copyProduct)
+    this.openSnackBar(product)
+  }
+
+  openSnackBar(product: Product) {
+    const str = `${product.name} has been added to cart`
+    this.snackBar.open(str, 'Close', {duration: 2000})
   }
 
   getManufacturers() {

@@ -30,6 +30,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { CreateManufacturerComponent } from './components/create-manufacturer/create-manufacturer/create-manufacturer.component';
 import { ManufacturersComponent } from './components/manufacturers/manufacturers/manufacturers.component';
@@ -115,7 +116,8 @@ import { CmsPipePipe } from './pipes/cms-pipe/cms-pipe.pipe';
     MatCheckboxModule,
     MatSliderModule,
     MatSlideToggleModule,
-    MatChipsModule
+    MatChipsModule,
+    MatSnackBarModule
   ],
   providers: [
     MatDatepickerModule,
