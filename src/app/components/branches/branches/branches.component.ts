@@ -36,6 +36,11 @@ export class BranchesComponent implements OnInit {
   }
 
   initMap(): void {
+    if(this.map) {
+      this.map.off();
+      this.map.remove();
+    }
+
     this.map = L.map('branches-map', {
       center: {
         lat: 32.1,
@@ -78,6 +83,7 @@ export class BranchesComponent implements OnInit {
       this.branchService.getBranches().subscribe(data => {
         this.branches = this.branchesClone = data
         this.search()
+        this.initMap()
       })
     })
   }
@@ -114,35 +120,23 @@ export class BranchesComponent implements OnInit {
   }
 
   openCreateDialog(): void {
-    const dialogRef = this.dialog.open(CreateBranchComponent);
-
-    dialogRef.afterClosed().subscribe(() => {
-      this.socket.emit('branchUpdate')
-    });
+    this.dialog.open(CreateBranchComponent);
   }
 
   openDeleteDialog(branch: Branch): void {
-    const dialogRef = this.dialog.open(DeleteBranchComponent, {
+    this.dialog.open(DeleteBranchComponent, {
       width: '25rem',
       data: {
         branch: branch
       }
-    });
-
-    dialogRef.afterClosed().subscribe(() => {
-      this.socket.emit('branchUpdate')
-    });
+    })
   }
 
   openUpdateDialog(branch: Branch): void {
-    const dialogRef = this.dialog.open(UpdateBranchComponent, {
+    this.dialog.open(UpdateBranchComponent, {
       data: {
         branch: branch
       }
-    });
-
-    dialogRef.afterClosed().subscribe(() => {
-      this.socket.emit('branchUpdate')
-    });
+    })
   }
 }
