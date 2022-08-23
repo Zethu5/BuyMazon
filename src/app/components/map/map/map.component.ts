@@ -31,6 +31,12 @@ export class MapComponent implements OnInit {
   }
 
   initMap(): void {
+    if(this.map) {
+      this.map.off()
+      this.map.remove()
+    }
+
+
     this.map = L.map('map', {
       center: {
         lat: 32.1,
