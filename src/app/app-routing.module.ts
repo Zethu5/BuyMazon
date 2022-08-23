@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminConsoleComponent } from './components/admin-console/admin-console/admin-console.component';
 import { AdsComponent } from './components/ads/ads/ads.component';
 import { BranchesComponent } from './components/branches/branches/branches.component';
 import { CartComponent } from './components/cart/cart/cart.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'checkout', component: CheckoutComponent},
   {path: 'statistics', component: StatisticsComponent},
   {path: 'ads', component: AdsComponent},
+  {path: 'adminconsole', component: AdminConsoleComponent},
 ];
 
 @NgModule({

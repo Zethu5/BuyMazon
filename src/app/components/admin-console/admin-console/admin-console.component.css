@@ -1,0 +1,27 @@
+.container {
+    width: 20vw;
+    height: 30vh;
+    margin: 0 auto;
+    margin-top: 3vh;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+  }
+
+.userContainer {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.title {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.adminTitle {
+    font-size: 50px;
+}

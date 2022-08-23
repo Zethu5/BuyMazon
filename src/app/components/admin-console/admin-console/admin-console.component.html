@@ -1,0 +1,18 @@
+<div class="title">
+    <span class="adminTitle">Admin Console</span>
+    <h5>You can't change your own status...</h5>
+</div>
+
+<mat-card class="container">
+    <div *ngFor="let user of users" class="userContainer">
+        <h3>{{user.username}}</h3>
+        <h3>{{user.email}}</h3>
+        <mat-slide-toggle 
+            [disabled]="isItMe(user.username)" 
+            [checked]="isUserAdmin(user)" 
+            (toggleChange)="changeUserAdminStatus(user)">
+            Admin
+        </mat-slide-toggle>
+        <mat-divider></mat-divider>
+    </div>
+</mat-card>

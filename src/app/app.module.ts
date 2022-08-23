@@ -57,6 +57,7 @@ import { CreateAdComponent } from './components/create-ad/create-ad/create-ad.co
 import { DeleteAdComponent } from './components/delete-ad/delete-ad/delete-ad.component';
 import { UpdateAdComponent } from './components/update-ad/update-ad/update-ad.component';
 import { CmsPipePipe } from './pipes/cms-pipe/cms-pipe.pipe';
+import { AdminConsoleComponent } from './components/admin-console/admin-console/admin-console.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { CmsPipePipe } from './pipes/cms-pipe/cms-pipe.pipe';
     CreateAdComponent,
     DeleteAdComponent,
     UpdateAdComponent,
-    CmsPipePipe
+    CmsPipePipe,
+    AdminConsoleComponent
   ],
   imports: [
     BrowserModule,
