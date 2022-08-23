@@ -15,10 +15,10 @@
   <h1>Our Branches</h1>
   <app-map></app-map>
   <div class="adsContainer">
-    <div class="adsTitle">
+    <div class="adsTitle" *ngIf="areThereActiveAds()">
       <h1>Ads</h1>
       <div *ngFor="let ad of ads">
-        <div *ngIf="ad.active" class="ad">
+        <div *ngIf="isAdActive(ad)" class="ad">
           <div fxLayout="row" fxLayoutAlign="space-evenly center">
               <img *ngFor="let product of ad.products" class="adProductPicture" mat-card-image src="{{ product.picture }}">
           </div>

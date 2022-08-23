@@ -4,6 +4,7 @@ import { AdService } from 'src/app/services/ad/ad.service';
 import * as io from 'socket.io-client';
 import { socket_connection } from 'src/environments/environment';
 import { UserService } from 'src/app/services/user/user.service';
+import { Ad } from 'src/app/models/ad';
 
 @Component({
   selector: 'app-homepage',
@@ -94,5 +95,17 @@ export class HomepageComponent implements OnInit {
   isAllowedToDisplayCategory(category: any) {
     if(category.allowed.includes('users')) return true
     return (this.isAdmin() ? true : false)
+  }
+
+  isAdActive(ad: any) {
+    const nowTime = (new Date).getTime()
+
+    return ad.active &&
+    (new Date(ad.startDate).getTime() <= nowTime) &&
+    (new Date(ad.endDate).getTime() >= nowTime)
+  }
+
+  areThereActiveAds() {
+    return this.ads.filter((ad: Ad) => this.isAdActive(ad)).length > 0
   }
 }
