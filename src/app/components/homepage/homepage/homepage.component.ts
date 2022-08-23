@@ -59,6 +59,13 @@ export class HomepageComponent implements OnInit {
       allowed: ['users', 'admins']
     })
 
+    this.categories.push({
+      name: 'Admin',
+      image: 'https://i.imgur.com/K3mt5My.png',
+      ref: '/adminconsole',
+      allowed: ['admins']
+    })
+
     this.getAds()
     this.updateAds()
   }
