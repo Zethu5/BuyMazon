@@ -25,6 +25,7 @@ const routes: Routes = [
   {path: 'statistics', component: StatisticsComponent},
   {path: 'ads', component: AdsComponent},
   {path: 'adminconsole', component: AdminConsoleComponent},
+  {path: '**', component: HomepageComponent},
 ];
 
 @NgModule({
